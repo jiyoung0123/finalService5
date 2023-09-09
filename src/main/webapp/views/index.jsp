@@ -82,13 +82,13 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/avatars/avatar-4.jpg" alt="" class="list-avatar">
+                                    <img src="/assets/images/avatars/avatar-4.jpg" alt="" class="list-avatar">
                                     <div class="list-name"> Property Rent And Sale  </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="//assets/images/avatars/avatar-5.jpg" alt="" class="list-avatar">
+                                    <img src="/assets/images/avatars/avatar-5.jpg" alt="" class="list-avatar">
                                     <div class="list-name">  Erica Jones </div>
                                 </a>
                             </li>
