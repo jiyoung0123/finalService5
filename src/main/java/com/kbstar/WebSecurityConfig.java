@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 
 //CORS를 해결하기 위한 파일
@@ -35,5 +35,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().permitAll()
                 .and().cors().configurationSource(source)
                 .and().csrf().disable();
+    }
+
+
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**") // 모든 경로에 대해 CORS 허용
+                .allowedOrigins("*")    // 모든 원본 허용
+                .allowedMethods("*")    // 모든 HTTP 메서드 허용
+                .allowedHeaders("*");   // 모든 헤더 허용
     }
 }
