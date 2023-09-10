@@ -2,145 +2,75 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-
-<style>
-
-
-/*    .dropdown a:hover {background-color: #ddd;}*/
-
-
-
-/*    .moving-content {*/
-/*        white-space: nowrap; !* 텍스트가 한 줄로 표시되도록 설정 *!*/
-/*        animation: marquee 10s linear infinite; !* 애니메이션 설정 *!*/
-
-/*    }*/
-
-/*    @keyframes marquee {*/
-/*        0% {*/
-/*            transform: translateX(100%); !* 초기 위치: 오른쪽으로 이동 *!*/
-/*        }*/
-/*        100% {*/
-/*            transform: translateX(-100%); !* 최종 위치: 왼쪽으로 이동 *!*/
-/*        }*/
-/*    }*/
-
-</style>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-
+<!-- 현재 페이지 스크립트 정의 -->
+<%--<script src="assets/js/stock/overlook.js"></script>--%>
 
 <script>
 
+    // # AES256 DECODE
+    // def aes_cbc_base64_dec(key, iv, cipher_text):
+    // """
+    // :param key:  str type AES256 secret key value
+    //     :param iv: str type AES256 Initialize Vector
+    //     :param cipher_text: Base64 encoded AES256 str
+    //     :return: Base64-AES256 decodec str
+    // """
+    // cipher = AES.new(key.encode('utf-8'), AES.MODE_CBC, iv.encode('utf-8'))
+    // return bytes.decode(unpad(cipher.decrypt(b64decode(cipher_text)), AES.block_size))
+    //
+    //
+    // # 웹소켓 접속키 발급
+    // def get_approval(key, secret):
+    // # url = https://openapivts.koreainvestment.com:29443' # 모의투자계좌
+    // url = 'https://openapi.koreainvestment.com:9443' # 실전투자계좌
+    // headers = {"content-type": "application/json"}
+    // body = {"grant_type": "client_credentials",
+    //     "appkey": key,
+    //     "secretkey": secret}
+    // PATH = "oauth2/Approval"
+    // URL = f"{url}/{PATH}"
+    // res = requests.post(URL, headers=headers, data=json.dumps(body))
+    // approval_key = res.json()["approval_key"]
+    // return approval_key
+
     $(()=>{
-        connect(4);
+        stock.init();
     });
-    const socketUrl = "wss://api.upbit.com/websocket/v1"; // WebSocket 엔드포인트 URL
-    const coinArray = [ 'KRW-BTC', "KRW-ETH", "KRW-DOGE", "KRW-ADA" ];
-    //https://api.upbit.com/v1/market/all -> 티커 조회
-    let socket = `socket`;
-    let socketName;
-    function connect(i) {
 
-        const socketMap = new Map();
-        for(j=0; j <i ; j++){
-            socketMap.set(`socket`+j , coinArray[j]);
-        };
-        // 확인완료(090923-최준혁)
-        // console.log('socketMap을 담을 그릇');
-        // console.log(socketMap);
+    const stockWebApprovalURI = 'https://openapi.koreainvestment.com:9443/oauth2/Approval';
+    const key =
 
-        socketMap.forEach((v, k)=>{
-            console.log('value 값' + v);
-            console.log('key 값' + k);
+    const stock = {
+        init: (key, secret) => {
 
-            //webSocket 송신시 들어갈 파라미터값 상수정의
-
-            // WebSocket 생성
-            k = new WebSocket(socketUrl);
-            // WebSocket 이벤트 핸들러 정의
-            k.onopen = function(event) {
-                console.log("WebSocket opened");
-                // 서버로 메시지 전송 예시
-                let message = JSON.stringify([{"ticket":"test"},{"type":"ticker","codes": v}]);
-                console.log(k + `k의 메세지 검증`);
-                console.log(message);
-                k.send(message);
-            };
-
-            //소켓 메세지
-            k.onmessage = function(event) {
-                let reader = new FileReader();
-                reader.onload = function() {
-                    console.log("Received message: ", reader.result);
-                    // let key = "trade_price";
-                    let jsonString = reader.result; // 문자열 값
-                    let json = JSON.parse(jsonString); // JSON 형식으로 변환된 객체
-                    let trade_price = Number(json["trade_price"]); // 숫자로 변환
-                    let formatted_trade_price = trade_price.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });
-                    // $(``).text(formatted_trade_price);
-                };
-                reader.readAsText(event.data);
-                // $('#bitcoin').text(json["trade_price"]);
-            };
-        });
-
-
-        socket.onclose = function(event) {
-            console.log("WebSocket closed");
-        };
-        socket2.onclose = function(event) {
-            console.log("WebSocket closed");
-        };
-        socket3.onclose = function(event) {
-            console.log("WebSocket closed");
-        };
-        socket4.onclose = function(event) {
-            console.log("WebSocket closed");
-        };
-
-        socket.onerror = function(error) {
-            console.error("WebSocket error:", error);
-        };
-        socket2.onerror = function(error) {
-            console.error("WebSocket error:", error);
-        };
-        socket3.onerror = function(error) {
-            console.error("WebSocket error:", error);
-        };
-        socket4.onerror = function(error) {
-            console.error("WebSocket error:", error);
-        };
-
-
-    }
-
-
-    function disconnect() {
-        if (socket) {
-            socket.close();
-            console.log("WebSocket disconnected");
+            $.ajax({
+                url: stockWebApprovalURI,
+                data: {
+                    "grant_type": "client_credentials",
+                    "appkey": key,
+                    "secretkey": secret
+                },
+                method: POST,
+                headers: {"content-type": "application/json"}
+            }).done((res) => {
+                console.log('200');
+                res.toString();
+                JSON.parse(res);
+            }).fail((res) => {
+                console.log('400');
+                res.toString();
+            })
         }
     }
 
 
-
 </script>
-
-
-
-
-
-
-
-<!-- ======= Hero Section ======= -->
 
 
 
@@ -164,7 +94,7 @@
                                                 </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
-                                                        <div id="content1_msg" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                        <div id="socket_msg0" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -184,7 +114,7 @@
                                                 </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
-                                                        <div id="content2_msg" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                        <div id="socket_msg1" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -204,7 +134,7 @@
                                                 </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
-                                                        <div id="content3_msg" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                        <div id="socket_msg2" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -224,7 +154,7 @@
                                                 </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
-                                                        <div id="content4_msg" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                        <div id="socket_msg3" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -372,8 +302,6 @@
                     </div>
                 </div>
             </div>
-
-
 
         </div>
     </div>
