@@ -4,10 +4,24 @@
 */
 
 /* -------------------------------------------------------------- */
-/* Import font
+/* Import font : 기본 지정된 폰트를 빼버리면 아이콘이 엑박뜨므로,
+KB금융체는 important 없이 선언해두고,
+일부 변경이 필요할 때마다 각 태그 css 선언된 내용을 찾아서
+금융체로 선언해주어야 함.
 ----------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
- 
+@font-face {
+  font-family : 'KBFGTextM';
+  src : url("../fonts/KBFGTextM.ttf");
+}
+*{
+  font-family : 'KBFGTextM';
+} 
+/* 인보 공통 css 추가 */
+.point{
+	font-weight: 600;
+	color: #ff8000;
+}
 /* ---------------------------------- */
 /* Buttons
 ------------------------------------- */
@@ -787,7 +801,7 @@ body p {
 
 /* Main Font */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Inter, sans-serif !important;
+  font-family: KBFGTextM !important;
   text-transform: none;
 }
 

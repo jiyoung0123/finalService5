@@ -35,5 +35,5 @@ public class MainController {
         model.addAttribute("center","pages");
         return "index";
     }
-
+ 
 }
