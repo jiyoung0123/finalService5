@@ -1222,7 +1222,6 @@
                 <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
             </li>
         </ul>
-
     </div>
 
     <!-- story colose button-->
