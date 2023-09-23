@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kbstar.mapper.RandomChatMapper">
+    <insert id="insert" parameterType="RandomChatRoom">
+        INSERT INTO randomChatRoom(createUserId , roomId , roomName , roomLoc, createDate, maxUserCnt , roomPwd, secretChk) VALUES (#{createUserId},#{roomId},#{roomName}, #{roomLoc}, SYSDATE, #{maxUserCnt}, #{roomPwd},#{secretChk})
+    </insert>
+    <select id="selectall" resultType="RandomChatRoom">
+        SELECT * FROM RandomChatRoom
+    </select>
+    <select id="select" parameterType="String" resultType="RandomChatRoom">
+        SELECT * FROM randomChatRoom WHERE roomId=#{roomId}
+    </select>
+    <delete id="delete" parameterType="String">
+        DELETE FROM randomChatRoom WHERE roomId=#{roomId}
+    </delete>
+    <update id="update" parameterType="RandomChatRoom">
+        UPDATE randomChatRoom SET roomId=#{roomId},userCount=#{userCount} WHERE roomId=#{roomId}
+    </update>
+</mapper>

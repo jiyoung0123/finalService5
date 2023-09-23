@@ -69,24 +69,26 @@ public class RandomChatRoomController {
         log.info("CREATE Chat Room {}", room);
 //        model.addAttribute("room",room);
         rttr.addFlashAttribute("roomName", room);
-        return "redirect:/randomChatList";
+        return "redirect:/groups";
+
     }
 
     // 채팅방 입장 화면
     // 파라미터로 넘어오는 roomId 를 확인후 해당 roomId 를 기준으로
     // 채팅방을 찾아서 클라이언트를 chatroom 으로 보낸다.
     @GetMapping("/chat/room")
-    public String roomDetail(Model model, String roomId,HttpSession session) throws Exception {
-        if(session.getAttribute("loginGuest")==null){
+    public String roomDetail(Model model, String roomId) throws Exception {
+       /* if(session.getAttribute("loginGuest")==null){
             return "redirect:/login";
-        }
+        }*/
         log.info("/chat/room도착======================================");
+        log.info("roomID받기!!!!!!!!!!!!!!!!!!", roomId);
         model.addAttribute("user","loginGuest");
         log.info("roomId {}", roomId);
         RandomChatRoom room = chatServiceMain.findRoomById(roomId);
         model.addAttribute("room", room);
 //        model.addAttribute("center","randomChatRoom1");
-        return "randomChatRoom1";
+        return dir+"randomChatRoom1";
     }
 
     // 채팅방 비밀번호 확인
