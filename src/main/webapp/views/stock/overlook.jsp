@@ -9,66 +9,150 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 <!-- 현재 페이지 스크립트 정의 -->
-<%--<script src="assets/js/stock/overlook.js"></script>--%>
+
 
 <script>
 
-    // # AES256 DECODE
-    // def aes_cbc_base64_dec(key, iv, cipher_text):
-    // """
-    // :param key:  str type AES256 secret key value
-    //     :param iv: str type AES256 Initialize Vector
-    //     :param cipher_text: Base64 encoded AES256 str
-    //     :return: Base64-AES256 decodec str
-    // """
-    // cipher = AES.new(key.encode('utf-8'), AES.MODE_CBC, iv.encode('utf-8'))
-    // return bytes.decode(unpad(cipher.decrypt(b64decode(cipher_text)), AES.block_size))
-    //
-    //
-    // # 웹소켓 접속키 발급
-    // def get_approval(key, secret):
-    // # url = https://openapivts.koreainvestment.com:29443' # 모의투자계좌
-    // url = 'https://openapi.koreainvestment.com:9443' # 실전투자계좌
-    // headers = {"content-type": "application/json"}
-    // body = {"grant_type": "client_credentials",
-    //     "appkey": key,
-    //     "secretkey": secret}
-    // PATH = "oauth2/Approval"
-    // URL = f"{url}/{PATH}"
-    // res = requests.post(URL, headers=headers, data=json.dumps(body))
-    // approval_key = res.json()["approval_key"]
-    // return approval_key
 
-    $(()=>{
-        stock.init();
-    });
 
-    const stockWebApprovalURI = 'https://openapi.koreainvestment.com:9443/oauth2/Approval';
-    const key =
+    //@작성자 : 최준혁
+    //@작성일 : 2023-09-10
+    //@라우터 : /stock
+    //@적용 : overlook.jsp
+    //@desc : document load 시 사전에 정의된 uri로 업비트 웹소켓 적용
 
-    const stock = {
-        init: (key, secret) => {
+    //https://api.upbit.com/v1/market/all -> 티커 조회
 
-            $.ajax({
-                url: stockWebApprovalURI,
-                data: {
+    function websocketConnect(i) {
+        const socketURI = "wss://api.upbit.com/websocket/v1"; // WebSocket 엔드포인트 URI
+        const coinArray = [ 'KRW-BTC', "KRW-ETH", "KRW-DOGE", "KRW-ADA" ]; //webSocket 송신시 들어갈 파라미터값 상수정의
+
+        const socketMap = new Map();
+        for(j=0; j <i ; j++){
+            socketMap.set(`socket`+j , coinArray[j]);
+        };
+        // 확인완료(090923-최준혁)
+        // console.log('socketMap을 담을 그릇을 확인 ==================');
+        console.log(socketMap);
+
+        socketMap.forEach((v, k)=>{
+            // 확인완료(090924-최준혁)
+            // console.log('value 값' + v);
+            // console.log('key 값' + k);
+            // console.log(typeof(k)); //string
+            let socketHtml = `socket_msg` + k.substring(6,7);
+            // console.log(socketHtml);
+
+            // WebSocket 생성
+            k = new WebSocket(socketURI);
+            // WebSocket 이벤트 핸들러 정의
+            k.onopen = (event)=>{
+                console.log("WebSocket opened");
+                // 서버로 메시지 전송 예시
+                // https://docs.upbit.com/reference/test-and-request-sample
+                let message = JSON.stringify([{"ticket":"test"},{"type":"ticker","codes": [v]}]);
+                //console.log(k + `k의 메세지 검증`);
+                //console.log(message);
+                k.send(message);
+            };
+            //Html에 렌더링할 소켓 메세지
+            k.onmessage = (event)=>{
+                let reader = new FileReader();
+                reader.onload = function() {
+                    //console.log("Received message: ", reader.result);
+                    // let key = "trade_price";
+                    let jsonString = reader.result; // 문자열 값
+                    let json = JSON.parse(jsonString); // JSON 형식으로 변환된 객체
+                    let trade_price = Number(json["trade_price"]); // 숫자로 변환
+                    let formatted_trade_price = trade_price.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });
+                    $(`#`+ socketHtml).text(formatted_trade_price);
+                };
+                reader.readAsText(event.data);
+                // $('#bitcoin').text(json["trade_price"]);
+            };
+            // 소켓 Close 이벤트 핸들러
+            k.onclose = (event)=>{
+                console.log("WebSocket closed");
+            };
+            // 소켓 이벤트 에러 핸들러
+            k.onerror = (event)=>{
+                console.error("WebSocket error:", error);
+            }
+        });
+
+    };
+
+
+
+    function websocketDisconnect() {
+        if (socket) {
+            socket.close();
+            console.log("WebSocket disconnected");
+        }
+    }
+
+
+    const stockApi = {
+
+        //(1) websocket
+        init : ()=>{
+            let stockWebApprovalURI = 'https://openapi.koreainvestment.com:9443/oauth2/Approval';
+
+           /* $.ajax({
+                url : stockWebApprovalURI,
+                data : {
                     "grant_type": "client_credentials",
                     "appkey": key,
                     "secretkey": secret
                 },
-                method: POST,
-                headers: {"content-type": "application/json"}
-            }).done((res) => {
+                method : POST,
+                headers : {"content-type": "application/json"}
+            }).done((res)=>{
                 console.log('200');
                 res.toString();
                 JSON.parse(res);
-            }).fail((res) => {
+            }).fail((res)=>{
                 console.log('400');
                 res.toString();
+            })*/
+
+        },
+        //(2) code를 통한 price 검색
+        searchPrice : (codes)=>{
+            $.ajax({
+                url : '/stock/price',
+                data : {
+                    'function' : 'TIME_SERIES_DAILY',
+                'stockCodes' : codes
+                }
+            }).done((data)=>{
+                let parsedData = data.replace(/\n/gi, '\\n');
+                console.log(parsedData);
+            }).fail(()=>{
+
+            })
+        },
+        //(3) codes 검색
+        searchCodes : (keywords)=>{
+            $.ajax({
+                url : '/stock/codes',
+                data : {'keywords' : keywords}
+            }).done((data)=>{
+                console.log(data.toString());
+            }).fail(()=>{
+
             })
         }
+
     }
 
+
+    $(()=>{
+        stockApi.init();
+        websocketConnect(4); //websocket 4개 활성화
+        stockApi.searchPrice('tsla');
+        //debugger; //디버깅
+    });
 
 </script>
 
