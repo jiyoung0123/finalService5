@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link href="assets/images/favicon.png" rel="icon" type="image/png">
+    <link href="/assets/images/favicon.png" rel="icon" type="image/png">
 
     <!-- Basic Page Needs
         ================================================== -->
@@ -21,13 +21,14 @@
 
     <!-- icons
     ================================================== -->
-    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="/assets/css/icons.css">
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="assets/css/uikit.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/uikit.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 
 
 </head>
@@ -48,8 +49,8 @@
 
                     <div id="logo">
                         <a href="/feed">
-                            <img src="/assets/images/logo.png" alt="">
-                            <img src="/assets/images/logo-mobile.png" class="logo_mobile" alt="">
+                            <img src="//assets/images/logo.png" alt="">
+                            <img src="//assets/images/logo-mobile.png" class="logo_mobile" alt="">
                         </a>
                     </div>
                 </div>
@@ -64,31 +65,31 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="list-avatar">
+                                    <img src="/assets/images/avatars/avatar-1.jpg" alt="" class="list-avatar">
                                     <div class="list-name">  Erica Jones </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="list-avatar">
+                                    <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="list-avatar">
                                     <div class="list-name">  Coffee  Addicts </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="list-avatar">
+                                    <img src="/assets/images/avatars/avatar-3.jpg" alt="" class="list-avatar">
                                     <div class="list-name"> Mountain Riders </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/avatars/avatar-4.jpg" alt="" class="list-avatar">
+                                    <img src="/assets/images/avatars/avatar-4.jpg" alt="" class="list-avatar">
                                     <div class="list-name"> Property Rent And Sale  </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="assets/images/avatars/avatar-5.jpg" alt="" class="list-avatar">
+                                    <img src="/assets/images/avatars/avatar-5.jpg" alt="" class="list-avatar">
                                     <div class="list-name">  Erica Jones </div>
                                 </a>
                             </li>
@@ -114,7 +115,7 @@
                             <ul class="dropdown_cart_scrollbar" data-simplebar>
                                 <li>
                                     <div class="cart_avatar">
-                                        <img src="assets/images/product/2.jpg" alt="">
+                                        <img src="/assets/images/product/2.jpg" alt="">
                                     </div>
                                     <div class="cart_text">
                                         <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wireless headphones </div>
@@ -127,7 +128,7 @@
                                 </li>
                                 <li>
                                     <div class="cart_avatar">
-                                        <img src="assets/images/product/13.jpg" alt="">
+                                        <img src="/assets/images/product/13.jpg" alt="">
                                     </div>
                                     <div class="cart_text">
                                         <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Parfum Spray</div>
@@ -140,7 +141,7 @@
                                 </li>
                                 <li>
                                     <div class="cart_avatar">
-                                        <img src="assets/images/product/15.jpg" alt="">
+                                        <img src="/assets/images/product/15.jpg" alt="">
                                     </div>
                                     <div class="cart_text">
                                         <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Herbal Shampoo </div>
@@ -153,7 +154,7 @@
                                 </li>
                                 <li>
                                     <div class="cart_avatar">
-                                        <img src="assets/images/product/14.jpg" alt="">
+                                        <img src="/assets/images/product/14.jpg" alt="">
                                     </div>
                                     <div class="cart_text">
                                         <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wood Chair </div>
@@ -166,7 +167,7 @@
                                 </li>
                                 <li>
                                     <div class="cart_avatar">
-                                        <img src="assets/images/product/9.jpg" alt="">
+                                        <img src="/assets/images/product/9.jpg" alt="">
                                     </div>
                                     <div class="cart_text">
                                         <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Strawberries FreshRipe </div>
@@ -179,7 +180,7 @@
                                 </li>
                                 <li>
                                     <div class="cart_avatar">
-                                        <img src="assets/images/product/2.jpg" alt="">
+                                        <img src="/assets/images/product/2.jpg" alt="">
                                     </div>
                                     <div class="cart_text">
                                         <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wireless headphones </div>
@@ -192,7 +193,7 @@
                                 </li>
                                 <li>
                                     <div class="cart_avatar">
-                                        <img src="assets/images/product/13.jpg" alt="">
+                                        <img src="/assets/images/product/13.jpg" alt="">
                                     </div>
                                     <div class="cart_text">
                                         <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Parfum Spray</div>
@@ -232,7 +233,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="drop_avatar">
-                                                <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                                                <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
                                                      <i class="icon-feather-thumbs-up"></i>
@@ -248,7 +249,7 @@
                                     </li>
                                     <li class="not-read">
                                         <a href="#">
-                                            <div class="drop_avatar status-online"> <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar status-online"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
@@ -261,7 +262,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-3.jpg" alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
                                                     <i class="icon-feather-thumbs-up"></i>
@@ -277,7 +278,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
@@ -290,7 +291,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
                                                     <i class="icon-feather-thumbs-up"></i>
@@ -306,7 +307,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar status-online"> <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar status-online"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
@@ -319,7 +320,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
@@ -332,7 +333,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
@@ -345,7 +346,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
@@ -358,7 +359,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
@@ -371,7 +372,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
@@ -408,7 +409,7 @@
                                 <ul>
                                     <li class="un-read">
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-7.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-7.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> Stella Johnson </strong> <time>12:43 PM</time>
@@ -418,7 +419,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> Adrian Mohani </strong> <time> 6:43 PM</time>
@@ -428,7 +429,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-6.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-6.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong>Alia Dolgove </strong> <time> Wed </time>
@@ -438,7 +439,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-5.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> Jonathan Madano </strong> <time> Sun</time>
@@ -448,7 +449,7 @@
                                     </li>
                                     <li class="un-read">
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> Stella Johnson </strong> <time>12:43 PM</time>
@@ -458,7 +459,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> Adrian Mohani </strong> <time> 6:43 PM</time>
@@ -468,7 +469,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong>Alia Dolgove </strong> <time> Wed </time>
@@ -478,7 +479,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="assets/images/avatars/avatar-4.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-4.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> Jonathan Madano </strong> <time> Sun</time>
@@ -493,13 +494,13 @@
 
 
                         <a href="#">
-                            <img src="assets/images/avatars/avatar-2.jpg" class="is_avatar" alt="">
+                            <img src="/assets/images/avatars/avatar-2.jpg" class="is_avatar" alt="">
                         </a>
                         <div uk-drop="mode: click;offset:5" class="header_dropdown profile_dropdown">
 
                             <a href="timeline.html" class="user">
                                 <div class="user_avatar">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                                    <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                                 </div>
                                 <div class="user_name">
                                     <div> Stella Johnson </div>
@@ -662,27 +663,27 @@
 
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                         <span class="user_status status_online"></span>
                     </div>
                     <div class="contact-username"> Dennis Han</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                         <span class="user_status"></span>
                     </div>
                     <div class="contact-username"> Erica Jones</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-7.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-7.jpg" alt="">
                     </div>
                     <div class="contact-username">Stella Johnson</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-4.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-4.jpg" alt="">
                     </div>
                     <div class="contact-username"> Alex Dolgove</div>
                 </a>
@@ -774,7 +775,7 @@
             <div class="sm:space-y-8 space-y-6 pb-2">
 
                 <div class="flex items-center sm:space-x-6 space-x-3">
-                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="sm:w-16 sm:h-16 w-14 h-14 rounded-full">
+                    <img src="/assets/images/avatars/avatar-3.jpg" alt="" class="sm:w-16 sm:h-16 w-14 h-14 rounded-full">
                     <div class="flex-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="text-base font-semibold"> <a href="#">  Alex Dolgove </a> </div>
@@ -787,7 +788,7 @@
                     </div>
                 </div>
                 <div class="flex items-center sm:space-x-6 space-x-3">
-                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="sm:w-16 sm:h-16 w-14 h-14 rounded-full">
+                    <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="sm:w-16 sm:h-16 w-14 h-14 rounded-full">
                     <div class="flex-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="text-base font-semibold"> <a href="#"> Stella Johnson </a> </div>
@@ -809,7 +810,7 @@
             <div class="mt-5 sm:space-y-8 space-y-6" id="upcoming" hidden>
 
                 <div class="flex items-center sm:space-x-6 space-x-3">
-                    <img src="assets/images/avatars/avatar-6.jpg" alt="" class="sm:w-16 sm:h-16 w-14 h-14 rounded-full">
+                    <img src="/assets/images/avatars/avatar-6.jpg" alt="" class="sm:w-16 sm:h-16 w-14 h-14 rounded-full">
                     <div class="flex-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="text-base font-semibold"> <a href="#">  Erica Jones </a> </div>
@@ -822,7 +823,7 @@
                     </div>
                 </div>
                 <div class="flex items-center sm:space-x-6 space-x-3">
-                    <img src="assets/images/avatars/avatar-5.jpg" alt="" class="sm:w-16 sm:h-16 w-14 h-14 rounded-full">
+                    <img src="/assets/images/avatars/avatar-5.jpg" alt="" class="sm:w-16 sm:h-16 w-14 h-14 rounded-full">
                     <div class="flex-1">
                         <div class="flex items-center justify-between mb-3">
                             <div class="text-base font-semibold"> <a href="#"> Dennis Han </a> </div>
@@ -919,53 +920,53 @@
             <div class="p-1">
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-7.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-7.jpg" alt="">
                     </div>
                     <div class="contact-username"> Alex Dolgove</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-8.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-8.jpg" alt="">
                         <span class="user_status status_online"></span>
                     </div>
                     <div class="contact-username"> Dennis Han</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                         <span class="user_status"></span>
                     </div>
                     <div class="contact-username"> Erica Jones</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-3.jpg" alt="">
                     </div>
                     <div class="contact-username">Stella Johnson</div>
                 </a>
 
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-5.jpg" alt="">
                     </div>
                     <div class="contact-username">Adrian Mohani </div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-6.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-6.jpg" alt="">
                     </div>
                     <div class="contact-username"> Jonathan Madano</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                         <span class="user_status"></span>
                     </div>
                     <div class="contact-username"> Erica Jones</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                         <span class="user_status status_online"></span>
                     </div>
                     <div class="contact-username"> Dennis Han</div>
@@ -976,53 +977,53 @@
             <div class="p-1">
                 <a href="chats-group.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-7.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-7.jpg" alt="">
                     </div>
                     <div class="contact-username"> Alex Dolgove</div>
                 </a>
                 <a href="chats-group.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-8.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-8.jpg" alt="">
                         <span class="user_status status_online"></span>
                     </div>
                     <div class="contact-username"> Dennis Han</div>
                 </a>
                 <a href="chats-group.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                         <span class="user_status"></span>
                     </div>
                     <div class="contact-username"> Erica Jones</div>
                 </a>
                 <a href="chats-group.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-3.jpg" alt="">
                     </div>
                     <div class="contact-username">Stella Johnson</div>
                 </a>
 
                 <a href="chats-group.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-5.jpg" alt="">
                     </div>
                     <div class="contact-username">Adrian Mohani </div>
                 </a>
                 <a href="chats-group.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-6.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-6.jpg" alt="">
                     </div>
                     <div class="contact-username"> Jonathan Madano</div>
                 </a>
                 <a href="chats-group.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                         <span class="user_status"></span>
                     </div>
                     <div class="contact-username"> Erica Jones</div>
                 </a>
                 <a href="chats-group.html">
                     <div class="contact-avatar">
-                        <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                         <span class="user_status status_online"></span>
                     </div>
                     <div class="contact-username"> Dennis Han</div>
@@ -1065,7 +1066,7 @@
 
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username"> Dennis Han</div>
@@ -1074,7 +1075,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username"> Adrian Mohani</div>
@@ -1083,7 +1084,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-3.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username">Alex Dolgove </div>
@@ -1092,7 +1093,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-4.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-4.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username"> Stella Johnson </div>
@@ -1101,7 +1102,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-5.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username"> Adrian Mohani </div>
@@ -1110,7 +1111,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-8.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-8.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username"> Dennis Han</div>
@@ -1119,7 +1120,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-6.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-6.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username"> Adrian Mohani</div>
@@ -1128,7 +1129,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-7.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-7.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username">Alex Dolgove </div>
@@ -1137,7 +1138,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-8.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-8.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username"> Stella Johnson </div>
@@ -1146,7 +1147,7 @@
                 </a>
                 <a href="#">
                     <div class="story-media">
-                        <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                        <img src="/assets/images/avatars/avatar-5.jpg" alt="">
                     </div>
                     <div class="story-text">
                         <div class="story-username"> Adrian Mohani </div>
@@ -1170,8 +1171,8 @@
                 <span uk-switcher-item="next" class="slider-icon is-right"> </span>
 
                 <div uk-lightbox>
-                    <a href="assets/images/avatars/avatar-lg-2.jpg" data-alt="Image">
-                        <img src="assets/images/avatars/avatar-lg-2.jpg" class="story-slider-image"  data-alt="Image">
+                    <a href="/assets/images/avatars/avatar-lg-2.jpg" data-alt="Image">
+                        <img src="/assets/images/avatars/avatar-lg-2.jpg" class="story-slider-image"  data-alt="Image">
                     </a>
                 </div>
 
@@ -1182,8 +1183,8 @@
                 <span uk-switcher-item="next" class="slider-icon is-right"> </span>
 
                 <div uk-lightbox>
-                    <a href="assets/images/avatars/avatar-lg-1.jpg" data-alt="Image">
-                        <img src="assets/images/avatars/avatar-lg-1.jpg" class="story-slider-image"  data-alt="Image">
+                    <a href="/assets/images/avatars/avatar-lg-1.jpg" data-alt="Image">
+                        <img src="/assets/images/avatars/avatar-lg-1.jpg" class="story-slider-image"  data-alt="Image">
                     </a>
                 </div>
 
@@ -1194,8 +1195,8 @@
                 <span uk-switcher-item="next" class="slider-icon is-right"> </span>
 
                 <div uk-lightbox>
-                    <a href="assets/images/avatars/avatar-lg-4.jpg" data-alt="Image">
-                        <img src="assets/images/avatars/avatar-lg-4.jpg" class="story-slider-image"  data-alt="Image">
+                    <a href="/assets/images/avatars/avatar-lg-4.jpg" data-alt="Image">
+                        <img src="/assets/images/avatars/avatar-lg-4.jpg" class="story-slider-image"  data-alt="Image">
                     </a>
                 </div>
 
@@ -1248,7 +1249,7 @@
             <button class="uk-modal-close-default bg-gray-100 rounded-full p-2.5 right-2" type="button" uk-close uk-tooltip="title: Close ; pos: bottom ;offset:7"></button>
         </div>
         <div class="flex flex-1 items-start space-x-4 p-5">
-            <img src="assets/images/avatars/avatar-2.jpg"
+            <img src="/assets/images/avatars/avatar-2.jpg"
                  class="bg-gray-200 border border-white rounded-full w-11 h-11">
             <div class="flex-1 pt-2">
                     <textarea class="uk-textare text-black shadow-none focus:shadow-none text-xl font-medium resize-none" rows="5"
@@ -1338,12 +1339,14 @@
 <!-- Javascript
 ================================================== -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="assets/js/tippy.all.min.js"></script>
-<script src="assets/js/uikit.js"></script>
-<script src="assets/js/simplebar.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="/assets/js/tippy.all.min.js"></script>
+<script src="/assets/js/uikit.js"></script>
+<script src="/assets/js/simplebar.js"></script>
+<script src="/assets/js/custom.js"></script>
+<script src="/assets/js/bootstrap-select.min.js"></script>
 <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+
 
 </body>
 </html>

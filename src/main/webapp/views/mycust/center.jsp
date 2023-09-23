@@ -26,7 +26,7 @@
                         <ul class="card divide-y divide-gray-100 sm:m-0 -mx-5">
                             <li>
                                 <div class="flex items-start space-x-5 p-7">
-                                     <img src="assets/images/starfriends/proflie1.jpg" alt="" class="w-12 h-12 rounded-full">
+                                     <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1">나비비  </a>
                                         <p class="text-sm text-gray-400 mb-2"> 관리한 지 1일 전 </p>
@@ -55,7 +55,7 @@
                             </li>
                             <li>
                                 <div class="flex items-start space-x-5 p-7">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <img src="/assets/images/avatars/avatar-3.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                       <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> Messing around with it, one use I found is by overriding </a>
                                   <p class="text-sm text-gray-400 mb-2"> Posted By: <span data-href="%40tag-dev.html">Tag-dev</span> 8 hours ago</span> </p>
@@ -69,7 +69,7 @@
                             </li>
                             <li>
                                 <div class="flex items-start space-x-5 p-7">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> Stuck on Please wait for hosting to be configured  </a>
                                         <p class="text-sm text-gray-400 mb-2"> Posted By: <span data-href="%40tag-dev.html">Tag-dev</span> 8 hours ago</span> </p>
@@ -87,7 +87,7 @@
                         <ul class="card divide-y divide-gray-100">
                             <li>
                                 <div class="flex items-center space-x-5 p-7">
-                                    <img src="assets/images/starfriends/proflie1.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1">  한국투자 미국 배당귀족 증권자투자신탁H(주식) A-e </a>
                                         <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium"> 
@@ -97,16 +97,16 @@
                                         </div>
                                     </div>
                                     <div class="sm:flex items-center -space-x-4 hidden">
-                                        <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
-                                        <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
-                                        <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
+                                        <img src="/assets/images/avatars/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
+                                        <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
+                                        <img src="/assets/images/avatars/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-red-100 text-red-500 font-semibold"> 12+</div>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="flex items-center space-x-5 p-7">
-                                    <img src="assets/images/starfriends/proflie4.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <img src="/assets/images/starfriends/proflie4.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1"> 베어링 고배당 증권자투자신탁(주식) AE  </a>
                                         <div class="flex space-x-3 text-sm pb-2 flex-wrap"> 
@@ -116,16 +116,16 @@
                                         </div>
                                     </div>
                                     <div class="sm:flex items-center -space-x-4 hidden">
-                                        <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
-                                        <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
-                                        <img src="assets/images/avatars/avatar-4.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
+                                        <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
+                                        <img src="/assets/images/avatars/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
+                                        <img src="/assets/images/avatars/avatar-4.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-green-100 text-green-500 font-semibold"> 12+</div>
                                     </div>
                                 </div>
                             </li> 
                             <li>
                                 <div class="flex items-center space-x-5 p-7">
-                                    <img src="assets/images/starfriends/proflie5.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <img src="/assets/images/starfriends/proflie5.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1"> KB PIMCO 글로벌 인컴 셀렉션 증권자투자신탁(채권-재간접형)(H) AE  </a>
                                         <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium"> 
@@ -135,15 +135,15 @@
                                         </div>
                                     </div>
                                     <div class="sm:flex items-center -space-x-4 hidden">
-                                        <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
-                                        <img src="assets/images/avatars/avatar-4.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Steven Jesse">
+                                        <img src="/assets/images/avatars/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
+                                        <img src="/assets/images/avatars/avatar-4.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Steven Jesse">
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-red-100 text-red-500 font-semibold"> 24+</div>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="flex items-center space-x-5 p-7">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-12 h-12 rounded-full">
+                                    <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1"> Messing around with it, one use I found is by overriding  </a>
                                         <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium"> 
@@ -153,9 +153,9 @@
                                         </div>
                                     </div>
                                     <div class="sm:flex items-center -space-x-4 hidden">
-                                        <img src="assets/images/avatars/avatar-5.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white hover:z-10" data-tippy-placement="top" title="Adrian Mohani">
-                                        <img src="assets/images/avatars/avatar-6.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
-                                        <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
+                                        <img src="/assets/images/avatars/avatar-5.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white hover:z-10" data-tippy-placement="top" title="Adrian Mohani">
+                                        <img src="/assets/images/avatars/avatar-6.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
+                                        <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-green-100 text-green-500 font-semibold"> 18+</div>
                                     </div>
                                 </div>
@@ -178,7 +178,7 @@
                                         <div class="bg-blue-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
-	                                            <img src="assets/images/starfriends/proflie3.jpg" alt="" class="w-8 h-8 rounded-full">
+	                                            <img src="/assets/images/starfriends/proflie3.jpg" alt="" class="w-8 h-8 rounded-full">
 	                                       		<a href="#" class="font-semibold"> 나껑충 </a>
 	                                       		<div class="flex items-center space-x-2">
                                             		<span> 4시간 전 </span>
@@ -195,7 +195,7 @@
                                         <div class="bg-green-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
-	                                            <img src="assets/images/starfriends/proflie2.jpg" alt="" class="w-8 h-8 rounded-full">
+	                                            <img src="/assets/images/starfriends/proflie2.jpg" alt="" class="w-8 h-8 rounded-full">
 	                                       		<a href="#" class="font-semibold"> 차아거 </a>
 	                                       		<div class="flex items-center space-x-2">
                                             		<span> 6시간 전 </span>
@@ -212,7 +212,7 @@
                                         <div class="bg-pink-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
-	                                            <img src="assets/images/starfriends/proflie5.jpg" alt="" class="w-8 h-8 rounded-full">
+	                                            <img src="/assets/images/starfriends/proflie5.jpg" alt="" class="w-8 h-8 rounded-full">
 	                                       		<a href="#" class="font-semibold"> 모라무 </a>
 	                                       		<div class="flex items-center space-x-2">
                                             		<span> 8시간 전 </span>
@@ -229,7 +229,7 @@
                                         <div class="bg-blue-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
-	                                            <img src="assets/images/starfriends/proflie1.jpg" alt="" class="w-8 h-8 rounded-full">
+	                                            <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="w-8 h-8 rounded-full">
 	                                       		<a href="#" class="font-semibold"> 나비비 </a>
 	                                       		<div class="flex items-center space-x-2">
                                             		<span> 10시간 전 </span>
@@ -247,7 +247,7 @@
                                         <div class="bg-yellow-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
-	                                            <img src="assets/images/starfriends/proflie3.jpg" alt="" class="w-8 h-8 rounded-full">
+	                                            <img src="/assets/images/starfriends/proflie3.jpg" alt="" class="w-8 h-8 rounded-full">
 	                                       		<a href="#" class="font-semibold"> 나껑충 </a>
 	                                       		<div class="flex items-center space-x-2">
                                             		<span> 2일 전 </span>
@@ -354,53 +354,53 @@
                 <div class="p-1">
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-7.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-7.jpg" alt="">
                         </div>
                         <div class="contact-username"> Alex Dolgove</div>
                     </a>
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-8.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-8.jpg" alt="">
                             <span class="user_status status_online"></span>
                         </div>
                         <div class="contact-username"> Dennis Han</div>
                     </a>
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                             <span class="user_status"></span>
                         </div>
                         <div class="contact-username"> Erica Jones</div>
                     </a>
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-3.jpg" alt="">
                         </div>
                         <div class="contact-username">Stella Johnson</div>
                     </a>
                     
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-5.jpg" alt="">
                         </div>
                         <div class="contact-username">Adrian Mohani </div>
                     </a>
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-6.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-6.jpg" alt="">
                         </div>
                         <div class="contact-username"> Jonathan Madano</div>
                     </a>
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                             <span class="user_status"></span>
                         </div>
                         <div class="contact-username"> Erica Jones</div>
                     </a>
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                             <span class="user_status status_online"></span>
                         </div>
                         <div class="contact-username"> Dennis Han</div>
@@ -411,53 +411,53 @@
                <div class="p-1">
                     <a href="chats-group.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-7.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-7.jpg" alt="">
                         </div>
                         <div class="contact-username"> Alex Dolgove</div>
                     </a>
                     <a href="chats-group.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-8.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-8.jpg" alt="">
                             <span class="user_status status_online"></span>
                         </div>
                         <div class="contact-username"> Dennis Han</div>
                     </a>
                     <a href="chats-group.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                             <span class="user_status"></span>
                         </div>
                         <div class="contact-username"> Erica Jones</div>
                     </a>
                     <a href="chats-group.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-3.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-3.jpg" alt="">
                         </div>
                         <div class="contact-username">Stella Johnson</div>
                     </a>
                     
                     <a href="chats-group.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-5.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-5.jpg" alt="">
                         </div>
                         <div class="contact-username">Adrian Mohani </div>
                     </a>
                     <a href="chats-group.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-6.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-6.jpg" alt="">
                         </div>
                         <div class="contact-username"> Jonathan Madano</div>
                     </a>
                     <a href="chats-group.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-2.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-2.jpg" alt="">
                             <span class="user_status"></span>
                         </div>
                         <div class="contact-username"> Erica Jones</div>
                     </a>
                     <a href="chats-group.html">
                         <div class="contact-avatar">
-                            <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                            <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                             <span class="user_status status_online"></span>
                         </div>
                         <div class="contact-username"> Dennis Han</div>
