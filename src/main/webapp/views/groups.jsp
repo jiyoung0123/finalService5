@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+<script src="path/to/jquery.min.js"></script>
+<script src="path/to/moment.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://kit.fontawesome.com/5f198f7eda.js" crossorigin="anonymous"></script>
 
 
 <style>
@@ -237,7 +247,7 @@
             <form method="post" action="/chat/createroom" onsubmit="return createRoom()">
               <div class="modal-body">
                 <div class="mb-3">
-                  <input type="hidden" name="createUserId" value="${loginGuest.guestId}">
+                  <input type="hidden" name="createUserId" value="taebin100@hanmail.net">
                   <label for="roomName" class="col-form-label">방 이름</label>
                   <input type="text" class="form-control" id="roomName" name="roomName">
                 </div>
@@ -261,10 +271,11 @@
                     <!--<input class="form-check-input" type="checkbox" id="maxChk">--></label>
                   <input type="text" class="form-control" id="maxUserCnt" name="maxUserCnt">
                 </div>
+
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="secret">
-                  <input type="hidden" name="secretChk" id="secretChk" value="">
-                  <label class="form-check-label" for="secret">
+                  <input class="form-check-input" type="checkbox" id="secretChk" name="secretChk" value="true">
+                  <input type="hidden" name="secretChk" value="false">
+                  <label class="form-check-label" >
                     채팅방 잠금
                   </label>
                 </div>
@@ -282,43 +293,73 @@
 
         <div class="uk-slider-container px-1 py-3">
           <ul class="uk-slider-items uk-child-width-1-4@m uk-child-width-1-3@s uk-grid-small uk-grid">
+            <c:forEach var="room" items="${list}">
 
             <li>
               <div class="card">
                 <div class="card-media h-28">
                   <div class="card-media-overly"></div>
                   <img src="assets/images/group/group-cover-1.jpg" alt="" class="">
+                  <c:if test="${room.secretChk}">
+                    <div class="absolute bg-red-100 font-semibold px-2.5 py-1 rounded-lg text-red-500 text-xs top-2.5 left-2.5">잠금🔒︎</div>
+                  </c:if>
 
-                  <div class="absolute bg-red-100 font-semibold px-2.5 py-1 rounded-lg text-red-500 text-xs top-2.5 left-2.5">Hot</div>
                 </div>
+
                 <div class="card-body">
-                  <a href="timeline-group.html" class="font-semibold text-lg truncate">방제목</a>
+                  <span class="hidden" id="${room.roomName}"></span>
+                  <c:if test="${room.secretChk}">
+                  <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" class="font-semibold text-lg truncate" data-id="${room.roomId}">${room.roomName}</a>
+                  </c:if>
+
+                  <c:if test="${not room.secretChk}">
+                    <a href="/chat/room?roomId=${room.roomId}" roomId="${room.roomId}"  class="font-semibold text-lg truncate" roomId="${room.roomId}" onclick="return chkRoomUserCnt(this.getAttribute('roomId'));">${room.roomName}</a>
+                  </c:if>
+
                   <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
-                    <a href="#"> <span>입장인원0명</span> </a>
-                    <a href="#"> <span>개설일</span> </a>
+                    <a href="#"> <span>주제 : ${room.roomLoc}</span> </a>
+                  </div>
+
+                  <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
+                    <a href="#">
+                      <span>
+                          <fmt:formatDate value="${room.createDate}" pattern="yyyy년 MMM dd일"/>
+
+                      </span> </a>
                   </div>
                   <div class="flex mt-3.5 space-x-2">
-                    <div class="flex items-center -space-x-2 -mt-1">
+                    <%--<div class="flex items-center -space-x-2 -mt-1">
                       <img alt="Image placeholder" src="assets/images/avatars/avatar-6.jpg" class="border-2 border-white rounded-full w-7">
                       <img alt="Image placeholder" src="assets/images/avatars/avatar-5.jpg" class="border-2 border-white rounded-full w-7">
-                    </div>
+                    </div>--%>
                     <div class="flex-1 leading-5 text-sm">
-                      <div> <strong>Johnson</strong> and 5 freind are members </div>
+                      <div> <strong>${room.userCount}명 참여중</strong> /${room.maxUserCnt}명</div>
                     </div>
                   </div>
 
                   <div class="flex mt-3.5 space-x-2 text-sm font-medium">
-                    <a href="#" class="bg-blue-600 flex flex-1 h-8 items-center justify-center rounded-md text-white capitalize">
+                    <c:if test="${room.secretChk}">
+                    <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" data-id="${room.roomId}" class="bg-blue-600 flex flex-1 h-8 items-center justify-center rounded-md text-white capitalize">
                       입장
                     </a>
+                    </c:if>
+
+                    <c:if test="${not room.secretChk}">
+                      <a href="/chat/room?roomId=${room.roomId}" roomId="${room.roomId}"  class="bg-blue-600 flex flex-1 h-8 items-center justify-center rounded-md text-white capitalize" roomId="${room.roomId}" onclick="return chkRoomUserCnt(this.getAttribute('roomId'));">입장</a>
+                    </c:if>
                     <a href="#" class="bg-gray-200 flex flex-1 h-8 items-center justify-center rounded-md capitalize">
-                      View
+                      방 설정
                     </a>
+
                   </div>
 
                 </div>
+
+
               </div>
             </li>
+
+            </c:forEach>
 
 
 
@@ -764,6 +805,98 @@
 
     </div>
   </div>
+
+<div class="modal fade" id="enterRoomModal" tabindex="-1" aria-labelledby="enterRoomModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">채팅방 비밀번호를 입력해주세요</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="roomName" class="col-form-label">방 비밀번호</label>
+          <div class="input-group">
+            <input type="password" name="roomPwd" id="enterPwd" class="form-control" data-toggle="password">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fa fa-eye"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="enterRoom()">입장하기</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="confirmPwdModal" aria-hidden="true" aria-labelledby="ModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">채팅방 설정을 위한 패스워드 확인</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label for="confirmPwd" class="col-form-label" id="confirmLabel">비밀번호 확인</label>
+        <div class="input-group">
+          <input type="password" name="confirmPwd" id="confirmPwd" class="form-control" data-toggle="password">
+          <div class="input-group-append">
+            <span class="input-group-text"><i class="fa fa-eye"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="configRoomBtn" class="btn btn-primary disabled" data-bs-target="#configRoomModal" data-bs-toggle="modal" aria-disabled="true">채팅방 설정하기</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="configRoomModal" tabindex="-1" aria-labelledby="roomModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">채팅방 설정</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="chRoomPwd" class="col-form-label">비밀번호 변경</label>
+          <div class="input-group">
+            <input type="password" name="chRoomPwd" id="chRoomPwd" class="form-control" data-toggle="password">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fa fa-eye"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="chRoomName" class="col-form-label">채팅방 이름 변경</label>
+          <input type="text" class="form-control" id="chRoomName" name="chRoomName">
+        </div>
+        <div class="mb-3">
+          <label for="chUserCount" class="col-form-label">채팅방 인원 변경</label>
+          <input type="text" class="form-control" id="chUserCount" name="chUserCount">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="chSecret">
+          <input type="hidden" name="secretChk" id="chSecretChk" value="">
+          <label class="form-check-label" for="secret">
+            채팅방 잠금
+          </label>
+        </div>
+        <br>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="delRoom()">방 삭제</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="editBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="editRoom()">변경하기</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"

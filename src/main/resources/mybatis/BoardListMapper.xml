@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kbstar.mapper.BoardListMapper">
+
+    <!-- 게시판아이디로 조회 -->
+<select id="selectall" resultType="BoardList">
+    SELECT * FROM boardlist
+</select>
+    <!-- 좋아요 수 상위 5개 표출 selectall-->
+<select id="popularSelect" parameterType="Integer" resultType="BoardList">
+    SELECT * FROM BoardList
+    WHERE boardID = #{boardID}
+    ORDER BY BoardLikes DESC
+    LIMIT 5
+</select>
+    <!-- 최신글 5개 표출 -->
+<select id="latestSelect" parameterType="Integer" resultType="BoardList">
+    SELECT * FROM BoardList
+    WHERE boardID = #{boardID}
+    ORDER BY STR_TO_DATE(boardDates, '%Y-%m-%d %H:%i:%s') DESC
+        LIMIT 5git reflog
+</select>
+    <!-- 글쓰기 -->
+<insert id="insertBoard" parameterType="BoardList">
+    INSERT INTO BoardList (
+        boardID,
+        boardWriterId,
+        boardPW,
+        boardTitle,
+        boardCategory,
+        boardContents,
+        hashtag,
+        boardImg,
+        boardImgname,
+        boardImagePath,
+        boardLikes,
+        boardHates,
+        boardDate
+    )
+    VALUES (
+               #{boardID},
+               #{boardWriterId},
+               #{boardPW},
+               #{boardTitle},
+               #{boardCategory},
+               #{boardContents},
+               #{hashtag},
+               #{boardImg},
+               #{boardImgname},
+               #{boardImagePath},
+               #{boardLikes},
+               #{boardHates},
+               #{boardDate}
+           )
+</insert>
+
+</mapper>

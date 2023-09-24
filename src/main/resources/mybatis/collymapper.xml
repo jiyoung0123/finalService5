@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kbstar.mapper.CollyFarmMapper">
+
+    <select id="select" parameterType="String" resultType="collyFarm">
+        SELECT * FROM collyFarm WHERE userId=#{userId}
+    </select>
+    <select id="selectall" resultType="collyFarm">
+        SELECT * FROM collyFarm
+    </select>
+    <insert id="insert" parameterType="collyFarm">
+        INSERT INTO collyFarm(userId, userName, collyNickname, collyLevel, levelPercent, collyImg, groupName, branchName, water, userLevel, yearOfEmp, typeOfCrops) VALUES (#{userId},#{userName},#{collyNickname},1,0,'콜리이미지경로',#{groupName},#{branchName},100,#{userLevel}, #{yearOfEmp}, #{typeOfCrops})
+    </insert>
+    <update id="update" parameterType="collyFarm">
+        UPDATE collyFarm SET name=#{name},pwd=#{pwd} WHERE id=#{id}
+    </update>
+    <delete id="delete" parameterType="String">
+        DELETE FROM collyFarm WHERE userId=#{userId}
+    </delete>
+
+</mapper>
