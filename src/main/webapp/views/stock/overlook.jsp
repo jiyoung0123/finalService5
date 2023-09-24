@@ -133,26 +133,212 @@
             })
         },
         //(3) codes 검색
-        searchCodes : (keywords)=>{
+        searchCodes : (keywords)=> {
             $.ajax({
-                url : '/stock/codes',
-                data : {'keywords' : keywords}
-            }).done((data)=>{
+                url: '/stock/codes',
+                data: {'keywords': keywords}
+            }).done((data) => {
                 console.log(data.toString());
-            }).fail(()=>{
+            }).fail(() => {
 
             })
         }
 
     }
 
+    const crwalStock = {
+        init : ()=>{
+            $.ajax({
+                url : '/stock/crawl'
+
+            }).done((data)=>{
+                console.log(JSON.stringify(data));
+                console.log(data[0]["nasdaq"]);
+
+                $('#stock0').text(data[0]["nasdaq"]);
+                $('#stock1').text(data[0]["russell2000"]);
+                $('#stock2').text(data[0]["dow30Price"]);
+                $('#stock3').text(data[0]["snp500"]);
+
+
+            }).fail(()=>{
+                console.log('failed');
+            })
+
+        }
+
+
+
+    }
+
+    // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
+    let stockexchange = {
+        init : ()=>{
+            $('#chatGPT_btn').click(()=>{
+                let symbol = $('#request').val();
+                console.log("clicked");
+                $('.progress').show();
+                stockexchange.startProgressBar();
+                $.ajax({
+                    url:'/sales/investment/generate',
+                    type: 'GET',
+                    data: {
+                        symbol : symbol
+                    }
+                }).done(
+                    (data)=>{
+                        console.log("success");
+                        stockexchange.display(data);
+                    }
+                )
+                    .fail(
+                        ()=>{
+                            console.log("failure");
+                        }
+                    );
+
+                stockexchange.display();
+            })
+
+        },
+        click: (symbol2)=>{
+            $('.progress').show();
+            $.ajax({
+                url:'/sales/investment/generate',
+                type: 'GET',
+                data: {
+                    symbol : symbol2
+                }
+
+            }).done(
+                (data)=>{
+                    console.log("success");
+                    stockexchange.display(data);
+                }
+            )
+                .fail(
+                    ()=>{
+                        console.log("failure");
+                    }
+                );
+        },
+        hideProgressBar: () => {
+            if (stockexchange.progressBar) {
+                stockexchange.progressBar.stop().css('width', '0');
+            }
+        },
+        startProgressBar: () => {
+            stockexchange.progressBar = $('.progress-bar');
+            stockexchange.progressBar.css('width', '0').animate({
+                width: '100%'
+            }, 10000, () => {
+                $('.progress').hide();
+            });
+        },
+        display : (data)=>{
+            const obj = JSON.parse(data);
+            console.log(obj);
+            $('#companyname').val(obj["Meta Data"]["2. Symbol"].toUpperCase());
+            $('#stockprice').val(obj["Time Series (Daily)"]["2023-05-15"]["1. open"]);
+            //chart
+            const set = obj["Time Series (Daily)"];
+            let ranges = [];
+            let averages = [];
+            for (let date in set) {
+                let item = set[date];
+                let low = parseInt(item["3. low"]);
+                let high = parseInt(item["2. high"]);
+                let open = parseInt(item["1. open"]);
+                ranges.push([low, high]);
+                averages.push([open]);
+            }
+            console.log("=====1======");
+            console.log(ranges);
+            console.log("=====2======");
+            console.log(averages);
+            Highcharts.chart('container', {
+
+                title: {
+                    text: 'STOCK TREND : ' + obj["Meta Data"]["2. Symbol"].toUpperCase(),
+                    align: 'left'
+                },
+
+                subtitle: {
+                    text: '통화기준 : $USD'+' __ powered by Alpha Vantage in NYSE',
+                    align: 'left'
+                },
+
+                xAxis: {
+                    type: 'datetime',
+                    accessibility: {
+                        rangeDescription: 'Range: Jul 1st 2022 to Jul 31st 2022.'
+                    }
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'Stock Price - USD'
+                    }
+                },
+
+                tooltip: {
+                    crosshairs: true,
+                    shared: true,
+                    valueSuffix: '$'
+                },
+
+                plotOptions: {
+                    series: {
+                        pointStart: Date.UTC(2022, 12, 19),
+                        pointIntervalUnit: 'day'
+                    }
+                },
+
+                series: [{
+                    name: obj["Meta Data"]["2. Symbol"].toUpperCase(),
+                    data: averages,//변수 data
+                    zIndex: 1,
+                    marker: {
+                        fillColor: 'white',
+                        lineWidth: 2,
+                        lineColor: Highcharts.getOptions().colors[0]
+                    }
+                }, {
+                    name: '최고가 - 최저가',
+                    data: ranges,//변수 data
+                    type: 'arearange',
+                    lineWidth: 0,
+                    linkedTo: ':previous',
+                    color: Highcharts.getOptions().colors[0],
+                    fillOpacity: 0.3,
+                    zIndex: 0,
+                    marker: {
+                        enabled: false
+                    }
+                }]
+            });
+
+        }//display
+    }//
+
+
+
+
+
+
 
     $(()=>{
         stockApi.init();
         websocketConnect(4); //websocket 4개 활성화
-        stockApi.searchPrice('tsla');
+        //stockApi.searchPrice('tsla');
         //debugger; //디버깅
+        crwalStock.init();
     });
+
+
+
+
+
 
 </script>
 
@@ -167,6 +353,8 @@
 
                 <!-- ======= About Section ======= -->
                 <section id="about" class="about">
+                    <H3>실시간 가상화폐 시가</H3>
+                    <h6>powered by UpBit</h6>
                     <div class="container" data-aos="fade-up">
                         <div class="row">
                             <div class="col-xl-3 col-md-6 mb-4">
@@ -257,7 +445,8 @@
             <div class=" justify-content-center" style="align-content: flex-start">
 
                 <div class="moving-container">
-                    <H6>현재 주가</H6>
+                    <H4>현재 주가</H4>
+                    <h6>powered by Yahoo Finance</h6>
 
                     <div class="moving-content">
                         <div class="row">
@@ -266,11 +455,11 @@
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">비트코인
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">NASDAQ
                                                 </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
-                                                        <div  class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                        <div  id="stock0" class="h5 mb-0 mr-3 font-weight-bold text-white-800" >0%</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -286,11 +475,11 @@
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">비트코인
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">RUSSELL2000
                                                 </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
-                                                        <div  class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                        <div id="stock1" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -306,11 +495,11 @@
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">비트코인
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">DOW30
                                                 </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
-                                                        <div  class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                        <div id="stock2" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -326,51 +515,11 @@
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">비트코인
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">S&P500
                                                 </div>
                                                 <div class="row no-gutters align-items-center">
                                                     <div class="col-auto">
-                                                        <div  class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2  mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">비트코인
-                                                </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div  class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2  mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">비트코인
-                                                </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div  class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                        <div id="stock3" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -382,9 +531,32 @@
                                 </div>
                             </div>
 
+
                         </div>
                     </div>
                 </div>
+            </div>
+
+
+            <!-- ======= Features Section ======= -->
+            <div class=" justify-content-center" style="align-content: flex-start">
+
+                <section id="features" class="features">
+
+                    <div class="container" data-aos="fade-up">
+
+                        <div class="row">
+
+                            <div class="image col-lg-6" style='background-image: url("/views/sales/earning/assets/img/features.jpg");' data-aos="fade-right"></div>
+
+                            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+            <!-- End Features Section -->
             </div>
 
         </div>

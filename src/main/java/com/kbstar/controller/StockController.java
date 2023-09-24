@@ -3,6 +3,7 @@ package com.kbstar.controller;
 
 import com.kbstar.util.StockPriceAPI;
 import com.kbstar.util.StockSearchAPI;
+import com.kbstar.util.WebCrawler;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -25,6 +26,9 @@ public class StockController {
     StockPriceAPI stockPriceAPI;
     @Autowired
     StockSearchAPI stockSearchAPI;
+
+    @Autowired
+    WebCrawler webCrawler;
 
 
     String dir ="stock/";
@@ -54,6 +58,16 @@ public class StockController {
         result.add(stockCodes);
 
         return ResponseEntity.ok(result);
+    }
+
+    @RequestMapping("/crawl")
+    @ResponseBody
+    public Object crwalStock() throws Exception {
+
+        JSONArray result = new JSONArray();
+        Object crawledResult = webCrawler.generateCode();
+
+        return crawledResult;
     }
 
 
