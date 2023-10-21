@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
-<!-- 고객 대시보드 페이지 -->
+<!-- 고객 대시보드 페이지 재커밋 -->
 <style>
     @import url("https://code.highcharts.com/css/highcharts.css");
     @import url("https://code.highcharts.com/dashboards/css/dashboards.css");
@@ -77,7 +77,7 @@
         font-weight: bold;
     }
 
-    /* Components specific */
+    /* Components specific */ 
     #dashboard-row-1-cell-2 .highcharts-dashboards-component-subtitle {
         color: var(--highcharts-dashboards-orange);
     }
@@ -510,7 +510,6 @@
 </script>
 </head>
 <body>
-
 <div class="main_content"  style="margin-top: 30px;">
     <div class="flex-shirink-0" >
         <div class="flex justify-between relative md:mb-4 mb-3">
@@ -521,5 +520,4 @@
         </div>
     </div>
 </div>
-
 </body>

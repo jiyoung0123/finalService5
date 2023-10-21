@@ -31,7 +31,7 @@
                         </div>
                        
                             <ul class="card divide-y divide-gray-100 sm:m-0 -mx-5 js-filter">
-                                <li class="data-color-grade">
+                                <li class="data-color-grade data-color-risk">
                                     <div class="flex items-start space-x-5 p-7">
                                         <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="w-12 h-12 rounded-full">
                                         <div class="flex-1">
@@ -63,7 +63,7 @@
                                     <div class="flex items-start space-x-5 p-7">
                                         <img src="assets/images/starfriends/proflie3.jpg" alt="" class="w-12 h-12 rounded-full">
                                         <div class="flex-1">
-                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 나껑충 </a>
+                                            <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1"> 나껑충 </a>
                                             <p class="text-sm text-gray-400 mb-2"> 관리한 지 4일 전 </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 상품명 : 피델리티 인디아 증권자투자신탁(주식)-Ce</p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 2,300,000원 </p>
@@ -88,7 +88,7 @@
                                     <div class="flex items-start space-x-5 p-7">
                                         <img src="assets/images/starfriends/proflie4.jpg" alt="" class="w-12 h-12 rounded-full">
                                         <div class="flex-1">
-                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 수콜리 </a>
+                                            <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1"> 수콜리 </a>
                                             <p class="text-sm text-gray-400 mb-2"> 관리한 지 14일 전 </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 상품명 : 베어링 고배당 증권자투자신탁(주식) AE </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 13,000,000원 </p>
@@ -110,7 +110,7 @@
                                     <div class="flex items-start space-x-5 p-7">
                                         <img src="assets/images/starfriends/proflie2.jpg" alt="" class="w-12 h-12 rounded-full">
                                         <div class="flex-1">
-                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 차아거 </a>
+                                            <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1"> 차아거 </a>
                                             <p class="text-sm text-gray-400 mb-2"> 관리한 지 3주 전 </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 상품명 : </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 2,300,000원 </p>
@@ -133,7 +133,7 @@
                                     <div class="flex items-start space-x-5 p-7">
                                         <img src="assets/images/starfriends/proflie2.jpg" alt="" class="w-12 h-12 rounded-full">
                                         <div class="flex-1">
-                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 안무러 </a>
+                                            <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1"> 안무러 </a>
                                             <p class="text-sm text-gray-400 mb-2"> 관리한 지 3주 전 </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 상품명 : </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 35,000,000원 </p>
@@ -156,7 +156,7 @@
                                     <div class="flex items-start space-x-5 p-7">
                                         <img src="assets/images/starfriends/proflie5.jpg" alt="" class="w-12 h-12 rounded-full">
                                         <div class="flex-1">
-                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 모라무 </a>
+                                            <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1"> 모라무 </a>
                                             <p class="text-sm text-gray-400 mb-2"> 관리한 지 한 달 전 </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 상품명 : KB PIMCO 글로벌 인컴 셀렉션 증권자투자신탁(채권-재간접형)(H) AE </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 7,300,000원 </p>
