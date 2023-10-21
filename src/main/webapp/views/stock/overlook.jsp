@@ -18,7 +18,7 @@
     //@작성자 : 최준혁
     //@작성일 : 2023-09-10
     //@라우터 : /stock
-    //@적용 : overlook.jsp
+    //@적용 : center.jsp
     //@desc : document load 시 사전에 정의된 uri로 업비트 웹소켓 적용
 
     //https://api.upbit.com/v1/market/all -> 티커 조회
@@ -174,20 +174,15 @@
     // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
     let stockexchange = {
         init : ()=>{
-            $('#chatGPT_btn').click(()=>{
-                let symbol = $('#request').val();
-                console.log("clicked");
-                $('.progress').show();
-                stockexchange.startProgressBar();
+            $('#stockSearch_btn').click(()=>{
                 $.ajax({
-                    url:'/sales/investment/generate',
+                    url:'/stock/codes',
                     type: 'GET',
                     data: {
-                        symbol : symbol
+                        symbol : $('#companyNameSearch').val()
                     }
                 }).done(
                     (data)=>{
-                        console.log("success");
                         stockexchange.display(data);
                     }
                 )
@@ -200,40 +195,6 @@
                 stockexchange.display();
             })
 
-        },
-        click: (symbol2)=>{
-            $('.progress').show();
-            $.ajax({
-                url:'/sales/investment/generate',
-                type: 'GET',
-                data: {
-                    symbol : symbol2
-                }
-
-            }).done(
-                (data)=>{
-                    console.log("success");
-                    stockexchange.display(data);
-                }
-            )
-                .fail(
-                    ()=>{
-                        console.log("failure");
-                    }
-                );
-        },
-        hideProgressBar: () => {
-            if (stockexchange.progressBar) {
-                stockexchange.progressBar.stop().css('width', '0');
-            }
-        },
-        startProgressBar: () => {
-            stockexchange.progressBar = $('.progress-bar');
-            stockexchange.progressBar.css('width', '0').animate({
-                width: '100%'
-            }, 10000, () => {
-                $('.progress').hide();
-            });
         },
         display : (data)=>{
             const obj = JSON.parse(data);
@@ -320,6 +281,7 @@
 
         }//display
     }//
+
 
 
 
@@ -530,12 +492,43 @@
                                     </div>
                                 </div>
                             </div>
-
-
+                            <div class="col-sm-4  mb-4">
+                                <input type="search" id="companyNameSearch" class="form-control rounded" placeholder="어떤 회사를 찾으시나요?" aria-label="Search" aria-describedby="search-addon" />
+                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning">search</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class=" justify-content-center" style="align-content: flex-start">
+                <div class="col-sm-6  mb-6">
+                    <table id="tableFX">
+                        <thead>
+                        <tr>
+                            <th>코드</th>
+                            <th>이름</th>
+                            <th>상장국가</th>
+                            <th>차트선택</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <figure class="highcharts-figure">
+                    <div id="container"></div>
+                </figure>
+            </div>
+
+
+
+
 
 
             <!-- ======= Features Section ======= -->

@@ -24,8 +24,8 @@ public class StockSearchAPI {
         client = HttpClient.newBuilder().build();
     }
     //https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=AUTHKEY1234567890&searchdate=20180102&data=AP01
-    public String generateCode(String keywords) throws Exception {
-        String code = "";
+    public JSONObject generateCode(String keywords) throws Exception {
+        JSONObject code = new JSONObject();
 
         // JSON 형식의 요청 본문 생성
         JsonObject requestBody = new JsonObject();
@@ -46,11 +46,8 @@ public class StockSearchAPI {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
             if (response.statusCode() == 200) {
-                code = response.body();
+                code.put("result", response.body());
 
-                log.info("==========");
-                log.info(code);
-                log.info("==========");
             } else {
                 System.out.println("API request failed. Response code: " + response.statusCode());
             }

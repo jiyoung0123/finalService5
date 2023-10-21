@@ -54,7 +54,7 @@ public class StockController {
     public ResponseEntity<List<?>> stockSearchApi(@RequestParam("keywords") String keywords) throws Exception {
 
         JSONArray result = new JSONArray();
-        String stockCodes = stockSearchAPI.generateCode(keywords);
+        JSONObject stockCodes = stockSearchAPI.generateCode(keywords);
         result.add(stockCodes);
 
         return ResponseEntity.ok(result);

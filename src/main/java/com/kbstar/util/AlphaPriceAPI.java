@@ -2,10 +2,8 @@ package com.kbstar.util;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONObject;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -13,18 +11,16 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.List;
 
 @Slf4j
-@Component("StockPriceAPI")
-public class StockPriceAPI {
+@Component("AlphaPriceAPI")
+public class AlphaPriceAPI {
     //private static final String function = "TIME_SERIES_DAILY_ADJUSTED";
     private static final String authkey = "L646A87J103HCPR7";
     private static final String BASE_URL = "https://www.alphavantage.co/query";
     private final HttpClient client;
 
-    public StockPriceAPI() {
+    public AlphaPriceAPI() {
         client = HttpClient.newBuilder().build();
     }
     //https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=AUTHKEY1234567890&searchdate=20180102&data=AP01
