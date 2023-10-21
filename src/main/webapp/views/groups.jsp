@@ -262,7 +262,7 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="roomLoc" class="col-form-label">채팅방 지역</label>
+                  <label for="roomLoc" class="col-form-label">채팅방 주제</label>
                   <input type="text" class="form-control" id="roomLoc" name="roomLoc">
                 </div>
 

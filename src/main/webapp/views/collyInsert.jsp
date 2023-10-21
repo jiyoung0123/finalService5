@@ -38,56 +38,7 @@
     <!-- Main Contents -->
     <div class="main_content">
         <div class="mcontainer">
-            <div class="relative" uk-slider="finite: true">
-                <div class="uk-slider-container px-1 py-3">
-                    <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small uk-grid">
-                        <li>
-                            <a href="timeline-page.html" class="uk-link-reset">
-                                <div class="card">
-                                    <img src="assets/images/avatars/avatar-1.jpg" class="h-44 object-cover rounded-t-md shadow-sm w-full">
-                                    <div class="p-4">
-                                        <h4 class="text-base font-semibold mb-1">콜리 이미지 넣기</h4>
-                                        <p class="font-medium text-sm">Level 1
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                       href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
-                    <a class="absolute bg-white bottom-1/2 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
-                       href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
-                </div>
-            </div>
 
-            <div class="lg:flex lg:space-x-15">
-                <div class="lg:w-2/3">
-                    <div class="card mb-6">
-                        <div class="card-media h-28">
-                            <div class="card-media-overly"></div>
-                            <img src="assets/images/funding/funder-1.jpg" alt="" class="">
-                        </div>
-                        <div class="p-5">
-                            <h4 class="text-xl font-semibold mb-1">나만의 콜리를 키워보세요!!!</h4>
-                            <p class="font-medium"> Fundraiser make it easy to support friends, family and the causes that are important to you such as:</p>
-
-                            <div class="mt-4 text-base font-medium space-y-2">
-                                <div class="flex items-center">
-                                    <ion-icon name="medkit"  class="text-lg mr-3"></ion-icon> Medical
-                                </div>
-                                <div class="flex items-center">
-                                    <ion-icon name="school" class="text-lg mr-3"></ion-icon> Education
-                                </div>
-                                <div class="flex items-center">
-                                    <ion-icon name="heart-circle" class="text-lg mr-3"></ion-icon>  Nunprofits and more
-                                </div>
-                            </div>
-                            <a href="#" class="bg-gray-100 rounded-lg text-center py-2 block mt-6 font-medium">물 받으러 가기</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <form id="registerColly_form">
              <div class="grid lg:grid-cols-3 mt-12 gap-8">

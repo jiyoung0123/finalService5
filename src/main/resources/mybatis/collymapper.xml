@@ -13,9 +13,31 @@
     <insert id="insert" parameterType="collyFarm">
         INSERT INTO collyFarm(userId, userName, collyNickname, collyLevel, levelPercent, collyImg, groupName, branchName, water, userLevel, yearOfEmp, typeOfCrops) VALUES (#{userId},#{userName},#{collyNickname},1,0,'콜리이미지경로',#{groupName},#{branchName},100,#{userLevel}, #{yearOfEmp}, #{typeOfCrops})
     </insert>
+
     <update id="update" parameterType="collyFarm">
-        UPDATE collyFarm SET name=#{name},pwd=#{pwd} WHERE id=#{id}
+        <choose>
+            <!-- levelPercent가 100 미만인 경우 -->
+            <when test="levelPercent &lt; 100">
+                UPDATE collyFarm
+                SET water = water - 10,
+                levelPercent = levelPercent + 10
+                WHERE userId = #{userId}
+            </when>
+            <!-- levelPercent가 100 이상인 경우 -->
+            <otherwise>
+                UPDATE collyFarm
+                SET water = water - 10,
+                levelPercent = 0, <!-- levelPercent를 0으로 리셋 -->
+                collyLevel = collyLevel + 1 <!-- collyLevel을 증가 -->
+                WHERE userId = #{userId}
+            </otherwise>
+        </choose>
     </update>
+
+
+
+
+
     <delete id="delete" parameterType="String">
         DELETE FROM collyFarm WHERE userId=#{userId}
     </delete>

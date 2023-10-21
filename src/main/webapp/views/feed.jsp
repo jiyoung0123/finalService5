@@ -1360,12 +1360,12 @@
 </div>
 
 <!-- Craete post modal -->
-<div id="create-post-modal" class="create-post is-story" uk-modal>
+<%--<div id="create-post-modal" class="create-post is-story" uk-modal>
     <div
             class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical rounded-lg p-0 lg:w-5/12 relative shadow-2xl uk-animation-slide-bottom-small">
 
         <div class="text-center py-3 border-b">
-            <h3 class="text-lg font-semibold"> Create Post </h3>
+            <h3 class="text-lg font-semibold">오늘의 퀴즈</h3>
             <button class="uk-modal-close-default bg-gray-100 rounded-full p-2.5 right-2" type="button" uk-close uk-tooltip="title: Close ; pos: bottom ;offset:7"></button>
         </div>
         <div class="flex flex-1 items-start space-x-4 p-5">
@@ -1373,7 +1373,7 @@
                  class="bg-gray-200 border border-white rounded-full w-11 h-11">
             <div class="flex-1 pt-2">
                     <textarea class="uk-textare text-black shadow-none focus:shadow-none text-xl font-medium resize-none" rows="5"
-                              placeholder="What's Your Mind ? Stella!"></textarea>
+                              placeholder="오늘의 퀴즈를 풀어보세요!!"></textarea>
             </div>
 
         </div>
@@ -1418,7 +1418,7 @@
                 Share </a>
         </div>
     </div>
-</div>
+</div>--%>
 
 <!-- For Night mode -->
 <script>

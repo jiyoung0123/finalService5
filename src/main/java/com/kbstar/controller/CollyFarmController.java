@@ -1,15 +1,19 @@
 package com.kbstar.controller;
 
 import com.kbstar.dto.CollyFarm;
+import com.kbstar.dto.Quiz;
 import com.kbstar.service.CollyService;
+import com.kbstar.service.QuizService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 
 @Controller
@@ -20,14 +24,37 @@ public class CollyFarmController {
 
     @Autowired
     CollyService collyService;
+    @Autowired
+    QuizService quizService;
 
     @GetMapping("/collyFarm")
-    public String collyFarm(Model model, HttpSession session) throws Exception {
-        if(session.getAttribute("loginGuest")==null){
+    public String collyFarm(Model model, @RequestParam("userId") String userId) throws Exception {
+        CollyFarm colly = null;
+        colly = collyService.get(userId);
+        log.info("=================");
+        if(colly == null){
             return "redirect:/collyInsert";
         }
-        /*model.addAttribute("rcolly", colly);*/
-        model.addAttribute("center", "collyMain");
+
+        int a = colly.getCollyLevel();
+        if (a>3){
+            log.info("축하합니다!!!!!!!!!!!!!!!!!!!!!!!");
+            model.addAttribute("center","collySuccess");
+        }
+        if (a<=3){
+            model.addAttribute("rcolly", colly);
+            model.addAttribute("center", "collyMain");
+        }
+        log.info("퀴즈풀어보세요~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        Quiz quiz1 = null;
+        quiz1 = quizService.get("1");
+
+        Quiz quiz2 = null;
+        quiz2 = quizService.get("2");
+
+        model.addAttribute("quiz1", quiz1);
+        model.addAttribute("quiz2", quiz2);
         return "index";
     }
 
@@ -52,7 +79,27 @@ public class CollyFarmController {
             throw new Exception("가입 오류");
         }
         model.addAttribute("rcolly", colly);
+        String userId = colly.getUserId();
         model.addAttribute("center", "collyMain");
+        return "redirect:/collyFarm?userId=userId";
+    }
+
+    @RequestMapping("/collyWater")
+    public String collyWater(Model model, String userId) throws Exception {
+        CollyFarm colly = null;
+        colly = collyService.get(userId);
+        collyService.modify(colly);
+        log.info(String.valueOf(colly));
+        CollyFarm ncolly = collyService.get(userId);
+        int a = colly.getCollyLevel();
+        if (a>3){
+            log.info("축하합니다!!!!!!!!!!!!!!!!!!!!!!!");
+            return "redirect:/feed";
+        }
+        if (a<=3){
+            model.addAttribute("rcolly", ncolly);
+            model.addAttribute("center", "collyMain");
+        }
         return "index";
     }
 
