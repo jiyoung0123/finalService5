@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<style>
+    .list-group-item{
+        color: #0c0c0c;
+    }
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- My 고객관리 메인 페이지 -->
 <body>
@@ -10,103 +15,83 @@
                     
                     <div class="lg:w-2/3 flex-shirink-0">
                     
+                        <!--  --> <div uk-filter="target: .js-filter">
                         <div class="flex justify-between relative md:mb-4 mb-3">
                             <div class="flex-1">
                                 <h2 class="text-2xl font-semibold"> My고객관리 </h2>
                                 <nav class="responsive-nav md:m-0 -mx-4 style-2">
                                     <ul uk-switcher="connect: #group-details; animation: uk-animation-fade">
-                                    <li class="uk-active"><a href="#" class="active lg:px-2"> 최근가입순 </a></li>
-                                        <li><a href="#" class="lg:px-2"> 투자금액순 </a></li>
-                                        <li><a href="#" class="lg:px-2"> 수익률순 </a></li>
-                                        <li><a href="#" class="lg:px-2"> 위험관리순 </a></li>
+                                    <li class="uk-active" uk-filter-control><a href="#" class="active lg:px-2"> 최근가입순 </a></li>
+                                        <li uk-filter-control=".data-color-amount"><a href="#" class="lg:px-2"> 고투자금액 </a></li>
+                                        <li uk-filter-control=".data-color-grade"><a href="#" class="lg:px-2"> 수익률관리대상 </a></li>
+                                        <li uk-filter-control=".data-color-risk"><a href="#" class="lg:px-2"> 위험관리대상 </a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        
-                        <ul class="card divide-y divide-gray-100 sm:m-0 -mx-5">
-                            <li>
-                                <div class="flex items-start space-x-5 p-7">
-                                     <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="w-12 h-12 rounded-full">
-                                    <div class="flex-1">
-                                        <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1">나비비  </a>
-                                        <p class="text-sm text-gray-400 mb-2"> 관리한 지 1일 전 </p>
-                                      <p class="leading-6 line-clamp-2 mt-3">상품명 : 한국투자 미국 배당귀족 증권자투자신탁H(주식) A-e</p>
-                                      <p class="leading-6 line-clamp-2 mt-3">매월 적립 중 | 현재까지 투자금액 5,896,000원</p>
+                       
+                            <ul class="card divide-y divide-gray-100 sm:m-0 -mx-5 js-filter">
+                                <li class="data-color-grade">
+                                    <div class="flex items-start space-x-5 p-7">
+                                        <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="w-12 h-12 rounded-full">
+                                        <div class="flex-1">
+                                            <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1">나비비  </a>
+                                            <p class="text-sm text-gray-400 mb-2"> 관리한 지 1일 전 </p>
+                                        <p class="leading-6 line-clamp-2 mt-3">상품명 : 한국투자 미국 배당귀족 증권자투자신탁H(주식) A-e</p>
+                                        <p class="leading-6 line-clamp-2 mt-3">매월 적립 중 | 현재까지 투자금액 5,896,000원</p>
+                                            <!-- 고객상담 메모이력보기 -->
+                                            <ul class="list-group items-start space-y-3" style="display: none;">
+                                                <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
+                                                <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32 mt-10"><span class="icon-material-outline-check"></span>  투자포트폴리오 발송 완료</li>
+                                                <hr>
+                                                <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
+                                                <hr>
+                                                <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
+                                                <hr>
+                                                <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
+                                            
+                                            </ul>
+                                        </div>
+                                        <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
+                                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                            <span class="text-xl"> 4 </span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="data-color-risk">
+                                    <div class="flex items-start space-x-5 p-7">
+                                        <img src="assets/images/starfriends/proflie3.jpg" alt="" class="w-12 h-12 rounded-full">
+                                        <div class="flex-1">
+                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 나껑충 </a>
+                                            <p class="text-sm text-gray-400 mb-2"> 관리한 지 4일 전 </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : 피델리티 인디아 증권자투자신탁(주식)-Ce</p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 2,300,000원 </p>
                                         <!-- 고객상담 메모이력보기 -->
                                         <ul class="list-group items-start space-y-3" style="display: none;">
                                             <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
                                             <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32 mt-10"><span class="icon-material-outline-check"></span>  투자포트폴리오 발송 완료</li>
-                                            <hr>
-                                            <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
                                             <hr>
                                             <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
                                             <hr>
                                             <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
                                         
                                         </ul>
+                                        </div>
+                                        <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
+                                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                            <span class="text-xl"> 3 </span>
+                                        </div>
                                     </div>
-                                    <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
-                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                        <span class="text-xl"> 4 </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-start space-x-5 p-7">
-                                    <img src="assets/images/starfriends/proflie3.jpg" alt="" class="w-12 h-12 rounded-full">
-                                    <div class="flex-1">
-                                        <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 나껑충 </a>
-                                        <p class="text-sm text-gray-400 mb-2"> 관리한 지 4일 전 </p>
-                                      <p class="leading-6 line-clamp-2 mt-3"> 상품명 : 피델리티 인디아 증권자투자신탁(주식)-Ce</p>
-                                      <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 2,300,000원 </p>
-                                     <!-- 고객상담 메모이력보기 -->
-                                     <ul class="list-group items-start space-y-3" style="display: none;">
-                                        <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32 mt-10"><span class="icon-material-outline-check"></span>  투자포트폴리오 발송 완료</li>
-                                        <hr>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
-                                        <hr>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
-                                    
-                                    </ul>
-                                    </div>
-                                    <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
-                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                        <span class="text-xl"> 3 </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-start space-x-5 p-7">
-                                    <img src="assets/images/starfriends/proflie4.jpg" alt="" class="w-12 h-12 rounded-full">
-                                    <div class="flex-1">
-                                        <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 수콜리 </a>
-                                        <p class="text-sm text-gray-400 mb-2"> 관리한 지 14일 전 </p>
-                                      <p class="leading-6 line-clamp-2 mt-3"> 상품명 : 베어링 고배당 증권자투자신탁(주식) AE </p>
-                                      <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 13,000,000원 </p>
-                                     <!-- 고객상담 메모이력보기 -->
-                                     <ul class="list-group items-start space-y-3" style="display: none;">
-                                        <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32 mt-10"><span class="icon-material-outline-check"></span>  투자포트폴리오 발송 완료</li>
-                                        <hr>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
-                                    </ul>
-                                    </div>
-                                    <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
-                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                        <span class="text-xl"> 1 </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-start space-x-5 p-7">
-                                    <img src="assets/images/starfriends/proflie2.jpg" alt="" class="w-12 h-12 rounded-full">
-                                    <div class="flex-1">
-                                        <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 차아거 </a>
-                                        <p class="text-sm text-gray-400 mb-2"> 관리한 지 3주 전 </p>
-                                      <p class="leading-6 line-clamp-2 mt-3"> 상품명 : </p>
-                                      <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 2,300,000원 </p>
+                                </li>
+                                <li class="data-color-amount">
+                                    <div class="flex items-start space-x-5 p-7">
+                                        <img src="assets/images/starfriends/proflie4.jpg" alt="" class="w-12 h-12 rounded-full">
+                                        <div class="flex-1">
+                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 수콜리 </a>
+                                            <p class="text-sm text-gray-400 mb-2"> 관리한 지 14일 전 </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : 베어링 고배당 증권자투자신탁(주식) AE </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 13,000,000원 </p>
                                         <!-- 고객상담 메모이력보기 -->
                                         <ul class="list-group items-start space-y-3" style="display: none;">
                                             <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
@@ -114,46 +99,94 @@
                                             <hr>
                                             <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
                                         </ul>
-                                    
+                                        </div>
+                                        <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
+                                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                            <span class="text-xl"> 1 </span>
+                                        </div>
                                     </div>
-                                    <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
-                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                        <span class="text-xl"> 2 </span>
+                                </li>
+                                <li class="data-color-grade">
+                                    <div class="flex items-start space-x-5 p-7">
+                                        <img src="assets/images/starfriends/proflie2.jpg" alt="" class="w-12 h-12 rounded-full">
+                                        <div class="flex-1">
+                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 차아거 </a>
+                                            <p class="text-sm text-gray-400 mb-2"> 관리한 지 3주 전 </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 2,300,000원 </p>
+                                            <!-- 고객상담 메모이력보기 -->
+                                            <ul class="list-group items-start space-y-3" style="display: none;">
+                                                <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
+                                                <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32 mt-10"><span class="icon-material-outline-check"></span>  투자포트폴리오 발송 완료</li>
+                                                <hr>
+                                                <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
+                                            </ul>
+                                        
+                                        </div>
+                                        <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
+                                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                            <span class="text-xl"> 2 </span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flex items-start space-x-5 p-7">
-                                    <img src="assets/images/starfriends/proflie5.jpg" alt="" class="w-12 h-12 rounded-full">
-                                    <div class="flex-1">
-                                        <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 모라무 </a>
-                                        <p class="text-sm text-gray-400 mb-2"> 관리한 지 한 달 전 </p>
-                                      <p class="leading-6 line-clamp-2 mt-3"> 상품명 : KB PIMCO 글로벌 인컴 셀렉션 증권자투자신탁(채권-재간접형)(H) AE </p>
-                                      <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 7,300,000원 </p>
-                                     
-                                      <!-- 고객상담 메모이력보기 -->
-                                      <ul class="list-group items-start space-y-3" style="display: none;">
-                                        <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32 mt-10"><span class="icon-material-outline-check"></span>  투자포트폴리오 발송 완료</li>
-                                        <hr>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
-                                        <hr>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  비대면채널에서 상품추천 분석 실시 데이터 파악으로 추가매수 권유</li>
-                                        <hr>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  가입 후 1개월 경과로 시장동향 안내 전화</li>
-                                        <hr>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  상품가입 후 해피콜 실시</li>
-                                        <hr>
-                                        <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  상품가입 시 고객성향 파악 메모(체계적인 단계투자 선호)</li>
-                                     </ul>
+                                </li>
+                                <li class="data-color-risk data-color-amount">
+                                    <div class="flex items-start space-x-5 p-7">
+                                        <img src="assets/images/starfriends/proflie2.jpg" alt="" class="w-12 h-12 rounded-full">
+                                        <div class="flex-1">
+                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 안무러 </a>
+                                            <p class="text-sm text-gray-400 mb-2"> 관리한 지 3주 전 </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 35,000,000원 </p>
+                                            <!-- 고객상담 메모이력보기 -->
+                                            <ul class="list-group items-start space-y-3" style="display: none;">
+                                                <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
+                                                <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32 mt-10"><span class="icon-material-outline-check"></span>  투자포트폴리오 발송 완료</li>
+                                                <hr>
+                                                <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
+                                            </ul>
+                                        
+                                        </div>
+                                        <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
+                                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                            <span class="text-xl"> 2 </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="data-color-amount">
+                                    <div class="flex items-start space-x-5 p-7">
+                                        <img src="assets/images/starfriends/proflie5.jpg" alt="" class="w-12 h-12 rounded-full">
+                                        <div class="flex-1">
+                                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 모라무 </a>
+                                            <p class="text-sm text-gray-400 mb-2"> 관리한 지 한 달 전 </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : KB PIMCO 글로벌 인컴 셀렉션 증권자투자신탁(채권-재간접형)(H) AE </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 7,300,000원 </p>
+                                        
+                                        <!-- 고객상담 메모이력보기 -->
+                                        <ul class="list-group items-start space-y-3" style="display: none;">
+                                            <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
+                                            <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32 mt-10"><span class="icon-material-outline-check"></span>  투자포트폴리오 발송 완료</li>
+                                            <hr>
+                                            <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
+                                            <hr>
+                                            <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  비대면채널에서 상품추천 분석 실시 데이터 파악으로 추가매수 권유</li>
+                                            <hr>
+                                            <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  가입 후 1개월 경과로 시장동향 안내 전화</li>
+                                            <hr>
+                                            <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  상품가입 후 해피콜 실시</li>
+                                            <hr>
+                                            <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  상품가입 시 고객성향 파악 메모(체계적인 단계투자 선호)</li>
+                                        </ul>
 
+                                        </div>
+                                        <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
+                                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                            <span class="text-xl"> 6 </span>
+                                        </div>
                                     </div>
-                                    <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
-                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                        <span class="text-xl"> 6 </span>
-                                    </div>
-                                </div>
-                          </li>
-                        </ul>
-
+                             
+                                </li>
+                            </ul>
+                        </div>
                         <h2 class="text-xl font-semibold mb-6 lg:mt-10 mt-4"> My상품별 고객관리 </h2>
                         <ul class="card divide-y divide-gray-100">
                             <li>
