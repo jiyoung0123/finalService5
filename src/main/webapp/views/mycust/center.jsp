@@ -277,7 +277,7 @@
                             <br>
                             <ul class="space-y-3">
                                 <li class="uk-filter-control">
-                                <a class="bg-gray-100 py-1.5 px-4 rounded-full" href="#">2023.9.16(토)</a>
+                                    <a class="bg-gray-100 py-1.5 px-4 rounded-full" href="#">2023.9.16(토)</a>
                                  	<div class="bg-white rounded-lg shadow-md p-3 flex "> 
                                         <div class="bg-blue-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
