@@ -750,14 +750,14 @@
                         </div>
                     </a>
 
-                    <h3 class="text-xl font-semibold"> Contacts </h3>
+                    <h3 class="text-xl font-semibold"> 이번주 직원들 Pick! </h3>
 
                     <div class="" uk-sticky="offset:80">
 
                         <nav class="responsive-nav border-b extanded mb-2 -mt-2">
                             <ul uk-switcher="connect: #group-details; animation: uk-animation-fade">
-                                <li class="uk-active"><a class="active" href="#0">  Friends  <span> 310 </span> </a></li>
-                                <li><a href="#0">Groups</a></li>
+                                <li class="uk-active"><a class="active" href="#0">  직원랭킹순  <span> Top </span> </a></li>
+                                <li><a href="#0">그룹랭킹순</a></li>
                             </ul>
                         </nav>
 
@@ -768,7 +768,7 @@
                                     <img src="assets/images/avatars/avatar-1.jpg" alt="">
                                     <span class="user_status status_online"></span>
                                 </div>
-                                <div class="contact-username"> Dennis Han</div>
+                                <div class="contact-username"> 지영언니야</div>
                             </a>
                             <div uk-drop="pos: left-center ;animation: uk-animation-slide-left-small">
                                 <div class="contact-list-box">
@@ -776,7 +776,7 @@
                                         <img src="assets/images/avatars/avatar-2.jpg" alt="">
                                         <span class="user_status status_online"></span>
                                     </div>
-                                    <div class="contact-username">   Dennis Han</div>
+                                    <div class="contact-username"> 지영언니야</div>
                                     <p>
                                         <ion-icon name="people" class="text-lg mr-1"></ion-icon> Become friends with
                                         <strong> Stella Johnson </strong> and <strong> 14 Others</strong>
@@ -798,7 +798,7 @@
                                     <img src="assets/images/avatars/avatar-2.jpg" alt="">
                                     <span class="user_status"></span>
                                 </div>
-                                <div class="contact-username"> Erica Jones</div>
+                                <div class="contact-username"> 서지영보다이진</div>
                             </a>
                             <div uk-drop="pos: left-center ;animation: uk-animation-slide-left-small">
                                 <div class="contact-list-box">
@@ -806,7 +806,7 @@
                                         <img src="assets/images/avatars/avatar-1.jpg" alt="">
                                         <span class="user_status"></span>
                                     </div>
-                                    <div class="contact-username">  Erica Jones </div>
+                                    <div class="contact-username">  서지영보다이진 </div>
                                     <p>
                                         <ion-icon name="people" class="text-lg mr-1"></ion-icon> Become friends with
                                         <strong> Stella Johnson </strong> and <strong> 14 Others</strong>
@@ -827,13 +827,13 @@
                                     <img src="assets/images/avatars/avatar-5.jpg" alt="">
                                     <span class="user_status status_online"></span>
                                 </div>
-                                <div class="contact-username">Stella Johnson</div>
+                                <div class="contact-username"> Just Do It 주니</div>
                             </a>
                             <a href="timeline.html">
                                 <div class="contact-avatar">
                                     <img src="assets/images/avatars/avatar-6.jpg" alt="">
                                 </div>
-                                <div class="contact-username"> Alex Dolgove</div>
+                                <div class="contact-username">망고링보</div>
                             </a>
 
                             <a href="timeline.html">
@@ -841,26 +841,26 @@
                                     <img src="assets/images/avatars/avatar-1.jpg" alt="">
                                     <span class="user_status status_online"></span>
                                 </div>
-                                <div class="contact-username"> Dennis Han</div>
+                                <div class="contact-username"> KB종목추천그룹</div>
                             </a>
                             <a href="timeline.html">
                                 <div class="contact-avatar">
                                     <img src="assets/images/avatars/avatar-2.jpg" alt="">
                                     <span class="user_status"></span>
                                 </div>
-                                <div class="contact-username"> Erica Jones</div>
+                                <div class="contact-username"> 학습독려그룹</div>
                             </a>
                             <a href="timeline.html">
                                 <div class="contact-avatar">
                                     <img src="assets/images/avatars/avatar-7.jpg" alt="">
                                 </div>
-                                <div class="contact-username">Stella Johnson</div>
+                                <div class="contact-username">꾸준히 한걸음씩 그룹</div>
                             </a>
                             <a href="timeline.html">
                                 <div class="contact-avatar">
                                     <img src="assets/images/avatars/avatar-4.jpg" alt="">
                                 </div>
-                                <div class="contact-username"> Alex Dolgove</div>
+                                <div class="contact-username"> 한 방을 노리는 그룹</div>
                             </a>
 
 
