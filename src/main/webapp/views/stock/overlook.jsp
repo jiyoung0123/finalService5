@@ -120,7 +120,7 @@
         //(2) code를 통한 price 검색
         searchPrice : (codes)=>{
             $.ajax({
-                url : '/stock/price',
+                url : '/stock/v1/price',
                 data : {
                     'function' : 'TIME_SERIES_DAILY',
                 'stockCodes' : codes
@@ -135,7 +135,7 @@
         //(3) codes 검색
         searchCodes : (keywords)=> {
             $.ajax({
-                url: '/stock/codes',
+                url: '/stock/v1/codes',
                 data: {'keywords': keywords}
             }).done((data) => {
                 console.log(data.toString());
@@ -149,7 +149,7 @@
     const crwalStock = {
         init : ()=>{
             $.ajax({
-                url : '/stock/crawl'
+                url : '/stock/v1/crawl'
 
             }).done((data)=>{
                 console.log(JSON.stringify(data));
@@ -171,29 +171,58 @@
 
     }
 
-    // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
-    let stockexchange = {
+    let retrieveStockPrice = {
         init : ()=>{
             $('#stockSearch_btn').click(()=>{
-                $.ajax({
-                    url:'/stock/codes',
-                    type: 'GET',
-                    data: {
-                        symbol : $('#companyNameSearch').val()
+                console.log('button Clicked');
+                console.log($('#companyNameSearch').val());
+                $.get({
+                    url : '/stock/v1/price',
+                    data : {
+                        'stockCodes' : $('#companyNameSearch').val()
                     }
-                }).done(
-                    (data)=>{
-                        stockexchange.display(data);
-                    }
-                )
-                    .fail(
-                        ()=>{
-                            console.log("failure");
-                        }
-                    );
+                }).done((data)=>{
+                    resData = JSON.parse(data.result);
+                    // JSON 형태로 이미 데이터가 넘어왔으면, JSON.parse를 써야한다.
+                    console.log(resData);
+                    //JSON 형태로 이미 데이터가 넘어왔는데,stringify를 쓰면 \n 이 붙는다.
+                    //console.log(JSON.stringify(data));
+                    chart(resData["Time Series (Daily)"]);
+                    console.log(resData["Time Series (Daily)"]);
 
-                stockexchange.display();
+                }).fail((e)=>{
+                    console.log('failed');
+                    console.log(e.toString());
+                })
             })
+        }
+    }
+
+
+
+
+    let stockexchange = {
+        init : ()=>{
+            // $('#stockSearch_btn').click(()=>{
+            //     $.ajax({
+            //         url:'/stock/codes',
+            //         type: 'GET',
+            //         data: {
+            //             symbol : $('#companyNameSearch').val()
+            //         }
+            //     }).done(
+            //         (data)=>{
+            //             stockexchange.display(data);
+            //         }
+            //     )
+            //         .fail(
+            //             ()=>{
+            //                 console.log("failure");
+            //             }
+            //         );
+            //
+            //     stockexchange.display();
+            // })
 
         },
         display : (data)=>{
@@ -282,6 +311,98 @@
         }//display
     }//
 
+    const chart = ((resData)=>{
+        console.log("highchart");
+        console.log(resData);
+        Highcharts.chart('chartContainer', {
+            chart: {
+                scrollablePlotArea: {
+                    minWidth: 700
+                }
+            },
+
+            data: resData,
+
+            title: {
+                text: 'Daily sessions at www.highcharts.com',
+                align: 'left'
+            },
+
+            subtitle: {
+                text: 'Source: Google Analytics',
+                align: 'left'
+            },
+
+            xAxis: {
+                tickInterval: 7 * 24 * 3600 * 1000, // one week
+                tickWidth: 0,
+                gridLineWidth: 1,
+                labels: {
+                    align: 'left',
+                    x: 3,
+                    y: -3
+                }
+            },
+
+            yAxis: [{ // left y axis
+                title: {
+                    text: null
+                },
+                labels: {
+                    align: 'left',
+                    x: 3,
+                    y: 16,
+                    format: '{value:.,0f}'
+                },
+                showFirstLabel: false
+            }, { // right y axis
+                linkedTo: 0,
+                gridLineWidth: 0,
+                opposite: true,
+                title: {
+                    text: null
+                },
+                labels: {
+                    align: 'right',
+                    x: -3,
+                    y: 16,
+                    format: '{value:.,0f}'
+                },
+                showFirstLabel: false
+            }],
+
+            legend: {
+                align: 'left',
+                verticalAlign: 'top',
+                borderWidth: 0
+            },
+
+            tooltip: {
+                shared: true,
+                crosshairs: true
+            },
+
+            plotOptions: {
+                series: {
+                    cursor: 'pointer',
+                    className: 'popup-on-click',
+                    marker: {
+                        lineWidth: 1
+                    }
+                }
+            },
+
+            series: [{
+                name: 'All sessions',
+                lineWidth: 4,
+                marker: {
+                    radius: 4
+                }
+            }, {
+                name: 'New users'
+            }]
+        });
+    })
 
 
 
@@ -290,11 +411,14 @@
 
 
     $(()=>{
-        stockApi.init();
-        websocketConnect(4); //websocket 4개 활성화
+        //stockApi.init();
+       // websocketConnect(4); //websocket 4개 활성화
         //stockApi.searchPrice('tsla');
         //debugger; //디버깅
-        crwalStock.init();
+        //crwalStock.init();
+        retrieveStockPrice.init();
+        //chart
+        //chart();
     });
 
 
@@ -302,14 +426,64 @@
 
 
 
-</script>
 
+
+</script>
+<link rel="stylesheet" href="./bootstrapt/css/bootstrap.min.css" />
+<script src="./bootstrapt/js/bootstrap.min.js"></script>
+<style>
+    .highcharts-figure,
+    .highcharts-data-table table {
+        min-width: 360px;
+        max-width: 800px;
+        margin: 1em auto;
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #ebebeb;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+</style>
 
 
 
     <div class="main_content">
-        <div class="mcontainer">
 
+
+
+
+        <div class="mcontainer">
             <!--  Feeds  -->
             <div class="lg-flex justify-content-center" style="align-content: flex-start">
 
@@ -333,7 +507,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -373,7 +547,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-auto">
-                                                <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -393,7 +567,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-auto">
-                                                <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -425,9 +599,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -444,9 +615,6 @@
                                                         <div id="stock1" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -465,9 +633,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -484,76 +649,50 @@
                                                         <div id="stock3" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             <div class="col-sm-4  mb-4">
                                 <input type="search" id="companyNameSearch" class="form-control rounded" placeholder="어떤 회사를 찾으시나요?" aria-label="Search" aria-describedby="search-addon" />
-                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning">search</button>
+<%--                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" >search</button>--%>
+                                <button type="button" id="stockSearch_btn" class="btn-close" data-toggle="modal" data-target="#retrieveStock" data-dismiss="modal">검색</button>
+
+<%--                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#retrieveStock">search</button>--%>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class=" justify-content-center" style="align-content: flex-start">
-                <div class="col-sm-6  mb-6">
-                    <table id="tableFX">
-                        <thead>
-                        <tr>
-                            <th>코드</th>
-                            <th>이름</th>
-                            <th>상장국가</th>
-                            <th>차트선택</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-                <figure class="highcharts-figure">
-                    <div id="container"></div>
-                </figure>
-            </div>
 
-
-
-
-
-
-            <!-- ======= Features Section ======= -->
             <div class=" justify-content-center" style="align-content: flex-start">
 
-                <section id="features" class="features">
+                <div class="moving-container">
+                    <h3> <img src = "/assets/images/yeoido5Channel.jpeg"/> KB 금융그룹 E-HRD Cloud 추천 동영상 </h3>
 
-                    <div class="container" data-aos="fade-up">
-
+                    <div>
                         <div class="row">
-
-                            <div class="image col-lg-6" style='background-image: url("/views/sales/earning/assets/img/features.jpg");' data-aos="fade-right"></div>
-
-                            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                            <div class="col-lg-6">
+                                <iframe width="500" height="280" src="https://www.youtube.com/embed/qSTxan6rjxc?si=2SoNlpWezh10wCP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-lg-6">
+                                <iframe width="500" height="280"  src="https://www.youtube.com/embed/ZeGURwPIb44?si=ya-aWFD4rP-tAV3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
-
                     </div>
-
-                </section>
-            <!-- End Features Section -->
+                </div>
             </div>
 
-        </div>
+
+
+
+
+
+            </div>
     </div>
+
+
 
 
 
