@@ -669,7 +669,7 @@
             <div class=" justify-content-center" style="align-content: flex-start">
 
                 <div class="moving-container">
-                    <h3> <img src = "/assets/images/yeoido5Channel.jpeg"/> KB 금융그룹 E-HRD Cloud 추천 동영상 </h3>
+                    <h3>  KB 금융그룹 E-HRD Cloud 추천 동영상 </h3>
 
                     <div>
                         <div class="row">
