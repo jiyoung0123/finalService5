@@ -282,6 +282,102 @@
         }//display
     }//
 
+    const chart = (()=>{
+        Highcharts.chart('chartContainer', {
+
+            chart: {
+                scrollablePlotArea: {
+                    minWidth: 700
+                }
+            },
+
+            data: {
+                csvURL: 'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/analytics.csv',
+                beforeParse: function (csv) {
+                    return csv.replace(/\n\n/g, '\n');
+                }
+            },
+
+            title: {
+                text: 'Daily sessions at www.highcharts.com',
+                align: 'left'
+            },
+
+            subtitle: {
+                text: 'Source: Google Analytics',
+                align: 'left'
+            },
+
+            xAxis: {
+                tickInterval: 7 * 24 * 3600 * 1000, // one week
+                tickWidth: 0,
+                gridLineWidth: 1,
+                labels: {
+                    align: 'left',
+                    x: 3,
+                    y: -3
+                }
+            },
+
+            yAxis: [{ // left y axis
+                title: {
+                    text: null
+                },
+                labels: {
+                    align: 'left',
+                    x: 3,
+                    y: 16,
+                    format: '{value:.,0f}'
+                },
+                showFirstLabel: false
+            }, { // right y axis
+                linkedTo: 0,
+                gridLineWidth: 0,
+                opposite: true,
+                title: {
+                    text: null
+                },
+                labels: {
+                    align: 'right',
+                    x: -3,
+                    y: 16,
+                    format: '{value:.,0f}'
+                },
+                showFirstLabel: false
+            }],
+
+            legend: {
+                align: 'left',
+                verticalAlign: 'top',
+                borderWidth: 0
+            },
+
+            tooltip: {
+                shared: true,
+                crosshairs: true
+            },
+
+            plotOptions: {
+                series: {
+                    cursor: 'pointer',
+                    className: 'popup-on-click',
+                    marker: {
+                        lineWidth: 1
+                    }
+                }
+            },
+
+            series: [{
+                name: 'All sessions',
+                lineWidth: 4,
+                marker: {
+                    radius: 4
+                }
+            }, {
+                name: 'New users'
+            }]
+        });
+    })
 
 
 
@@ -295,6 +391,8 @@
         //stockApi.searchPrice('tsla');
         //debugger; //디버깅
         crwalStock.init();
+        //chart
+        chart();
     });
 
 
@@ -303,13 +401,65 @@
 
 
 </script>
+<style>
+    .highcharts-figure,
+    .highcharts-data-table table {
+        min-width: 360px;
+        max-width: 800px;
+        margin: 1em auto;
+    }
 
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #ebebeb;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+</style>
 
 
 
     <div class="main_content">
-        <div class="mcontainer">
 
+
+        <figure class="highcharts-figure">
+            <div id="chartContainer"></div>
+            <p class="highcharts-description">
+                Chart showing data loaded dynamically. The individual data points can
+                be clicked to display more information.
+            </p>
+        </figure>
+
+        <div class="mcontainer">
             <!--  Feeds  -->
             <div class="lg-flex justify-content-center" style="align-content: flex-start">
 
@@ -482,7 +632,9 @@
                         </div>
                             <div class="col-sm-4  mb-4">
                                 <input type="search" id="companyNameSearch" class="form-control rounded" placeholder="어떤 회사를 찾으시나요?" aria-label="Search" aria-describedby="search-addon" />
-                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning">search</button>
+                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" >search</button>
+
+<%--                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#retrieveStock">search</button>--%>
                             </div>
                     </div>
                 </div>
@@ -513,7 +665,6 @@
 
 
 
-
             <!-- ======= Features Section ======= -->
             <div class=" justify-content-center" style="align-content: flex-start">
 
@@ -535,7 +686,32 @@
             <!-- End Features Section -->
             </div>
 
-        </div>
+
+            <div class="modal" id="retrieveStock">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Modal Heading</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            Modal body..
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
     </div>
 
 
