@@ -5,7 +5,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+    }
 
+    .container h2 {
+        margin-right: 10px;
+    }
+
+    .container img {
+        width: 30px;
+        margin-left: 30vi;
+    }
+</style>
 <body>
 
 
@@ -27,7 +41,13 @@
 
                     <div class="flex justify-between relative md:mb-4 mb-3">
                         <div class="flex-1">
-                            <h2 class="text-2xl font-semibold"> WM 게시판 </h2>
+                            <div class="container">
+                                <h2 class="text-2xl font-semibold">WM 게시판</h2>
+                                <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
+                                   data-tippy-placement="left" title="Create New Page">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </div>
                             <nav class="responsive-nav md:m-0 -mx-4 style-2">
                                 <ul>
                                     <li class="active"><a href="#" class="lg:px-2"> 전체글 </a></li>
@@ -40,34 +60,34 @@
 
                     <ul class="card divide-y divide-gray-100 sm:m-0 -mx-5">
                         <c:forEach var="obj" items="${boardlist}">
-                        <li>
-                            <div class="flex items-start space-x-5 p-7">
-                                <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-12 h-12 rounded-full">
-                                <div class="flex-1">
-                                    <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> ${obj.boardTitle}</a>
-                                    <p class="text-sm text-gray-400 mb-2"> Posted By: <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> 8 hours ago</span> </p>
-                                    <p class="leading-6 line-clamp-2 mt-3">  ${obj.boardContents}</p>
+                            <li>
+                                <div class="flex items-start space-x-5 p-7">
+                                    <img src=${obj.boardImagePath} alt="" class="w-12 h-12 rounded-full">
+                                    <div class="flex-1">
+                                        <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> ${obj.boardTitle}</a>
+                                        <p class="text-sm text-gray-400 mb-2"> 작성자 <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> ${obj.boardDate}</p>
+                                        <p class="leading-6 line-clamp-2 mt-3">  ${obj.boardContents}</p>
+                                    </div>
+                                    <div class="sm:flex items-center space-x-4 hidden">
+                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                        <span class="text-xl"> ${obj.boardLikes} </span>
+                                    </div>
                                 </div>
-                                <div class="sm:flex items-center space-x-4 hidden">
-                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                    <span class="text-xl"> 4 </span>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
                         </c:forEach>
                     </ul>
-<%--가장 좋아요가 많은 글 보여주기--%>
+                    <%--가장 좋아요가 많은 글 보여주기--%>
                     <h2 class="text-xl font-semibold mb-6 lg:mt-10 mt-4"> 핫 WM 이슈 </h2>
                     <ul class="card divide-y divide-gray-100">
                         <li>
                             <div class="flex items-center space-x-5 p-7">
-                                <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-12 h-12 rounded-full">
+                                <img src="assets/images/avatars/b.png" alt="" class="w-12 h-12 rounded-full">
                                 <div class="flex-1">
-                                    <a href="#" class="text-lg font-semibold line-clamp-1"> Recommendations for new computer </a>
+                                    <a href="#" class="text-lg font-semibold line-clamp-1"> 항셍지수의 미래에 대해 어떻게 생각하세요?</a>
                                     <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium">
-                                        <a href="timeline.html" class="font-semibold"> Adrian Jackson </a>
-                                        <div class="text-gray-500"> Oct 20Th , 2020 </div>
-                                        <div class="text-gray-500"> 12 replies</div>
+                                        <a href="timeline.html" class="font-semibold"> 작성자 2855004 </a>
+                                        <div class="text-gray-500"> 2023.11.13 </div>
+                                        <div class="text-gray-500"> 102 개의 댓글 </div>
                                     </div>
                                 </div>
                                 <div class="sm:flex items-center -space-x-4 hidden">

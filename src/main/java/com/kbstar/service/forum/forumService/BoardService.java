@@ -17,7 +17,7 @@ public class BoardService implements KBService<Integer, BoardList> {
 
     @Override
     public void register(BoardList boardList) throws Exception {
-
+        mapper.insert(boardList);
     }
 
     @Override
