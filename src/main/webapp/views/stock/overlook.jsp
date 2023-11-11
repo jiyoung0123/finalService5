@@ -507,7 +507,7 @@
                                             <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
                                                 <div> 15명의 추천 </div>
                                                 <div>·</div>
-                                                <div> 286 views </div>
+                                                <div> 286명이 지켜보는 중 </div>
                                             </div>
                                             <div id="socket_msg1" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
                                                 $12.99
@@ -528,9 +528,9 @@
                                             <div class="text-xs font-semibold uppercase text-yellow-500"> 업비트 </div>
                                             <div class="text-lg mt-3 2.5 text-gray-700"> 이더리움 </div>
                                             <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
-                                                <div> 15 likes</div>
+                                                <div> 75명의 추천 </div>
                                                 <div>·</div>
-                                                <div> 286 views </div>
+                                                <div> 148명이 지켜보는 중 </div>
                                             </div>
 
                                             <div id="socket_msg2" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
@@ -552,9 +552,9 @@
                                             <div class="text-xs font-semibold uppercase text-yellow-500"> 업비트 </div>
                                             <div class="text-lg mt-3 2.5 text-gray-700"> 도지코인 </div>
                                             <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
-                                                <div> 15 likes</div>
+                                                <div> 32명의 추천 </div>
                                                 <div>·</div>
-                                                <div> 286 views </div>
+                                                <div> 126명이 지켜보는 중 </div>
                                             </div>
                                             <div id="socket_msg3" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
                                                 $12.99
@@ -575,9 +575,9 @@
                                             <div class="text-xs font-semibold uppercase text-yellow-500"> 업비트 </div>
                                             <div class="text-lg mt-3 2.5 text-gray-700"> 에이다 </div>
                                             <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
-                                                <div> 15 likes</div>
+                                                <div> 4명의 추천 </div>
                                                 <div>·</div>
-                                                <div> 286 views </div>
+                                                <div> 286명이 지켜보는 중 </div>
                                             </div>
                                             <div id="socket_msg4" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
                                                 $12.99
