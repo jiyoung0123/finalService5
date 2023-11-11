@@ -669,7 +669,7 @@
 
             <div class="contact-list my-2 ml-1">
 
-                <a href="chats-friend.html">
+                <a href="chats-friend.html">\
                     <div class="contact-avatar">
                         <img src="/assets/images/avatars/avatar-1.jpg" alt="">
                         <span class="user_status status_online"></span>
