@@ -494,11 +494,14 @@
                 <div class="moving-container">
                     <h3> <img src = "/assets/images/yeoido5Channel.jpeg"/> KB 금융그룹 E-HRD Cloud 추천 동영상 </h3>
 
-                    <div class="moving-content">
+                    <div>
                         <div class="row">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qSTxan6rjxc?si=2SoNlpWezh10wCP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZeGURwPIb44?si=ya-aWFD4rP-tAV3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                            <div class="col-lg-6">
+                                <iframe width="500" height="280" src="https://www.youtube.com/embed/qSTxan6rjxc?si=2SoNlpWezh10wCP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-lg-6">
+                                <iframe width="500" height="280"  src="https://www.youtube.com/embed/ZeGURwPIb44?si=ya-aWFD4rP-tAV3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
