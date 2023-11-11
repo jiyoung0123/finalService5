@@ -479,46 +479,32 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             <div class="col-sm-4  mb-4">
                                 <input type="search" id="companyNameSearch" class="form-control rounded" placeholder="어떤 회사를 찾으시나요?" aria-label="Search" aria-describedby="search-addon" />
                                 <button type="button" id="stockSearch_btn" class="btn btn-outline-warning">search</button>
                             </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" justify-content-center" style="align-content: flex-start">
+
+                <div class="moving-container">
+                    <h3> <img src = "/assets/images/yeoido5Channel.jpeg"/> KB 금융그룹 E-HRD Cloud 추천 동영상 </h3>
+
+                    <div class="moving-content">
+                        <div class="row">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qSTxan6rjxc?si=2SoNlpWezh10wCP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZeGURwPIb44?si=ya-aWFD4rP-tAV3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class=" justify-content-center" style="align-content: flex-start">
-                <div class="col-sm-6  mb-6">
-                    <table id="tableFX">
-                        <thead>
-                        <tr>
-                            <th>코드</th>
-                            <th>이름</th>
-                            <th>상장국가</th>
-                            <th>차트선택</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-                <figure class="highcharts-figure">
-                    <div id="container"></div>
-                </figure>
-            </div>
 
-
-
-            <h4> <img src = "/assets/images/yeoido5Channel.jpeg"/> KB 금융그룹 여의도 5번출구 춰천 동영상 </h4>
-            <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/qSTxan6rjxc?si=2SoNlpWezh10wCP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
 
 
 
