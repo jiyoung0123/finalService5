@@ -412,7 +412,7 @@
 
     $(()=>{
         //stockApi.init();
-       // websocketConnect(4); //websocket 4개 활성화
+         websocketConnect(4); //websocket 4개 활성화
         //stockApi.searchPrice('tsla');
         //debugger; //디버깅
         //crwalStock.init();
@@ -489,92 +489,204 @@
 
                 <!-- ======= About Section ======= -->
                 <section id="about" class="about">
-                    <H3>실시간 가상화폐 시가</H3>
-                    <h6>powered by UpBit</h6>
-                    <div class="container" data-aos="fade-up">
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">비트코인
-                                                </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div id="socket_msg0" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    <div class="relative -mt-3" uk-slider="finite: true">
+                        <div class="uk-slider-container px-1 py-3">
+                            <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@s uk-grid-small uk-grid">
+
+                                <li>
+                                    <div class="card p-2 flex space-x-4 border border-gray-100">
+                                        <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                            <div class="card-media h-24">
+                                                <img src="/assets/images/product/bitcoin.png" alt="비트코인"/>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">이더리움
-                                                </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div id="socket_msg1" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>
-                                                    </div>
-                                                </div>
+                                        <div class="flex-1 pt-2.5 relative">
+
+                                            <div class="text-xs font-semibold uppercase text-yellow-500"> 업비트 </div>
+                                            <div class="text-lg mt-3 2.5 text-gray-700">비트코인</div>
+                                            <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                <div> 15명의 추천 </div>
+                                                <div>·</div>
+                                                <div> 286 views </div>
                                             </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <div id="socket_msg1" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                $12.99
                                             </div>
+
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-dark shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">도지코인
-                                                </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div id="socket_msg2" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                </li>
+                                <li>
+                                    <div class="card p-2 flex space-x-4 border border-gray-100">
+                                        <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                            <div class="card-media h-24">
+                                                <img src="/assets/images/product/ethurium.png" alt="이더리움">
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-danger shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">에이다
-                                                </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div id="socket_msg3" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>
-                                                    </div>
-                                                </div>
+                                        <div class="flex-1 pt-2.5 relative">
+
+                                            <div class="text-xs font-semibold uppercase text-yellow-500"> 업비트 </div>
+                                            <div class="text-lg mt-3 2.5 text-gray-700"> 이더리움 </div>
+                                            <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                <div> 15 likes</div>
+                                                <div>·</div>
+                                                <div> 286 views </div>
                                             </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+
+                                            <div id="socket_msg2" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                $12.99
                                             </div>
+
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </li>
+                                <li>
+                                    <div class="card p-2 flex space-x-4 border border-gray-100">
+                                        <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                            <div class="card-media h-24">
+                                                <img src="/assets/images/product/dodge.png" alt="dodgeCoin">
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 pt-2.5 relative">
+
+                                            <div class="text-xs font-semibold uppercase text-yellow-500"> 업비트 </div>
+                                            <div class="text-lg mt-3 2.5 text-gray-700"> 도지코인 </div>
+                                            <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                <div> 15 likes</div>
+                                                <div>·</div>
+                                                <div> 286 views </div>
+                                            </div>
+                                            <div id="socket_msg3" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                $12.99
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card p-2 flex space-x-4 border border-gray-100">
+                                        <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                            <div class="card-media h-24">
+                                                <img src="/assets/images/product/adacoin.png" alt="adaCoin">
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 pt-2.5 relative">
+
+                                            <div class="text-xs font-semibold uppercase text-yellow-500"> 업비트 </div>
+                                            <div class="text-lg mt-3 2.5 text-gray-700"> 에이다 </div>
+                                            <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                <div> 15 likes</div>
+                                                <div>·</div>
+                                                <div> 286 views </div>
+                                            </div>
+                                            <div id="socket_msg4" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                $12.99
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
                         </div>
+
+                        <a class="absolute bg-white top-11 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
+                           href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                        <a class="absolute bg-white top-11 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
+                           href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+
                     </div>
+
+
+
+
+
+
+<%--                    <div class="container" data-aos="fade-up">--%>
+<%--                        <div class="row">--%>
+<%--                            <div class="col-xl-3 col-md-6 mb-4">--%>
+<%--                                <div class="card border-left-success shadow h-100 py-2">--%>
+<%--                                    <div class="card-body">--%>
+<%--                                        <div class="row no-gutters align-items-center">--%>
+<%--                                            <div class="col mr-2">--%>
+<%--                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">비트코인--%>
+<%--                                                </div>--%>
+<%--                                                <div class="row no-gutters align-items-center">--%>
+<%--                                                    <div class="col-auto">--%>
+<%--                                                        <div id="socket_msg0" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>--%>
+<%--                                                    </div>--%>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
+<%--                                            <div class="col-auto">--%>
+<%--                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="col-xl-3 col-md-6 mb-4">--%>
+<%--                                <div class="card border-left-primary shadow h-100 py-2">--%>
+<%--                                    <div class="card-body">--%>
+<%--                                        <div class="row no-gutters align-items-center">--%>
+<%--                                            <div class="col mr-2">--%>
+<%--                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">이더리움--%>
+<%--                                                </div>--%>
+<%--                                                <div class="row no-gutters align-items-center">--%>
+<%--                                                    <div class="col-auto">--%>
+<%--                                                        <div id="socket_msg1" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>--%>
+<%--                                                    </div>--%>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
+<%--                                            <div class="col-auto">--%>
+<%--                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="col-xl-3 col-md-6 mb-4">--%>
+<%--                                <div class="card border-left-dark shadow h-100 py-2">--%>
+<%--                                    <div class="card-body">--%>
+<%--                                        <div class="row no-gutters align-items-center">--%>
+<%--                                            <div class="col mr-2">--%>
+<%--                                                <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">도지코인--%>
+<%--                                                </div>--%>
+<%--                                                <div class="row no-gutters align-items-center">--%>
+<%--                                                    <div class="col-auto">--%>
+<%--                                                        <div id="socket_msg2" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>--%>
+<%--                                                    </div>--%>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
+<%--                                            <div class="col-auto">--%>
+<%--                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="col-xl-3 col-md-6 mb-4">--%>
+<%--                                <div class="card border-left-danger shadow h-100 py-2">--%>
+<%--                                    <div class="card-body">--%>
+<%--                                        <div class="row no-gutters align-items-center">--%>
+<%--                                            <div class="col mr-2">--%>
+<%--                                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">에이다--%>
+<%--                                                </div>--%>
+<%--                                                <div class="row no-gutters align-items-center">--%>
+<%--                                                    <div class="col-auto">--%>
+<%--                                                        <div id="socket_msg3" class="h5 mb-0 mr-3 font-weight-bold text-white-800">50%</div>--%>
+<%--                                                    </div>--%>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
+<%--                                            <div class="col-auto">--%>
+<%--                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+
                 </section>
             </div>
 
