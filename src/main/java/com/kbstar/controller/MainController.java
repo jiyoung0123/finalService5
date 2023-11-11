@@ -61,4 +61,31 @@ public class MainController {
         model.addAttribute("center", "board");
         return "index";
     }
+
+    @RequestMapping("/stock")
+    public String main(Model model, HttpSession session) throws Exception {
+        model.addAttribute("center",   "stock/overlook");
+        return "index";
+    }
+
+
+
+    @RequestMapping("/boardWrite")
+    public String boardWrtie(Model model) throws Exception {
+        model.addAttribute("center", "boardWrite");
+        return "index";
+    }
+    @RequestMapping("/boardWriteImpl")
+    public String boardWriteImpl(Model model, BoardList boardList) {
+        try {
+            boardService.register(boardList);
+            log.error("boardList : " + boardList);
+            model.addAttribute("center", "board");
+            return "redirect:/board";
+        } catch (Exception e) {
+            // Handle exceptions or errors
+            model.addAttribute("error", "An error occurred: " + e.getMessage());
+            return "error"; // Return the name of the error view
+        }
+    }
 }
