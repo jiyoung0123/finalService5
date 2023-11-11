@@ -333,7 +333,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -373,7 +373,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-auto">
-                                                <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -393,7 +393,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-auto">
-                                                <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -425,9 +425,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -444,9 +441,6 @@
                                                         <div id="stock1" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -465,9 +459,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -484,47 +475,39 @@
                                                         <div id="stock3" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             <div class="col-sm-4  mb-4">
                                 <input type="search" id="companyNameSearch" class="form-control rounded" placeholder="어떤 회사를 찾으시나요?" aria-label="Search" aria-describedby="search-addon" />
                                 <button type="button" id="stockSearch_btn" class="btn btn-outline-warning">search</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" justify-content-center" style="align-content: flex-start">
+
+                <div class="moving-container">
+                    <h3> <img src = "/assets/images/yeoido5Channel.jpeg"/> KB 금융그룹 E-HRD Cloud 추천 동영상 </h3>
+
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <iframe width="500" height="280" src="https://www.youtube.com/embed/qSTxan6rjxc?si=2SoNlpWezh10wCP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-lg-6">
+                                <iframe width="500" height="280"  src="https://www.youtube.com/embed/ZeGURwPIb44?si=ya-aWFD4rP-tAV3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class=" justify-content-center" style="align-content: flex-start">
-                <div class="col-sm-6  mb-6">
-                    <table id="tableFX">
-                        <thead>
-                        <tr>
-                            <th>코드</th>
-                            <th>이름</th>
-                            <th>상장국가</th>
-                            <th>차트선택</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-                <figure class="highcharts-figure">
-                    <div id="container"></div>
-                </figure>
-            </div>
+
 
 
 
