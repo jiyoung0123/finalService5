@@ -120,7 +120,7 @@
         //(2) code를 통한 price 검색
         searchPrice : (codes)=>{
             $.ajax({
-                url : '/stock/price',
+                url : '/stock/v1/price',
                 data : {
                     'function' : 'TIME_SERIES_DAILY',
                 'stockCodes' : codes
@@ -135,7 +135,7 @@
         //(3) codes 검색
         searchCodes : (keywords)=> {
             $.ajax({
-                url: '/stock/codes',
+                url: '/stock/v1/codes',
                 data: {'keywords': keywords}
             }).done((data) => {
                 console.log(data.toString());
@@ -149,7 +149,7 @@
     const crwalStock = {
         init : ()=>{
             $.ajax({
-                url : '/stock/crawl'
+                url : '/stock/v1/crawl'
 
             }).done((data)=>{
                 console.log(JSON.stringify(data));
@@ -171,29 +171,58 @@
 
     }
 
-    // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
-    let stockexchange = {
+    let retrieveStockPrice = {
         init : ()=>{
             $('#stockSearch_btn').click(()=>{
-                $.ajax({
-                    url:'/stock/codes',
-                    type: 'GET',
-                    data: {
-                        symbol : $('#companyNameSearch').val()
+                console.log('button Clicked');
+                console.log($('#companyNameSearch').val());
+                $.get({
+                    url : '/stock/v1/price',
+                    data : {
+                        'stockCodes' : $('#companyNameSearch').val()
                     }
-                }).done(
-                    (data)=>{
-                        stockexchange.display(data);
-                    }
-                )
-                    .fail(
-                        ()=>{
-                            console.log("failure");
-                        }
-                    );
+                }).done((data)=>{
+                    resData = JSON.parse(data.result);
+                    // JSON 형태로 이미 데이터가 넘어왔으면, JSON.parse를 써야한다.
+                    console.log(resData);
+                    //JSON 형태로 이미 데이터가 넘어왔는데,stringify를 쓰면 \n 이 붙는다.
+                    //console.log(JSON.stringify(data));
+                    chart(resData["Time Series (Daily)"]);
+                    console.log(resData["Time Series (Daily)"]);
 
-                stockexchange.display();
+                }).fail((e)=>{
+                    console.log('failed');
+                    console.log(e.toString());
+                })
             })
+        }
+    }
+
+
+
+
+    let stockexchange = {
+        init : ()=>{
+            // $('#stockSearch_btn').click(()=>{
+            //     $.ajax({
+            //         url:'/stock/codes',
+            //         type: 'GET',
+            //         data: {
+            //             symbol : $('#companyNameSearch').val()
+            //         }
+            //     }).done(
+            //         (data)=>{
+            //             stockexchange.display(data);
+            //         }
+            //     )
+            //         .fail(
+            //             ()=>{
+            //                 console.log("failure");
+            //             }
+            //         );
+            //
+            //     stockexchange.display();
+            // })
 
         },
         display : (data)=>{
@@ -282,21 +311,17 @@
         }//display
     }//
 
-    const chart = (()=>{
+    const chart = ((resData)=>{
+        console.log("highchart");
+        console.log(resData);
         Highcharts.chart('chartContainer', {
-
             chart: {
                 scrollablePlotArea: {
                     minWidth: 700
                 }
             },
 
-            data: {
-                csvURL: 'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/analytics.csv',
-                beforeParse: function (csv) {
-                    return csv.replace(/\n\n/g, '\n');
-                }
-            },
+            data: resData,
 
             title: {
                 text: 'Daily sessions at www.highcharts.com',
@@ -386,13 +411,14 @@
 
 
     $(()=>{
-        stockApi.init();
-        websocketConnect(4); //websocket 4개 활성화
+        //stockApi.init();
+       // websocketConnect(4); //websocket 4개 활성화
         //stockApi.searchPrice('tsla');
         //debugger; //디버깅
-        crwalStock.init();
+        //crwalStock.init();
+        retrieveStockPrice.init();
         //chart
-        chart();
+        //chart();
     });
 
 
@@ -400,7 +426,11 @@
 
 
 
+
+
 </script>
+<link rel="stylesheet" href="./bootstrapt/css/bootstrap.min.css" />
+<script src="./bootstrapt/js/bootstrap.min.js"></script>
 <style>
     .highcharts-figure,
     .highcharts-data-table table {
@@ -451,13 +481,7 @@
     <div class="main_content">
 
 
-        <figure class="highcharts-figure">
-            <div id="chartContainer"></div>
-            <p class="highcharts-description">
-                Chart showing data loaded dynamically. The individual data points can
-                be clicked to display more information.
-            </p>
-        </figure>
+
 
         <div class="mcontainer">
             <!--  Feeds  -->
@@ -632,7 +656,8 @@
                         </div>
                             <div class="col-sm-4  mb-4">
                                 <input type="search" id="companyNameSearch" class="form-control rounded" placeholder="어떤 회사를 찾으시나요?" aria-label="Search" aria-describedby="search-addon" />
-                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" >search</button>
+<%--                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" >search</button>--%>
+                                <button type="button" id="stockSearch_btn" class="btn-close" data-toggle="modal" data-target="#retrieveStock" data-dismiss="modal">검색</button>
 
 <%--                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#retrieveStock">search</button>--%>
                             </div>
@@ -664,55 +689,10 @@
 
 
 
-
-            <!-- ======= Features Section ======= -->
-            <div class=" justify-content-center" style="align-content: flex-start">
-
-                <section id="features" class="features">
-
-                    <div class="container" data-aos="fade-up">
-
-                        <div class="row">
-
-                            <div class="image col-lg-6" style='background-image: url("/views/sales/earning/assets/img/features.jpg");' data-aos="fade-right"></div>
-
-                            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                            </div>
-                        </div>
-
-                    </div>
-
-                </section>
-            <!-- End Features Section -->
-            </div>
-
-
-            <div class="modal" id="retrieveStock">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Modal Heading</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            Modal body..
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
             </div>
     </div>
+
+
 
 
 
