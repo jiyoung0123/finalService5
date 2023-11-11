@@ -61,4 +61,12 @@ public class MainController {
         model.addAttribute("center", "board");
         return "index";
     }
+
+    @RequestMapping("/stock")
+    public String main(Model model, HttpSession session) throws Exception {
+        model.addAttribute("center",   "stock/overlook");
+        return "index";
+    }
+
+
 }
