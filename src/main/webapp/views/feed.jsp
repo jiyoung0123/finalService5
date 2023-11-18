@@ -763,7 +763,7 @@
 
                         <div class="contact-list">
 
-                            <a href="#">
+                            <a href="/myprofile/detail">
                                 <div class="contact-avatar">
                                     <img src="assets/images/avatars/avatar-1.jpg" alt="">
                                     <span class="user_status status_online"></span>
@@ -773,10 +773,10 @@
                             <div uk-drop="pos: left-center ;animation: uk-animation-slide-left-small">
                                 <div class="contact-list-box">
                                     <div class="contact-avatar">
-                                        <img src="assets/images/avatars/avatar-2.jpg" alt="">
-                                        <span class="user_status status_online"></span>
+                                        <img src="assets/images/avatars/avatar-1.jpg" alt="">
+                                        <span class="user_status"></span>
                                     </div>
-                                    <div class="contact-username"> 지영언니야</div>
+                                    <div class="contact-username">  지영언니야</div>
                                     <p>
                                         <ion-icon name="people" class="text-lg mr-1"></ion-icon> Become friends with
                                         <strong> Stella Johnson </strong> and <strong> 14 Others</strong>
