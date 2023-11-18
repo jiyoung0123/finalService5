@@ -136,6 +136,13 @@
             <artifactId>jsoup</artifactId>
             <version>1.14.3</version>
         </dependency>
+        <!-- OkHttp3 -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.9.1</version> <!-- 적절한 버전을 선택하세요 -->
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

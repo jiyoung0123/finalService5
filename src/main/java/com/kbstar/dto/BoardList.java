@@ -19,7 +19,7 @@ public class BoardList {
     private String hashtag;//해시태그(검색용)
     private String boardImg;//게시판이미지
     private String boardImgName;//게시판이미지명
-    private String boardImgPath;//게시판이미지경로
+    private String boardImagePath;//게시판이미지경로
     private int boardLikes;//추천수
     private int boardHates;//비추천수
     private String boardDate;//작성일자

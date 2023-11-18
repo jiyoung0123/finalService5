@@ -2,6 +2,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<script src="assets/js/tippy.all.min.js"></script>
+<script src="assets/js/uikit.js"></script>
+<script src="assets/js/simplebar.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="assets/js/boardWrite.js"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +28,7 @@
     }
 </style>
 <body>
+
 
 
 <div id="wrapper">
@@ -50,56 +58,41 @@
                             </div>
                             <nav class="responsive-nav md:m-0 -mx-4 style-2">
                                 <ul>
-                                    <li class="active"><a href="#" class="lg:px-2"> 전체글 </a></li>
-                                    <li><a href="#" class="lg:px-2"> 인기글 </a></li>
-                                    <li><a href="#" class="lg:px-2"> 최신글 </a></li>
+                                    <li class="active"><a href="#" class="lg:px-2"> 어떤 내용을 공유하고 싶으세요? </a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
 
-                    <ul class="card divide-y divide-gray-100 sm:m-0 -mx-5">
-                        <c:forEach var="obj" items="${boardlist}">
-                            <li>
-                                <div class="flex items-start space-x-5 p-7">
-                                    <img src=${obj.boardImagePath} alt="" class="w-12 h-12 rounded-full">
-                                    <div class="flex-1">
-                                        <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> ${obj.boardTitle}</a>
-                                        <p class="text-sm text-gray-400 mb-2"> 작성자 <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> ${obj.boardDate}</p>
-                                        <p class="leading-6 line-clamp-2 mt-3">  ${obj.boardContents}</p>
-                                    </div>
-                                    <div class="sm:flex items-center space-x-4 hidden">
-                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                        <span class="text-xl"> ${obj.boardLikes} </span>
-                                    </div>
-                                </div>
-                            </li>
-                        </c:forEach>
-                    </ul>
-                    <%--가장 좋아요가 많은 글 보여주기--%>
-                    <h2 class="text-xl font-semibold mb-6 lg:mt-10 mt-4"> 핫 WM 이슈 </h2>
-                    <ul class="card divide-y divide-gray-100">
-                        <li>
-                            <div class="flex items-center space-x-5 p-7">
-                                <img src="assets/images/avatars/b.png" alt="" class="w-12 h-12 rounded-full">
-                                <div class="flex-1">
-                                    <a href="#" class="text-lg font-semibold line-clamp-1"> 항셍지수의 미래에 대해 어떻게 생각하세요?</a>
-                                    <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium">
-                                        <a href="timeline.html" class="font-semibold"> 작성자 2855004 </a>
-                                        <div class="text-gray-500"> 2023.11.13 </div>
-                                        <div class="text-gray-500"> 102 개의 댓글 </div>
-                                    </div>
-                                </div>
-                                <div class="sm:flex items-center -space-x-4 hidden">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
-                                    <div class="w-10 h-10 rounded-full flex justify-center items-center bg-red-100 text-red-500 font-semibold"> 12+</div>
+
+                    <form id="postForm" class="card divide-y divide-gray-100">
+                        <div class="flex items-center space-x-5 p-7">
+                            <div class="flex-1">
+                                <div class="mb-3">
+                                    <label for="boardTitle" class="form-label">제목</label>
+                                    <input type="text" class="form-control" id="boardTitle" name="boardTitle" placeholder="제목을 입력해주세요">
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
 
+                        <div class="flex items-center space-x-5 p-7">
+                            <div class="flex-1">
+                                <div class="mb-3">
+                                    <label for="boardContents" class="form-label">내용</label>
+                                    <textarea class="form-control" id="boardContents" name="boardContents" placeholder="내용을 입력해주세요" style="height: 300px;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center p-7">
+                            <button type="button" id="submitBtn" class="flex items-center justify-center h-10 px-5 rounded-md bg-blue-600 text-white space-x-1.5 hover:text-white" style="width: 300px">
+                                <span> 등록하기 </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="lg:w-1/3 pt-5">
@@ -728,6 +721,10 @@
 
 <!-- For Night mode -->
 <script>
+    $(document).ready(function () {
+        postForm.init();
+    });
+
     (function (window, document, undefined) {
         'use strict';
         if (!('localStorage' in window)) return;
@@ -764,13 +761,7 @@
 
 <!-- Javascript
 ================================================== -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="assets/js/tippy.all.min.js"></script>
-<script src="assets/js/uikit.js"></script>
-<script src="assets/js/simplebar.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
-<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
 
 </body>
 </html>

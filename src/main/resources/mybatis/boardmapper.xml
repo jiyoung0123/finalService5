@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kbstar.mapper.BoardListMapper">
+    <insert id="insert" parameterType="boardList">
+        INSERT INTO BoardList (
+            boardID,
+            boardWriterId,
+            boardPW,
+            boardTitle,
+            boardCategory,
+            boardContents,
+            hashtag,
+            boardImg,
+            boardImgname,
+            boardImagePath,
+            boardLikes,
+            boardHates,
+            boardDate
+        )
+        VALUES (
+                   1, -- 원하는 boardId 값
+                   FLOOR(RAND() * (4000000 - 1000000 + 1) + 1000000), -- 랜덤한 7자리 숫자
+                   '1234',
+                   #{boardTitle},
+                   '게시물 카테고리',
+                   #{boardContents},
+                   '해시태그',
+                   '게시물 이미지',
+                   '게시물 이미지 이름2',
+                   #{boardImagePath},
+                   FLOOR(RAND() * 10 + 1),
+                   0,
+                   '2023.11.12'
+               )
+    </insert>
+
+</mapper>
