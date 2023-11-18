@@ -43,10 +43,25 @@
                         <div class="flex-1">
                             <div class="container">
                                 <h2 class="text-2xl font-semibold">WM 게시판</h2>
-                                <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
-                                   data-tippy-placement="left" title="Create New Page">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                </a>
+                                
+                                    <!-- 게시글 작성하기
+                                    boardWriterId가 없으면, 모달창(프로필 등록 안내) 
+                                    있으면, 작성하기 창으로 이동-->
+                                    <c:choose>
+                                        <c:when test="${boardWriterId == null}">
+                                            <a href="/boardWrite" uk-toggle="target: #modal-profile" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
+                                            data-tippy-placement="left" title="Create New Page">
+                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                         </a>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
+                                            data-tippy-placement="left" title="Create New Page">
+                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                            </a>
+                                        </c:otherwise>
+                                    </c:choose>
+                                    <!-- 게시글 작성하기 -->
                             </div>
                             <nav class="responsive-nav md:m-0 -mx-4 style-2">
                                 <ul>
@@ -725,7 +740,17 @@
         </div>
     </div>
 </div>
-
+<!-- 프로필 설정 안하고, 게시글 작성하기 버튼 클릭 시 모달창 test -->
+<div id="modal-profile" uk-modal>
+    <div class="uk-modal-body uk-modal-dialog rounded-md shadow-2xl">
+        <h2 class="mb-2 uk-modal-title">잠깐! 게시글 작성 전</h2>
+        <p>아직 나의 프로필 설정을 안하셨나요?<br>게시글을 작성하면 보여질 나의 정보를 등록한 뒤 이용하러 가볼까요?</p>
+        <div class="uk-modal-footer text-right mt-6 px-0 space-x-1">
+            <button class="button gray uk-modal-close" type="button">뒤로가기</button>
+            <a href="/myprofile"><button class="button" type="button">확인</button></a>
+        </div>
+    </div>
+</div>
 <!-- For Night mode -->
 <script>
     (function (window, document, undefined) {
