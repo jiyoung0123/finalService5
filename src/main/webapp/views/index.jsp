@@ -64,8 +64,8 @@
 
                     <div id="logo">
                         <a href="/feed">
-                            <img src="/assets/images/logo.png" alt="">
-                            <img src="/assets/images/logo-mobile.png" class="logo_mobile" alt="">
+                            <img src="/assets/images/logo/wm_logo.png" style="width: 100px; height: 60px;" alt="">
+                            <img src="/assets/images/logo/wm_logo.png" style="width: 100px; height: 60px;" class="logo_mobile" alt="">
                         </a>
                     </div>
                 </div>
