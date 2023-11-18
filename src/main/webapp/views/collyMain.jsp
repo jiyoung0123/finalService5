@@ -44,7 +44,7 @@
         <div class="mcontainer">
             <div class="my-2 flex items-center justify-between pb-3">
                 <div>
-                    <h2 class="text-xl font-semibold">나의 농장에 콜리를 키워 보세요!!</h2>
+                    <h2 class="text-xl font-semibold"> 나의 농장에 콜리를 키워 보세요!!</h2>
                 </div>
             </div>
             <form id="colly_form">
