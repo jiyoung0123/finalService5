@@ -1136,72 +1136,6 @@
             <jsp:include page="${center}.jsp"/>
         </c:otherwise>
     </c:choose>
-    <div class="story-content">
-
-        <ul class="uk-switcher uk-animation-scale-up" id="story_slider" >
-            <li class="relative">
-
-                <span uk-switcher-item="previous" class="slider-icon is-left"> </span>
-                <span uk-switcher-item="next" class="slider-icon is-right"> </span>
-
-                <div uk-lightbox>
-                    <a href="/assets/images/avatars/avatar-lg-2.jpg" data-alt="Image">
-                        <img src="/assets/images/avatars/avatar-lg-2.jpg" class="story-slider-image"  data-alt="Image">
-                    </a>
-                </div>
-
-            </li>
-            <li class="relative">
-
-                <span uk-switcher-item="previous" class="slider-icon is-left"> </span>
-                <span uk-switcher-item="next" class="slider-icon is-right"> </span>
-
-                <div uk-lightbox>
-                    <a href="/assets/images/avatars/avatar-lg-1.jpg" data-alt="Image">
-                        <img src="/assets/images/avatars/avatar-lg-1.jpg" class="story-slider-image"  data-alt="Image">
-                    </a>
-                </div>
-
-            </li>
-            <li class="relative">
-
-                <span uk-switcher-item="previous" class="slider-icon is-left"> </span>
-                <span uk-switcher-item="next" class="slider-icon is-right"> </span>
-
-                <div uk-lightbox>
-                    <a href="/assets/images/avatars/avatar-lg-4.jpg" data-alt="Image">
-                        <img src="/assets/images/avatars/avatar-lg-4.jpg" class="story-slider-image"  data-alt="Image">
-                    </a>
-                </div>
-
-            </li>
-
-            <li class="relative">
-                <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
-            </li>
-            <li class="relative">
-                <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
-            </li>
-            <li class="relative">
-                <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
-            </li>
-            <li class="relative">
-                <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
-            </li>
-            <li class="relative">
-                <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
-            </li>
-            <li class="relative">
-                <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
-            </li>
-            <li class="relative">
-                <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
-            </li>
-            <li class="relative">
-                <div class="bg-gray-200 story-slider-placeholder shadow-none animate-pulse"> </div>
-            </li>
-        </ul>
-    </div>
 
     <!-- story colose button-->
     <span class="story-btn-close" uk-toggle="target: body ; cls: story-active"
@@ -1275,32 +1209,7 @@
 </div>
 
 
-<!-- 작성자 : 최준혁  modal -->
-<div class="modal" id="retrieveStock" data-backdrop="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <!-- Modal body -->
-            <div class="modal-body">
-                <figure class="highcharts-figure">
-                    <div id="chartContainer"></div>
-                    <p class="highcharts-description">
-                        Chart showing data loaded dynamically. The individual data points can
-                        be clicked to display more information.
-                    </p>
-                </figure>
-            </div>
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- For Night mode -->
 <script>
