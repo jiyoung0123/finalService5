@@ -18,14 +18,14 @@ public class MyProfileController {
 
     // [정인보] 나의고객 전체조회 페이지 이동
     @RequestMapping("")
-    public String mycust(Model model){
+    public String myprofile(Model model){
         model.addAttribute("center" ,dir + "center");
         return "index";
     }
     // [정인보] 고객 대시보드 조회 페이지 이동
-    @RequestMapping("/dashboard")
-    public String dashboard(Model model){
-        model.addAttribute("center" ,dir + "dashboard");
+    @RequestMapping("/detail")
+    public String detail(Model model){
+        model.addAttribute("center" ,dir + "detail");
         return "index";
     }
 

@@ -3,6 +3,23 @@
     .list-group-item{
         color: #0c0c0c;
     }
+    .clickableImage:hover{
+    	cursor : pointer;
+    	 border: 3px solid #e0e0e0;
+         paddind: 5px;
+    }
+    /* 캐릭터 이미지 클릭 효과 */
+     .clicked {
+            border: 3px solid blue;
+            paddind: 5px; /* 여백 크기 조절 */
+        }
+         .insert {
+            color: wihte;
+            text-decoration: none; /* 밑줄 제거 */
+        }
+        .insert:hover {
+            color: wihte; /* 마우스를 대면 색상을 상속받음 */
+        }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- My 고객관리 메인 페이지 -->
@@ -20,18 +37,18 @@
                             <div class="text-xl font-semibold">  My프로필 설정하기 </div>
                         </div>
 
-                        <div class="space-y-8 mt-10">
+                        <div class="space-y-8 mt-10 mb-10">
                             <div class=" flex-1 sm:space-y-8 space-y-6">
                             <!-- 이미지 선택하기 -->
                              
                 				 <div class="text-base font-semibold"> 나의 캐릭터 </div>
                 				 <div class="font-medium text-sm text-gray-400" style="margin-top:3px;"> 나를 표현하는 이미지를 1개 선택해 주세요.</div>
                 				 <div class="flex items-center justify-around" style="margin-bottom:15px;">
-                				   <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="sm:w-20 sm:h-20 w-14 h-14 rounded-full">
-                                   <img src="/assets/images/starfriends/proflie2.jpg" alt="" class="sm:w-20 sm:h-20 w-14 h-14 rounded-full">
-                                   <img src="/assets/images/starfriends/proflie3.jpg" alt="" class="sm:w-20 sm:h-20 w-14 h-14 rounded-full">
-                                   <img src="/assets/images/starfriends/proflie4.jpg" alt="" class="sm:w-20 sm:h-20 w-14 h-14 rounded-full">
-                                   <img src="/assets/images/starfriends/proflie5.jpg" alt="" class="sm:w-20 sm:h-20 w-14 h-14 rounded-full">
+                				   <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="clickableImage sm:w-20 sm:h-20 w-14 h-14 rounded-full">
+                                   <img src="/assets/images/starfriends/proflie2.jpg" alt="" class="clickableImage sm:w-20 sm:h-20 w-14 h-14 rounded-full">
+                                   <img src="/assets/images/starfriends/proflie3.jpg" alt="" class="clickableImage sm:w-20 sm:h-20 w-14 h-14 rounded-full">
+                                   <img src="/assets/images/starfriends/proflie4.jpg" alt="" class="clickableImage sm:w-20 sm:h-20 w-14 h-14 rounded-full">
+                                   <img src="/assets/images/starfriends/proflie5.jpg" alt="" class="clickableImage sm:w-20 sm:h-20 w-14 h-14 rounded-full">
                                  </div>       
                 			<!-- //이미지 선택하기 -->
                 				 
@@ -39,10 +56,10 @@
                                      <div class="flex-1">
                                         <div class="flex items-center justify-between mb-3">
                                             <div class="text-base font-semibold"> <a href="#">  나의 이름 </a> </div>
-                                            <div class="font-medium text-sm text-blue-400"> 사용 가능</div>
+                                            <div class="font-medium text-sm text-blue-400" id="resultArea"> </div>
                                         </div>
                                         <div class="relative">
-                                            <input type="text" name="" id="" class="with-border" placeholder="게시판에서 사용할 닉네임, 별명 등을 설정해 주세요.">
+                                            <input type="text" name="" id="userInput" class="with-border" placeholder="게시판에서 사용할 닉네임, 별명 등을 6자리 이내로 설정해 주세요.">
                                             <ion-icon name="happy" class="absolute right-3 text-2xl top-1/4"></ion-icon>
                                         </div>
                                     </div>
@@ -164,19 +181,19 @@
                 				<div class="font-medium text-sm text-gray-400"> 내가 도전할 목표를 1개 선택하고 그에 대한 세부내용을 작성하세요.</div>
                 				<div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .card; delay: 300; repeat: true">
                                    <div>
-                                       <div class="card p-5">
+                                       <div class="card p-5 clickGoal">
                                            <h3 class="text-lg font-semibold mb-2">최다판매왕 되기!</h3>
                                            <p>꾸준히 오래하면 달성가능해요.<br>중요한건 꺾이지 않는 마음!</p>
                                        </div>
                                    </div>
                                    <div>
-                                       <div class="card p-5" uk-scrollspy-class="uk-animation-slide-top">
+                                       <div class="card p-5 clickGoal" uk-scrollspy-class="uk-animation-slide-top">
                                            <h3 class="text-lg font-semibold mb-2">목표금액 초과 달성하기!</h3>
                                            <p>만기/자동예치 내점 고객을 주 타깃으로 한다면 더욱 유리하겠죠?</p>
                                        </div>
                                    </div>
                                    <div>
-                                       <div class="card p-5">
+                                       <div class="card p-5 clickGoal">
                                            <h3 class="text-lg font-semibold mb-2">이번주 직원 Pick 선정되기!</h3>
                                            <p>주변 동료들에게 '나'를 보여줄 기회!<br>KB의 유명인사 나야나~!</p>
                                        </div>
@@ -190,7 +207,6 @@
                                         </div>
                                         <div class="relative">
                                             <input type="text" name="" id="" class="with-border" placeholder="작성예시) 목표 판매횟수 : 15회 / 목표 판매금액 : 1억원 / 12월 31일까지 직원 Pick 선정되기">
-                                            <ion-icon name="happy" class="absolute right-3 text-2xl top-1/4"></ion-icon>
                                         </div>
                                     </div>
                                 </div>
@@ -200,8 +216,9 @@
                             
                         </div>
 
-						<div class="flex justify-center border-gray-100 py-8">
-							<button class="button lg:w-1/3">프로필 설정 완료</button>
+						<div class="border-t flex justify-between lg:space-x-10 p-7 bg-gray-50 rounded-b-md">
+						<p class="text-sm leading-6">프로필을 등록하고 본격적으로 게시판과 그룹 Chat을 둘러보러 가세요!</p>
+							<a href="/groups" class="insert button lg:w-1/3"><button type="button">설정 완료</button></a>
 						</div>
 
                     </div>
@@ -216,13 +233,45 @@
     
 
     <script>
-// 고객상담메모이력 : 토글
-$(document).ready( function(){
-    $('.navbar-toggler').click( function(){
-    $('.list-group').toggle('slow');
-});  
-});
-
+    
+    $(document).ready(function() {
+    	// * 캐릭터 이미지 선택하기 효과
+        $(".clickableImage").on("click", function() {
+            // 모든 이미지의 클래스 제거
+            $(".clickableImage").removeClass("clicked");
+            
+            // 클릭된 이미지에 클래스를 추가하여 스타일을 적용
+            $(this).addClass("clicked");
+        });
+        // * '이름'입력 창에 입력이 완료되면 실행되는 이벤트
+        $("#userInput").on("input", function() {
+            // 입력 값 가져오기
+            var userInput = $(this).val();
+            
+            // 사용자 입력이 있을 경우 '사용 가능' 텍스트를 결과 영역에 표시
+            if (userInput.trim() !== "") {
+                $("#resultArea").text("사용 가능").css({color:'blue'});
+            	// 글자 수가 6자리를 초과하는지 확인
+                if (userInput.length > 6) {
+                    $("#resultArea").text("사용 불가").css({color:'red'});
+                } else {
+                    $("#resultArea").text("사용 가능").css({color:'blue'});
+                }
+            }
+            else {
+                // 사용자 입력이 없을 경우 결과 영역을 비움
+                $("#resultArea").text("");
+            }
+        });
+    	// * 나의 목표 3개 중 1개 선택하기 효과
+        $(".clickGoal").on("click", function() {
+            // 모든 이미지의 클래스 제거
+            $(".clickGoal").removeClass("clicked");
+            
+            // 클릭된 이미지에 클래스를 추가하여 스타일을 적용
+            $(this).addClass("clicked");
+        });
+    });
 // 다크모드
         (function (window, document, undefined) {
             'use strict';
