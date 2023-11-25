@@ -12,9 +12,9 @@
             <div class="mcontainer">
 
                 <div class="lg:flex lg:space-x-12">
-                    
+
                     <div class="lg:w-2/3 flex-shirink-0">
-                    
+
                         <!--  --> <div uk-filter="target: .js-filter">
                         <div class="flex justify-between relative md:mb-4 mb-3">
                             <div class="flex-1">
@@ -29,7 +29,7 @@
                                 </nav>
                             </div>
                         </div>
-                       
+
                             <ul class="card divide-y divide-gray-100 sm:m-0 -mx-5 js-filter">
                                 <li class="data-color-grade data-color-risk">
                                     <div class="flex items-start space-x-5 p-7">
@@ -49,7 +49,7 @@
                                                 <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
                                                 <hr>
                                                 <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
-                                            
+
                                             </ul>
                                         </div>
                                         <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
@@ -75,7 +75,7 @@
                                             <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
                                             <hr>
                                             <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
-                                        
+
                                         </ul>
                                         </div>
                                         <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
@@ -121,7 +121,7 @@
                                                 <hr>
                                                 <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
                                             </ul>
-                                        
+
                                         </div>
                                         <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
                                             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
@@ -144,7 +144,7 @@
                                                 <hr>
                                                 <li class="list-group-item bg-gray-100 w-full h-5 rounded lg:mr-32"><span class="icon-material-outline-check"></span>  고객 관심상품에 대한 상담요청 접수로 통화 완료</li>
                                             </ul>
-                                        
+
                                         </div>
                                         <div class="sm:flex items-center space-x-4 hidden navbar-toggler" style="cursor: pointer;">
                                             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
@@ -160,7 +160,7 @@
                                             <p class="text-sm text-gray-400 mb-2"> 관리한 지 한 달 전 </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 상품명 : KB PIMCO 글로벌 인컴 셀렉션 증권자투자신탁(채권-재간접형)(H) AE </p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 7,300,000원 </p>
-                                        
+
                                         <!-- 고객상담 메모이력보기 -->
                                         <ul class="list-group items-start space-y-3" style="display: none;">
                                             <li class="mt-5"><span class="icon-material-outline-assignment font-bold"><span><span class="font-bold">  고객상담 세부이력</span></li>
@@ -183,7 +183,7 @@
                                             <span class="text-xl"> 6 </span>
                                         </div>
                                     </div>
-                             
+
                                 </li>
                             </ul>
                         </div>
@@ -194,7 +194,7 @@
                                     <img src="/assets/images/starfriends/proflie1.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1">  한국투자 미국 배당귀족 증권자투자신탁H(주식) A-e </a>
-                                        <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium"> 
+                                        <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium">
                                             <a href="timeline.html" class="font-semibold"> 높은 위험 | 임의식 </a>
                                             <div class="text-gray-500"> Oct 20Th , 2020 </div>
                                             <div class="text-gray-500"> 12 명 가입 중</div>
@@ -213,7 +213,7 @@
                                     <img src="/assets/images/starfriends/proflie4.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1"> 베어링 고배당 증권자투자신탁(주식) AE  </a>
-                                        <div class="flex space-x-3 text-sm pb-2 flex-wrap"> 
+                                        <div class="flex space-x-3 text-sm pb-2 flex-wrap">
                                             <a href="timeline.html" class="font-semibold">  높은위험 | 국내주식  </a>
                                             <div class="text-gray-500"> Oct 20Th , 2020 </div>
                                             <div class="text-gray-500"> 5명 가입 중</div>
@@ -226,13 +226,13 @@
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-green-100 text-green-500 font-semibold"> 5+</div>
                                     </div>
                                 </div>
-                            </li> 
+                            </li>
                             <li>
                                 <div class="flex items-center space-x-5 p-7">
                                     <img src="/assets/images/starfriends/proflie5.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1"> KB PIMCO 글로벌 인컴 셀렉션 증권자투자신탁(채권-재간접형)(H) AE  </a>
-                                        <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium"> 
+                                        <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium">
                                             <a href="timeline.html" class="font-semibold">  보통 위험 | 해외채권  </a>
                                             <div class="text-gray-500"> Oct 20Th , 2020 </div>
                                             <div class="text-gray-500"> 3명 가입 중</div>
@@ -250,7 +250,7 @@
                                     <img src="/assets/images/starfriends/proflie3.jpg" alt="" class="w-12 h-12 rounded-full">
                                     <div class="flex-1">
                                         <a href="#" class="text-lg font-semibold line-clamp-1"> 피델리티 인디아 증권자투자신탁(주식)-Ce </a>
-                                        <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium"> 
+                                        <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium">
                                             <a href="timeline.html" class="font-semibold"> 보통 위험 | 해외채권 </a>
                                             <div class="text-gray-500"> Oct 20Th , 2020 </div>
                                             <div class="text-gray-500"> 4명 가입 중 </div>
@@ -265,20 +265,20 @@
                                 </div>
                             </li>
                         </ul>
-                      
+
                     </div>
-  
+
                     <div class="lg:w-1/3 pt-5">
-  
+
                         <div uk-sticky="offset:100">
-                            
+
                             <h2 class="text-xl font-semibold mb-2"> My고객 타임라인 </h2>
                             <p> 직원이 관심을 가질 수록<br> 고객들의 <span class="point">자산관리 관심도</span>는 더욱 높아져요.  </p>
                             <br>
                             <ul class="space-y-3">
                                 <li class="uk-filter-control">
                                     <a class="bg-gray-100 py-1.5 px-4 rounded-full" href="#">2023.9.16(토)</a>
-                                 	<div class="bg-white rounded-lg shadow-md p-3 flex "> 
+                                 	<div class="bg-white rounded-lg shadow-md p-3 flex ">
                                         <div class="bg-blue-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
@@ -288,14 +288,14 @@
                                             		<span> 4시간 전 </span>
                                         		</div>
                                             </div>
-                                            <p class="text-sm"> 가입한 상품의 수익률을 조회했어요. </p> 
+                                            <p class="text-sm"> 가입한 상품의 수익률을 조회했어요. </p>
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
                                             	<i class="icon-feather-calendar pr-1"></i> <div> 9.16(토) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>
                                <li>
-                                 	<div class="bg-white rounded-lg shadow-md p-3 flex "> 
+                                 	<div class="bg-white rounded-lg shadow-md p-3 flex ">
                                         <div class="bg-green-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
@@ -305,14 +305,14 @@
                                             		<span> 6시간 전 </span>
                                         		</div>
                                             </div>
-                                            <p class="text-sm"> 가입한 상품의 일부를 매도했어요. </p> 
+                                            <p class="text-sm"> 가입한 상품의 일부를 매도했어요. </p>
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
                                             	<i class="icon-feather-calendar pr-1"></i> <div> 9.16(토) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>
                                 <li>
-                                 	<div class="bg-white rounded-lg shadow-md p-3 flex "> 
+                                 	<div class="bg-white rounded-lg shadow-md p-3 flex ">
                                         <div class="bg-pink-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
@@ -322,14 +322,14 @@
                                             		<span> 8시간 전 </span>
                                         		</div>
                                             </div>
-                                            <p class="text-sm"> 투자상품을 추가로 가입했어요. </p> 
+                                            <p class="text-sm"> 투자상품을 추가로 가입했어요. </p>
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
                                             	<i class="icon-feather-calendar pr-1"></i> <div> 9.16(토) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>
                                 <li>
-                                 	<div class="bg-white rounded-lg shadow-md p-3 flex "> 
+                                 	<div class="bg-white rounded-lg shadow-md p-3 flex ">
                                         <div class="bg-blue-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
@@ -339,7 +339,7 @@
                                             		<span> 10시간 전 </span>
                                         		</div>
                                             </div>
-                                            <p class="text-sm"> 가입한 상품의 수익률을 조회했어요. </p> 
+                                            <p class="text-sm"> 가입한 상품의 수익률을 조회했어요. </p>
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
                                             	<i class="icon-feather-calendar pr-1"></i> <div> 9.16(토) 오전 10:41 </div> </div>
                                         	</div>
@@ -347,33 +347,33 @@
                                 </li>
                                 <li class="uk-filter-control">
                                 <a class="bg-gray-100 py-1.5 px-4 rounded-full" href="#">2023.9.14(목)</a>
-                                 	<div class="bg-white rounded-lg shadow-md p-3 flex "> 
+                                 	<div class="bg-white rounded-lg shadow-md p-3 flex ">
                                         <div class="bg-yellow-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
                                         	<div class="flex items-center space-x-3">
-	                                            <img src="/assets/images/starfriends/proflie3.jpg" alt="" class="w-8 h-8 rounded-full">
+	                                            <img src="/assets/images/starfriends/proflie3.jpg충" alt="" class="w-8 h-8 rounded-full">
 	                                       		<a href="#" class="font-semibold"> 나껑충 </a>
 	                                       		<div class="flex items-center space-x-2">
                                             		<span> 2일 전 </span>
                                         		</div>
                                             </div>
-                                            <p class="text-sm"> 다른 종류의 상품을 검색하고 있어요. </p> 
+                                            <p class="text-sm"> 다른 종류의 상품을 검색하고 있어요. </p>
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
                                             	<i class="icon-feather-calendar pr-1"></i> <div> 9.14(목) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>
                             </ul>
-  
+
                         </div>
-                  
+
                     </div>
-                      
+
                 </div>
-        
+
             </div>
         </div>
-        
+
     </div>
 
 
@@ -384,7 +384,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
         </svg>
     </div>
-    
+
     <div id="offcanvas-chat" uk-offcanvas="flip: true; overlay: true">
         <div class="uk-offcanvas-bar bg-white p-0 w-full lg:w-80 shadow-2xl">
 
@@ -407,32 +407,32 @@
                     <a href="#">
                         <ion-icon name="ellipsis-vertical" class="text-xl hover:bg-gray-100 p-1 rounded-full"></ion-icon>
                     </a>
-                    <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden border border-gray-100 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"  
+                    <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden border border-gray-100 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
                     uk-drop="mode: click;pos: bottom-right;animation: uk-animation-slide-bottom-small; offset:5">
                         <ul class="space-y-1">
-                          <li> 
+                          <li>
                               <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
                                  <ion-icon name="checkbox-outline" class="pr-2 text-xl"></ion-icon> Mark all as read
-                              </a> 
+                              </a>
                           </li>
-                          <li> 
+                          <li>
                               <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                <ion-icon name="settings-outline" class="pr-2 text-xl"></ion-icon>  Chat setting 
-                              </a> 
+                                <ion-icon name="settings-outline" class="pr-2 text-xl"></ion-icon>  Chat setting
+                              </a>
                           </li>
-                          <li> 
+                          <li>
                               <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
                                 <ion-icon name="notifications-off-outline" class="pr-2 text-lg"></ion-icon>   Disable notifications
-                              </a> 
-                          </li> 
-                          <li> 
+                              </a>
+                          </li>
+                          <li>
                               <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
-                                <ion-icon name="star-outline"  class="pr-2 text-xl"></ion-icon>  Create a group chat 
-                              </a> 
+                                <ion-icon name="star-outline"  class="pr-2 text-xl"></ion-icon>  Create a group chat
+                              </a>
                           </li>
                         </ul>
                     </div>
-                              
+
 
                 </div>
 
@@ -443,7 +443,7 @@
                 id="search" hidden>
                 <input type="text" placeholder="Search.." class="flex-1">
                 <ion-icon name="close-outline" class="text-2xl hover:bg-gray-100 p-1 rounded-full mr-4 cursor-pointer"
-                    uk-toggle="target: #search;animation: uk-animation-slide-top-small"></ion-icon> 
+                    uk-toggle="target: #search;animation: uk-animation-slide-top-small"></ion-icon>
             </div>
 
             <nav class="responsive-nav border-b extanded mb-2 -mt-2">
@@ -482,7 +482,7 @@
                         </div>
                         <div class="contact-username">Stella Johnson</div>
                     </a>
-                    
+
                     <a href="chats-friend.html">
                         <div class="contact-avatar">
                             <img src="/assets/images/avatars/avatar-5.jpg" alt="">
@@ -509,7 +509,7 @@
                         </div>
                         <div class="contact-username"> Dennis Han</div>
                     </a>
-                   
+
 
                 </div>
                <div class="p-1">
@@ -539,7 +539,7 @@
                         </div>
                         <div class="contact-username">Stella Johnson</div>
                     </a>
-                    
+
                     <a href="chats-group.html">
                         <div class="contact-avatar">
                             <img src="/assets/images/avatars/avatar-5.jpg" alt="">
@@ -566,7 +566,7 @@
                         </div>
                         <div class="contact-username"> Dennis Han</div>
                     </a>
-                   
+
 
                 </div>
 
@@ -574,14 +574,14 @@
         </div>
     </div>
 
-    
+
 
     <script>
 // 고객상담메모이력 : 토글
 $(document).ready( function(){
     $('.navbar-toggler').click( function(){
     $('.list-group').toggle('slow');
-});  
+});
 });
 
 // 다크모드
@@ -593,18 +593,18 @@ $(document).ready( function(){
                 document.documentElement.className += ' night-mode';
             }
         })(window, document);
-    
+
         (function (window, document, undefined) {
-    
+
             'use strict';
-    
+
             // Feature test
             if (!('localStorage' in window)) return;
-    
+
             // Get our newly insert toggle
             var nightMode = document.querySelector('#night-mode');
             if (!nightMode) return;
-    
+
             // When clicked, toggle night mode on or off
             nightMode.addEventListener('click', function (event) {
                 event.preventDefault();
@@ -615,13 +615,13 @@ $(document).ready( function(){
                 }
                 localStorage.removeItem('gmtNightMode');
             }, false);
-    
+
         })(window, document);
     </script>
-    
 
-     
-  
+
+
+
 
 
 </body>

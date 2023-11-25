@@ -23,8 +23,11 @@ public class MainController {
     private BoardService boardService; // BoardService 인터페이스를 주입 받음
 
     @RequestMapping("/")
-    public String main(Model model){
-
+    public String main(Model model) throws Exception {
+        //board 분기처리(최준혁 2023 1125)
+        List<BoardList> list = boardService.get(); // boardService 객체를 통해 get() 메서드 호출
+        model.addAttribute("boardlist", list);
+        model.addAttribute("center", "board");
         return "index";
     }
 
