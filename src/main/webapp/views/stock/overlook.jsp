@@ -497,7 +497,7 @@
                                     <div class="card p-2 flex space-x-4 border border-gray-100">
                                         <div class="w-20 h-24 overflow-hidden rounded-lg">
                                             <div class="card-media h-24">
-                                                <img src="/assets/images/product/bitcoin.png" alt="비트코인"/>
+                                                <img src="/assets/images/logo/bitcoin.png" alt="비트코인"/>
                                             </div>
                                         </div>
                                         <div class="flex-1 pt-2.5 relative">
@@ -692,90 +692,120 @@
 
             <div class=" justify-content-center" style="align-content: flex-start">
 
+
                 <div class="moving-container">
                     <H4>현재 주가</H4>
-                    <h6>powered by Yahoo Finance</h6>
+                    <section id="about" class="about">
+                        <div class="relative -mt-3" uk-slider="finite: true">
+                            <div class="uk-slider-container px-1 py-3">
+                                <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@s uk-grid-small uk-grid">
 
-                    <div class="moving-content">
-                        <div class="row">
-                            <div class="col-sm-2  mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">NASDAQ
-                                                </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div  id="stock0" class="h5 mb-0 mr-3 font-weight-bold text-white-800" >0%</div>
-                                                    </div>
+                                    <li>
+                                        <div class="card p-2 flex space-x-4 border border-gray-100">
+                                            <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                                <div class="card-media h-24">
+                                                    <img src="/assets/images/logo/nasdaq.jpeg" alt="나스닥"/>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2  mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">RUSSELL2000
+                                            <div class="flex-1 pt-2.5 relative">
+
+                                                <div class="text-xs font-semibold uppercase text-yellow-500"> Yahoo Finance </div>
+                                                <div class="text-lg mt-3 2.5 text-gray-700"> NASDAQ </div>
+                                                <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                    <div> 15명의 추천 </div>
+                                                    <div>·</div>
+                                                    <div> 286명이 지켜보는 중 </div>
                                                 </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div id="stock1" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
-                                                    </div>
+                                                <div id="stock0" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                    $12.99
                                                 </div>
+
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2  mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">DOW30
-                                                </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div id="stock2" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
-                                                    </div>
+                                    </li>
+                                    <li>
+                                        <div class="card p-2 flex space-x-4 border border-gray-100">
+                                            <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                                <div class="card-media h-24">
+                                                    <img src="/assets/images/logo/russell.png" alt="이더리움">
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2  mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">S&P500
+                                            <div class="flex-1 pt-2.5 relative">
+
+                                                <div class="text-xs font-semibold uppercase text-yellow-500"> Yahoo Finance </div>
+                                                <div class="text-lg mt-3 2.5 text-gray-700"> RUSSELL2000 </div>
+                                                <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                    <div> 75명의 추천 </div>
+                                                    <div>·</div>
+                                                    <div> 148명이 지켜보는 중 </div>
                                                 </div>
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto">
-                                                        <div id="stock3" class="h5 mb-0 mr-3 font-weight-bold text-white-800">0%</div>
-                                                    </div>
+
+                                                <div id="stock1" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                    $12.99
                                                 </div>
+
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <div class="card p-2 flex space-x-4 border border-gray-100">
+                                            <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                                <div class="card-media h-24">
+                                                    <img src="/assets/images/logo/dow.png" alt="dow">
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 pt-2.5 relative">
+
+                                                <div class="text-xs font-semibold uppercase text-yellow-500"> Yahoo Finance </div>
+                                                <div class="text-lg mt-3 2.5 text-gray-700"> DOW30 </div>
+                                                <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                    <div> 32명의 추천 </div>
+                                                    <div>·</div>
+                                                    <div> 126명이 지켜보는 중 </div>
+                                                </div>
+                                                <div id="stock2" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                    $12.99
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card p-2 flex space-x-4 border border-gray-100">
+                                            <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                                <div class="card-media h-24">
+                                                    <img src="/assets/images/logo/snp500.png" alt="snp500">
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 pt-2.5 relative">
+
+                                                <div class="text-xs font-semibold uppercase text-yellow-500"> Yahoo Finance </div>
+                                                <div class="text-lg mt-3 2.5 text-gray-700"> S&P 500 </div>
+                                                <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                    <div> 4명의 추천 </div>
+                                                    <div>·</div>
+                                                    <div> 286명이 지켜보는 중 </div>
+                                                </div>
+                                                <div id="stock3" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                    $12.99
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
                             </div>
+
+                            <a class="absolute bg-white top-11 flex items-center justify-center p-2 -left-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
+                               href="#" uk-slider-item="previous"> <i class="icon-feather-chevron-left"></i></a>
+                            <a class="absolute bg-white top-11 flex items-center justify-center p-2 -right-4 rounded-full shadow-md text-xl w-9 z-10 dark:bg-gray-800 dark:text-white"
+                               href="#" uk-slider-item="next"> <i class="icon-feather-chevron-right"></i></a>
+
                         </div>
-                            <div class="col-sm-4  mb-4">
-                                <input type="search" id="companyNameSearch" class="form-control rounded" placeholder="어떤 회사를 찾으시나요?" aria-label="Search" aria-describedby="search-addon" />
-<%--                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" >search</button>--%>
-                                <button type="button" id="stockSearch_btn" class="btn-close" data-toggle="modal" data-target="#retrieveStock" data-dismiss="modal">검색</button>
 
-<%--                                <button type="button" id="stockSearch_btn" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#retrieveStock">search</button>--%>
-                            </div>
-                    </div>
-                </div>
-            </div>
+                    </section>
+
 
 
             <div class=" justify-content-center" style="align-content: flex-start">
