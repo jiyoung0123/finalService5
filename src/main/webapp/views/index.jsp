@@ -671,27 +671,27 @@
 
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                        <img src="/assets/images/starfriends/proflie1.jpg" alt="">
                         <span class="user_status status_online"></span>
                     </div>
                     <div class="contact-username"> 서지영과 아이들</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="/assets/images/avatars/avatar-2.jpg" alt="">
+                        <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                         <span class="user_status"></span>
                     </div>
                     <div class="contact-username"> 진진자라! 즐겁게 해요</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="/assets/images/avatars/avatar-7.jpg" alt="">
+                        <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                     </div>
                     <div class="contact-username"> KB 레버리지방</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="/assets/images/avatars/avatar-4.jpg" alt="">
+                        <img src="/assets/images/starfriends/proflie4.jpg" alt="">
                     </div>
                     <div class="contact-username"> 학습독려방</div>
                 </a>
