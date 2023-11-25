@@ -117,9 +117,9 @@
 
                     <div class="header_widgets">
 
-                        <a href="#" class="is_icon" uk-tooltip="title: Cart">
-                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
-                        </a>
+<%--                        <a href="#" class="is_icon" uk-tooltip="title: Cart">--%>
+<%--                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>--%>
+<%--                        </a>--%>
 <%--                        <div uk-drop="mode: click" class="header_dropdown dropdown_cart">--%>
 
 <%--&lt;%&ndash;                            <div class="drop_headline">&ndash;%&gt;--%>
@@ -348,11 +348,11 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie4.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>정인보</strong>님이 콜리팜 친구추가를 하였어요!
+                                                    <strong>최준혁</strong>님이 콜리팜 친구추가를 하였어요!
                                                     <span class="text-link">콜리팜 물주러 가기</span>
                                                 </p>
                                                 <time> 12 hours ago </time>
