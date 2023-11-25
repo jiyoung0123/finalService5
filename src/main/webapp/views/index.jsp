@@ -58,7 +58,7 @@
                 <!-- search icon for mobile -->
                 <div class="header-search-icon" uk-toggle="target: #wrapper ; cls: show-searchbox"> </div>
                 <div class="header_search"><i class="uil-search-alt"></i>
-                    <input value="" type="text" class="form-control" placeholder="Search for Friends , Videos and more.." autocomplete="off">
+                    <input value="" type="text" class="form-control" placeholder="검색할 내용을 입력해 주세요." autocomplete="off">
                     <div uk-drop="mode: click" class="header_search_dropdown">
 
                         <h4 class="search_title"> Recently </h4>
@@ -649,27 +649,50 @@
 
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                        <div class="rounded-full border-2 bg-gray-200 border-gray-100" style="padding: 3px 0px 0px 5px"
+                        data-tippy-placement="top" >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                            </svg>
+                         </div>
                         <span class="user_status status_online"></span>
                     </div>
                     <div class="contact-username"> 서지영과 아이들</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="/assets/images/avatars/avatar-2.jpg" alt="">
+                        <div class="rounded-full border-2 bg-gray-200 border-gray-100" style="padding: 3px 0px 0px 5px"
+                        data-tippy-placement="top" >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                            </svg>
+                         </div>
+                        <!-- <img src="/assets/images/avatars/avatar-2.jpg" alt=""> -->
                         <span class="user_status"></span>
                     </div>
                     <div class="contact-username"> 진진자라! 즐겁게 해요</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="/assets/images/avatars/avatar-7.jpg" alt="">
+                        <div class="rounded-full border-2 bg-gray-200 border-gray-100" style="padding: 3px 0px 0px 5px"
+                        data-tippy-placement="top" >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                            </svg>
+                         </div>
+                        <!-- <img src="/assets/images/avatars/avatar-7.jpg" alt=""> -->
                     </div>
                     <div class="contact-username"> KB 레버리지방</div>
                 </a>
                 <a href="chats-friend.html">
                     <div class="contact-avatar">
-                        <img src="/assets/images/avatars/avatar-4.jpg" alt="">
+                        <div class="rounded-full border-2 bg-gray-200 border-gray-100" style="padding: 3px 0px 0px 5px"
+                        data-tippy-placement="top" >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                            </svg>
+                         </div>
+                        <!-- <img src="/assets/images/avatars/avatar-4.jpg" alt=""> -->
                     </div>
                     <div class="contact-username"> 학습독려방</div>
                 </a>
@@ -1189,21 +1212,27 @@
             class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical rounded-lg p-0 lg:w-5/12 relative shadow-2xl uk-animation-slide-bottom-small">
 
         <div class="text-center py-3 border-b">
-            <h3 class="text-lg font-semibold"> Create Post </h3>
+            <h3 class="text-lg font-semibold"> 피드 남기기 </h3>
             <button class="uk-modal-close-default bg-gray-100 rounded-full p-2.5 right-2" type="button" uk-close uk-tooltip="title: Close ; pos: bottom ;offset:7"></button>
         </div>
         <div class="flex flex-1 items-start space-x-4 p-5">
-            <img src="/assets/images/avatars/avatar-2.jpg"
-                 class="bg-gray-200 border border-white rounded-full w-11 h-11">
+            <div class="rounded-full border-2 bg-gray-200 border-gray-100" style="padding: 5px 0px 0px 5px; width: 38px;"
+                                data-tippy-placement="top" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                    </svg>
+                                 </div>
+            <!-- <img src="/assets/images/avatars/avatar-2.jpg"
+                 class="bg-gray-200 border border-white rounded-full w-11 h-11"> -->
             <div class="flex-1 pt-2">
                     <textarea class="uk-textare text-black shadow-none focus:shadow-none text-xl font-medium resize-none" rows="5"
-                              placeholder="What's Your Mind ? Stella!"></textarea>
+                              placeholder="직원에게 남기고 싶은 피드 내용을 작성해 주세요."></textarea>
             </div>
 
         </div>
         <div class="bsolute bottom-0 p-4 space-x-4 w-full">
             <div class="flex bg-gray-50 border border-purple-100 rounded-2xl p-2 shadow-sm items-center">
-                <div class="lg:block hidden ml-1"> Add to your post </div>
+                <div class="lg:block hidden ml-1"> 첨부하기 </div>
                 <div class="flex flex-1 items-center lg:justify-end justify-center space-x-2">
 
                     <svg class="bg-blue-100 h-9 p-1.5 rounded-full text-blue-600 w-9 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
@@ -1223,22 +1252,19 @@
         <div class="flex items-center w-full justify-between border-t p-3">
 
             <select class="selectpicker mt-2 story">
-                <option>Only me</option>
-                <option>Every one</option>
-                <option>People I Follow </option>
-                <optionion>People Follow Me</optionion>
+                <option>받는사람만 보이기</option>
+                <option>모두에게 보이기</option>
+                <option>받는사람의 친구까지 보이기 </option>
             </select>
 
             <div class="flex space-x-2">
-                <a href="#" class="bg-red-100 flex font-medium h-9 items-center justify-center px-5 rounded-md text-red-600 text-sm">
-                    <svg class="h-5 pr-1 rounded-full text-red-500 w-6 fill-current" id="veiw-more" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="false" style=""> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                    Live </a>
-                <a href="#" class="bg-blue-600 flex h-9 items-center justify-center rounded-md text-white px-5 font-medium">
-                    Share </a>
+                
+                <a href="#" class="bg-blue-600 flex h-9 items-center justify-center rounded-md text-white px-5 font-medium" style="width: 70px;">
+                    등록</a>
             </div>
 
             <a href="#" hidden
-               class="bg-blue-600 flex h-9 items-center justify-center rounded-lg text-white px-12 font-semibold">
+               class="bg-blue-600 flex items-center justify-center rounded-lg text-white px-12">
                 Share </a>
         </div>
     </div>

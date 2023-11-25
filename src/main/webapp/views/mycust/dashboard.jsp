@@ -352,7 +352,7 @@
                                 // },
                                 {
                                     tagName: 'h5',
-                                    textContent: '고객명 : 김비비',
+                                    textContent: '고객명 : 나비비',
                                     attributes: {
                                         id: 'main-right-text'
                                     }

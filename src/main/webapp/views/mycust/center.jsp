@@ -112,7 +112,7 @@
                                         <div class="flex-1">
                                             <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1"> 차아거 </a>
                                             <p class="text-sm text-gray-400 mb-2"> 관리한 지 3주 전 </p>
-                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : KB스타 ESG 우량 중단기채 증권자투자신탁(채권) CE 적</p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 2,300,000원 </p>
                                             <!-- 고객상담 메모이력보기 -->
                                             <ul class="list-group items-start space-y-3" style="display: none;">
@@ -135,7 +135,7 @@
                                         <div class="flex-1">
                                             <a href="/mycust/dashboard" class="text-lg font-semibold line-clamp-1 mb-1"> 안무러 </a>
                                             <p class="text-sm text-gray-400 mb-2"> 관리한 지 3주 전 </p>
-                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : </p>
+                                        <p class="leading-6 line-clamp-2 mt-3"> 상품명 : 일임형 ISA</p>
                                         <p class="leading-6 line-clamp-2 mt-3"> 매월 적립 중 | 현재까지 투자금액 35,000,000원 </p>
                                             <!-- 고객상담 메모이력보기 -->
                                             <ul class="list-group items-start space-y-3" style="display: none;">
@@ -201,9 +201,21 @@
                                         </div>
                                     </div>
                                     <div class="sm:flex items-center -space-x-4 hidden">
-                                        <img src="/assets/images/avatars/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
-                                        <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
-                                        <img src="/assets/images/avatars/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                        data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                      </svg>
+                                    </div>
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-red-100 text-red-500 font-semibold"> 12+</div>
                                     </div>
                                 </div>
@@ -220,9 +232,21 @@
                                         </div>
                                     </div>
                                     <div class="sm:flex items-center -space-x-4 hidden">
-                                        <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
-                                        <img src="/assets/images/avatars/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
-                                        <img src="/assets/images/avatars/avatar-4.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-green-100 text-green-500 font-semibold"> 5+</div>
                                     </div>
                                 </div>
@@ -239,8 +263,16 @@
                                         </div>
                                     </div>
                                     <div class="sm:flex items-center -space-x-4 hidden">
-                                        <img src="/assets/images/avatars/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
-                                        <img src="/assets/images/avatars/avatar-4.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Steven Jesse">
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
+                                          <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-red-100 text-red-500 font-semibold"> 3+</div>
                                     </div>
                                 </div>
@@ -257,9 +289,21 @@
                                         </div>
                                     </div>
                                     <div class="sm:flex items-center -space-x-4 hidden">
-                                        <img src="/assets/images/avatars/avatar-5.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white hover:z-10" data-tippy-placement="top" title="Adrian Mohani">
-                                        <img src="/assets/images/avatars/avatar-6.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
-                                        <img src="/assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                        data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                      </svg>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
+                                        <div class="w-10 h-10 rounded-full border-2 bg-gray-100 border-white" style="padding: 5px 0px 0px 5px"
+                                            data-tippy-placement="top" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25" height="25" class="bi bi-person" viewBox="0 0 16 16">
+                                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                          </svg>
+                                        </div>
                                         <div class="w-10 h-10 rounded-full flex justify-center items-center bg-green-100 text-green-500 font-semibold"> 4+</div>
                                     </div>
                                 </div>
