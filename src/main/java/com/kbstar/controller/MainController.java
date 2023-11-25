@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -88,4 +90,5 @@ public class MainController {
             return "error"; // Return the name of the error view
         }
     }
+
 }
