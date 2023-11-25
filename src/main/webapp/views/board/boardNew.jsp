@@ -43,31 +43,18 @@
                         <div class="flex-1">
                             <div class="container">
                                 <h2 class="text-2xl font-semibold">WM 게시판</h2>
-                                
-                                    <!-- 게시글 작성하기
-                                    boardWriterId가 없으면, 모달창(프로필 등록 안내) 
-                                    있으면, 작성하기 창으로 이동-->
-                                    <c:choose>
-                                        <c:when test="${boardWriterId == null}">
-                                            <a href="/boardWrite" uk-toggle="target: #modal-profile" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
-                                            data-tippy-placement="left" title="Create New Page">
-                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                         </a>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
-                                            data-tippy-placement="left" title="Create New Page">
-                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                            </a>
-                                        </c:otherwise>
-                                    </c:choose>
-                                    <!-- 게시글 작성하기 -->
+
+                                <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
+                                   data-tippy-placement="left" title="Create New Page">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                </a>
+
                             </div>
                             <nav class="responsive-nav md:m-0 -mx-4 style-2">
                                 <ul>
-                                    <li class="active"><a href="#" class="lg:px-2"> 전체글 </a></li>
+                                    <li ><a href="/board" class="lg:px-2"> 전체글 </a></li>
                                     <li><a href="/boardLiked" class="lg:px-2"> 인기글 </a></li>
-                                    <li><a href="/boardNew" class="lg:px-2"> 최신글 </a></li>
+                                    <li class="active"><a href="/boardNew" class="lg:px-2"> 최신글 </a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -112,7 +99,7 @@
                             <div class="flex items-center space-x-5 p-7">
                                 <img src="assets/images/avatars/b.png" alt="" class="w-12 h-12 rounded-full">
                                 <div class="flex-1">
-                                    <a href="/board/boardDetail2" class="text-lg font-semibold line-clamp-1"> 항셍지수의 미래에 대해 어떻게 생각하세요?</a>
+                                    <a href="/boardDetail2" class="text-lg font-semibold line-clamp-1"> 항셍지수의 미래에 대해 어떻게 생각하세요?</a>
                                     <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium">
                                         <a href="timeline.html" class="font-semibold"> 작성자 2855004 </a>
                                         <div class="text-gray-500"> 2023.11.13 </div>

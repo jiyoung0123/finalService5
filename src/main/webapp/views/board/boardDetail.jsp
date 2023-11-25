@@ -2,6 +2,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<script src="assets/js/tippy.all.min.js"></script>
+<script src="assets/js/uikit.js"></script>
+<script src="assets/js/simplebar.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="assets/js/boardWrite.js"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +28,7 @@
     }
 </style>
 <body>
+
 
 
 <div id="wrapper">
@@ -43,91 +51,90 @@
                         <div class="flex-1">
                             <div class="container">
                                 <h2 class="text-2xl font-semibold">WM 게시판</h2>
-                                
-                                    <!-- 게시글 작성하기
-                                    boardWriterId가 없으면, 모달창(프로필 등록 안내) 
-                                    있으면, 작성하기 창으로 이동-->
-                                    <c:choose>
-                                        <c:when test="${boardWriterId == null}">
-                                            <a href="/boardWrite" uk-toggle="target: #modal-profile" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
-                                            data-tippy-placement="left" title="Create New Page">
-                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                         </a>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
-                                            data-tippy-placement="left" title="Create New Page">
-                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                            </a>
-                                        </c:otherwise>
-                                    </c:choose>
-                                    <!-- 게시글 작성하기 -->
+                                <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
+                                   data-tippy-placement="left" title="Create New Page">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                </a>
                             </div>
                             <nav class="responsive-nav md:m-0 -mx-4 style-2">
                                 <ul>
-                                    <li class="active"><a href="#" class="lg:px-2"> 전체글 </a></li>
-                                    <li><a href="/boardLiked" class="lg:px-2"> 인기글 </a></li>
-                                    <li><a href="/boardNew" class="lg:px-2"> 최신글 </a></li>
+                                    <li class="active"><a href="#" class="lg:px-2"> 어떤 내용을 공유하고 싶으세요? </a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
 
-                    <ul class="card divide-y divide-gray-100 sm:m-0 -mx-5">
-                        <li>
-                            <div class="flex items-start space-x-5 p-7">
-                                <img src="assets/images/콜리.png" alt="" class="w-12 h-12 rounded-full">
-                                <div class="flex-1">
-                                    <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> 완전 뿌듯해요</a>
-                                    <p class="text-sm text-gray-400 mb-2"> 3133252  <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> 11/12/2023</p>
-                                    <p class="leading-6 line-clamp-2 mt-3">  오늘 권유한 상품이에요 </p>
-                                </div>
-                                <div class="sm:flex items-center space-x-4 hidden">
-                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                    <span class="text-xl"> 7 </span>
+
+                    <form id="postForm" class="card divide-y divide-gray-100">
+                        <div class="flex items-center space-x-5 p-7">
+                            <div class="flex-1">
+                                <div class="mb-1">
+                                    <label for="boardTitle" class="form-label">제목</label>
+                                    <input type="text" class="form-control" id="boardTitle" name="boardTitle" value="오늘 완전 뿌듯해요 !">
                                 </div>
                             </div>
-                        </li>
-                        <c:forEach var="obj" items="${boardlist}">
-                            <li>
-                                <div class="flex items-start space-x-5 p-7">
-                                    <img src=${obj.boardImagePath} alt="" class="w-12 h-12 rounded-full">
-                                    <div class="flex-1">
-                                        <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> ${obj.boardTitle}</a>
-                                        <p class="text-sm text-gray-400 mb-2"> 작성자 <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> ${obj.boardDate}</p>
-                                        <p class="leading-6 line-clamp-2 mt-3">  ${obj.boardContents}</p>
-                                    </div>
-                                    <div class="sm:flex items-center space-x-4 hidden">
-                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                        <span class="text-xl"> ${obj.boardLikes} </span>
-                                    </div>
-                                </div>
-                            </li>
-                        </c:forEach>
-                    </ul>
-                    <%--가장 좋아요가 많은 글 보여주기--%>
-                    <h2 class="text-xl font-semibold mb-6 lg:mt-10 mt-4"> 핫 WM 이슈 </h2>
-                    <ul class="card divide-y divide-gray-100">
-                        <li>
-                            <div class="flex items-center space-x-5 p-7">
-                                <img src="assets/images/avatars/b.png" alt="" class="w-12 h-12 rounded-full">
-                                <div class="flex-1">
-                                    <a href="/board/boardDetail2" class="text-lg font-semibold line-clamp-1"> 항셍지수의 미래에 대해 어떻게 생각하세요?</a>
-                                    <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium">
-                                        <a href="timeline.html" class="font-semibold"> 작성자 2855004 </a>
-                                        <div class="text-gray-500"> 2023.11.13 </div>
-                                        <div class="text-gray-500"> 102 개의 댓글 </div>
-                                    </div>
-                                </div>
-                                <div class="sm:flex items-center -space-x-4 hidden">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Jesse Stevens">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Stella Johnson">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-white" data-tippy-placement="top" title="Adrian Mohani">
-                                    <div class="w-10 h-10 rounded-full flex justify-center items-center bg-red-100 text-red-500 font-semibold"> 12+</div>
+                        </div>
+
+                        <div class="flex items-center space-x-5 p-7">
+                            <div class="flex-1">
+                                <div class="mb-3">
+                                    <label for="boardContents" class="form-label">내용</label>
+                                    <input type="hidden" class="form-control" id="boardContents" name="boardContents"
+                                           value="피델리티 글로벌 테크놀로지 증권자투자신탁(주식-재간접형)
+                                           AE 판매했어요,
+                                    " style="height: 300px;"></input>
+                                    <p class="leading-6 line-clamp-2 mt-3"> 오늘 권유한 상품이에요 </p>
+                                    <p class="leading-6 line-clamp-2 mt-3"> 피델리티 글로벌 테크놀로지 증권자투자신탁(주식-재간접형) AE </p>
+                                    <p class="leading-6 line-clamp-2 mt-3"> 개가치(개인고객가치증대) 채웠어요, 다행이에요 ... </p>
+                                    <p class="leading-6 line-clamp-2 mt-3"> 우리지점 막내가 오늘 실적때문에 힘들어해서  </p>
+                                    <p class="leading-6 line-clamp-2 mt-3"> 손님 권유하는 것도 같이 도와주고 저 오늘 조금 뿌듯해요^^ </p>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+
+                    </form>
+                    <%--                    댓글 작성--%>
+                    <div class="flex items-center space-x-5 p-7">
+                        <div class="flex-1">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="commentTitle" class="block text-sm font-medium text-gray-700">제목</label>
+                                    <div class="mt-1 relative rounded-md shadow-sm">
+                                        <input type="text" id="commentTitle" name="commentTitle" class="form-input py-2 px-3 block w-full leading-5 rounded-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" placeholder="댓글 제목을 입력하세요...">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="commentContent" class="block text-sm font-medium text-gray-700">내용</label>
+                                    <div class="mt-1 relative rounded-md shadow-sm">
+                                        <textarea id="commentContent" name="commentContent" rows="3" class="form-input py-2 px-3 block w-full leading-5 rounded-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" placeholder="댓글 내용을 입력하세요..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-end">
+                                    <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-800 transition duration-150 ease-in-out">입력</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+<%--                    댓글--%>
+
+                        <div class="flex items-start space-x-5 p-7">
+                            <img src="assets/images/avatars/a.png" alt="" class="w-12 h-12 rounded-full">
+                            <div class="flex-1">
+                                <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 멋진 선배에요 ~,</a>
+                                <p class="text-sm text-gray-400 mb-2"> 3133252  <span data-href="%40tag-dev.html"> </span> </span> 20231125 </p>
+                                <p class="leading-6 line-clamp-2 mt-3">  후배에게 선한 영향력 ^^ </p>
+                            </div>
+                        </div>
+                    <div class="flex items-start space-x-5 p-7">
+                        <img src="assets/images/avatars/b.png" alt="" class="w-12 h-12 rounded-full">
+                        <div class="flex-1">
+                            <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 오랜만에 훈훈한 이야기네요 </a>
+                            <p class="text-sm text-gray-400 mb-2"> 2855414  <span data-href="%40tag-dev.html"> </span> </span> 20231125 </p>
+                            <p class="leading-6 line-clamp-2 mt-3"> 피델리티 글로벌 테크놀로지 좋은 펀드같아요  </p>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -754,19 +761,13 @@
         </div>
     </div>
 </div>
-<!-- 프로필 설정 안하고, 게시글 작성하기 버튼 클릭 시 모달창 test -->
-<div id="modal-profile" uk-modal>
-    <div class="uk-modal-body uk-modal-dialog rounded-md shadow-2xl">
-        <h2 class="mb-2 uk-modal-title">잠깐! 게시글 작성 전</h2>
-        <p>아직 나의 프로필 설정을 안하셨나요?<br>게시글을 작성하면 보여질 나의 정보를 등록한 뒤 이용하러 가볼까요?</p>
-        <div class="uk-modal-footer text-right mt-6 px-0 space-x-1">
-            <button class="button gray uk-modal-close" type="button">뒤로가기</button>
-            <a href="/myprofile"><button class="button" type="button">확인</button></a>
-        </div>
-    </div>
-</div>
+
 <!-- For Night mode -->
 <script>
+    $(document).ready(function () {
+        postForm.init();
+    });
+
     (function (window, document, undefined) {
         'use strict';
         if (!('localStorage' in window)) return;
@@ -803,13 +804,7 @@
 
 <!-- Javascript
 ================================================== -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="assets/js/tippy.all.min.js"></script>
-<script src="assets/js/uikit.js"></script>
-<script src="assets/js/simplebar.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
-<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
 
 </body>
 </html>
