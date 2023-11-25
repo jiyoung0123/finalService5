@@ -117,9 +117,9 @@
 
                     <div class="header_widgets">
 
-                        <a href="#" class="is_icon" uk-tooltip="title: Cart">
-                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
-                        </a>
+<%--                        <a href="#" class="is_icon" uk-tooltip="title: Cart">--%>
+<%--                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>--%>
+<%--                        </a>--%>
 <%--                        <div uk-drop="mode: click" class="header_dropdown dropdown_cart">--%>
 
 <%--&lt;%&ndash;                            <div class="drop_headline">&ndash;%&gt;--%>
@@ -348,11 +348,11 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie4.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>정인보</strong>님이 콜리팜 친구추가를 하였어요!
+                                                    <strong>최준혁</strong>님이 콜리팜 친구추가를 하였어요!
                                                     <span class="text-link">콜리팜 물주러 가기</span>
                                                 </p>
                                                 <time> 12 hours ago </time>
@@ -424,17 +424,17 @@
                                 <ul>
                                     <li class="un-read">
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-7.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> 나수덕(L3, 클라우드플랫폼부(P)) </strong> <time>12:43 PM</time>
+                                                <strong> 나수덕(L3, 아키텍처부) </strong> <time>12:43 PM</time>
                                                 <p>  WM사업부문 DevOPs 적용방안입니다 ...  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> 한수지(L2, 수탁부) </strong> <time> 6:43 PM</time>
@@ -444,17 +444,17 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-6.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> 김지영(L3, 업무지원센터) </strong> <time> Wed </time>
+                                                <strong> 김지영(L3(부점장대우), 업무지원센터) </strong> <time> Wed </time>
                                                 <p>  날이 풀리면 골프나 한 번...  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-5.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie4.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> 김찬호(L1, WM사업부) </strong> <time> Sun</time>
@@ -464,27 +464,27 @@
                                     </li>
                                     <li class="un-read">
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> 윤창준(L1, 개인마케팅부) </strong> <time>12:43 PM</time>
-                                                <p>  안녕하세요!  ...  </p>
+                                                <p>  안녕하세요!  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie4.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> 김진후(S3, KB금융지주)  </strong> <time> 6:43 PM</time>
+                                                <strong> 김진후(S3, 자본시장플랫폼부)  </strong> <time> 6:43 PM</time>
                                                 <p> 바쁘신데 죄송합니다만 ...  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-3.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> 인정현(L1, 직원만족부) </strong> <time> Wed </time>
@@ -494,7 +494,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-4.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <strong> 신찬희(과장, KB카드사)  </strong> <time> Sun</time>
