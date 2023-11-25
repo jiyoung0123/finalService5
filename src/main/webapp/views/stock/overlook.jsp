@@ -806,11 +806,19 @@
                     </section>
 
 
+            <br>
+            <br>
+                    <div class="contact-list my-2 ml-1">
+                        <div class="contact-avatar">
+                            <img src="/assets/images/starfriends/proflie1.jpg" alt="">
+                        </div>
+                        <div class="contact-username"> KB 금융그룹 E-HRD Cloud 추천 동영상 </div>
+                    </div>
 
             <div class=" justify-content-center" style="align-content: flex-start">
 
+
                 <div class="moving-container">
-                    <h2 class="text-2xl font-semibold"> KB 금융그룹 E-HRD Cloud 추천 동영상 </h2>
 
                     <div>
                         <div class="row">
