@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -62,6 +64,14 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/stock")
+    public String main(Model model, HttpSession session) throws Exception {
+        model.addAttribute("center",   "stock/overlook");
+        return "index";
+    }
+
+
+
     @RequestMapping("/boardWrite")
     public String boardWrtie(Model model) throws Exception {
         model.addAttribute("center", "boardWrite");
@@ -80,4 +90,5 @@ public class MainController {
             return "error"; // Return the name of the error view
         }
     }
+
 }

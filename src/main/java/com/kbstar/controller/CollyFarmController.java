@@ -103,5 +103,15 @@ public class CollyFarmController {
         return "index";
     }
 
-
+    @RequestMapping("/collyQuiz")
+    public String collyQuiz(Model model, String quizId, String answer) throws Exception {
+        Quiz quiz = null;
+        quiz = quizService.get(quizId);
+        log.info(String.valueOf(quiz));
+        log.info("##########################");
+        log.info(quiz.getAnswer());
+        log.info("사용자정답"+answer);
+        model.addAttribute("center", "collyMain");
+        return "index";
+    }
 }

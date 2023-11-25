@@ -22,8 +22,17 @@
     }
 
     function add_water(){
-        var answer = $("#quizeSelect2").val();
-        alert("정답은"+answer);
+        var answer = $("input[name='quizOption']:checked").val();
+        $.ajax({
+            type : "post",
+            url : "/collyQuiz",
+            data: { "quizId" : "2",
+                     "answer": answer },
+            success : function(result){
+                alert("퀴즈에 참여해 주셔서 감사합니다");
+                location.reload();
+            }
+        });
 
     }
 
@@ -35,7 +44,7 @@
         <div class="mcontainer">
             <div class="my-2 flex items-center justify-between pb-3">
                 <div>
-                    <h2 class="text-xl font-semibold">나의 농장에 콜리를 키워 보세요!!</h2>
+                    <h2 class="text-xl font-semibold"> 나의 농장에 콜리를 키워 보세요!!</h2>
                 </div>
             </div>
             <form id="colly_form">
@@ -169,6 +178,7 @@
     </div>
 </div>
 
+<%--
 <div id="quiz-modal2" class="create-post is-story" uk-modal>
     <div
             class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical rounded-lg p-0 lg:w-5/12 relative shadow-2xl uk-animation-slide-bottom-small">
@@ -206,5 +216,42 @@
             </div>
         </div>
 
+    </div>
+</div>--%>
+
+<div id="quiz-modal2" class="create-post is-story" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical rounded-lg p-0 lg:w-5/12 relative shadow-2xl uk-animation-slide-bottom-small">
+        <div class="text-center py-3 border-b">
+            <h3 class="text-lg font-semibold">오늘의 퀴~즈</h3>
+            <button class="uk-modal-close-default bg-gray-100 rounded-full p-2.5 right-2" type="button" uk-close uk-tooltip="title: Close ; pos: bottom ;offset:7"></button>
+        </div>
+        <div class="flex flex-1 items-start space-x-4 p-5">
+            <div class="flex-1 pt-2">
+                ${quiz2.quizContent}
+                <br>
+                <br>
+                <label>
+                    <input type="radio" name="quizOption" value="1">
+                    1번. ${quiz2.one}
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="quizOption" value="2">
+                    2번. ${quiz2.two}
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="quizOption" value="3">
+                    3번. ${quiz2.three}
+                </label>
+            </div>
+        </div>
+        <div class="flex items-center w-full justify-between border-t p-3">
+            <div class="flex space-x-2">
+                <button id="quiz2" href="#" class="bg-blue-600 flex h-9 items-center justify-center rounded-md text-white px-5 font-medium" onclick="add_water()">
+                    제출하기
+                </button>
+            </div>
+        </div>
     </div>
 </div>

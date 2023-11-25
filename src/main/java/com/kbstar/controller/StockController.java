@@ -1,6 +1,7 @@
 package com.kbstar.controller;
 
 
+import com.kbstar.util.NewStockPriceAPI;
 import com.kbstar.util.StockPriceAPI;
 import com.kbstar.util.StockSearchAPI;
 import com.kbstar.util.WebCrawler;
@@ -15,10 +16,11 @@ import org.springframework.web.bind.annotation.*;
 
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
 
-@Controller
-@RequestMapping("/stock")
+@RestController
+@RequestMapping("/stock/v1")
 @Slf4j
 public class StockController {
 
@@ -28,25 +30,18 @@ public class StockController {
     StockSearchAPI stockSearchAPI;
 
     @Autowired
+    NewStockPriceAPI newStockPriceAPI;
+
+    @Autowired
     WebCrawler webCrawler;
 
 
-    String dir ="stock/";
 
 
-
-    @RequestMapping("")
-    public String main(Model model, HttpSession session) throws Exception {
-        model.addAttribute("center", dir + "overlook");
-        return "index";
-    }
     @GetMapping("/price")
-    @ResponseBody
-    public String stockPriceApi(@RequestParam("function") String function, @RequestParam("stockCodes") String stockCodes) throws Exception {
-        JSONObject result = new JSONObject();
-        result.put("stockPrice", stockPriceAPI.generateCode(function, stockCodes));
+    public HashMap<String, Object> stockPriceApi(@RequestParam("stockCodes") String stockCodes) throws Exception {
 
-        return result.toJSONString();
+        return  newStockPriceAPI.generateCode(stockCodes);
     }
 
     @RequestMapping("/codes")
@@ -72,3 +67,5 @@ public class StockController {
 
 
 }
+
+
