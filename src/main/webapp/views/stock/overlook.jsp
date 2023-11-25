@@ -694,7 +694,6 @@
 
 
                 <div class="moving-container">
-                    <H4>현재 주가</H4>
                     <section id="about" class="about">
                         <div class="relative -mt-3" uk-slider="finite: true">
                             <div class="uk-slider-container px-1 py-3">
@@ -811,7 +810,7 @@
             <div class=" justify-content-center" style="align-content: flex-start">
 
                 <div class="moving-container">
-                    <h3>  KB 금융그룹 E-HRD Cloud 추천 동영상 </h3>
+                    <h2 class="text-2xl font-semibold"> KB 금융그룹 E-HRD Cloud 추천 동영상 </h2>
 
                     <div>
                         <div class="row">
