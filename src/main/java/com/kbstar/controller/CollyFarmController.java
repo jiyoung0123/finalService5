@@ -68,6 +68,19 @@ public class CollyFarmController {
         return "index";
     }
 
+    @GetMapping("/collyStart")
+    public String collyStart(Model model, HttpSession session) throws Exception {
+   /*     if(session.getAttribute("loginGuest")==null){
+            return "redirect:/login";
+        }
+        model.addAttribute("user","loginGuest");*/
+        model.addAttribute("center","collyStart");
+        return "index";
+    }
+
+
+
+
     @RequestMapping("/registerimpl")
     public String registerimpl(Model model, CollyFarm colly, HttpSession session) throws Exception {
         log.info("콜리정보!!!!!!!!!!!!!!!!!!!!!!!!");
