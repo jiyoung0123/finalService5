@@ -64,7 +64,7 @@ public class CollyFarmController {
             return "redirect:/login";
         }
         model.addAttribute("user","loginGuest");*/
-        model.addAttribute("center","collyInsert");
+        model.addAttribute("center","collyStart");
         return "index";
     }
 

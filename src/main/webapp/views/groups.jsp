@@ -214,7 +214,7 @@
     <div class="mcontainer">
       <div class="flex justify-between relative md:mb-4 mb-3">
         <div class="flex-1">
-          <h2 class="text-2xl font-semibold"> Groups </h2>
+          <%--<h2 class="text-2xl font-semibold"> Groups </h2>--%>
           <nav class="responsive-nav border-b md:m-0 -mx-4">
             <ul>
               <li class="active"><a href="#" class="lg:px-2">추천 </a></li>
@@ -294,12 +294,11 @@
         <div class="uk-slider-container px-1 py-3">
           <ul class="uk-slider-items uk-child-width-1-4@m uk-child-width-1-3@s uk-grid-small uk-grid">
             <c:forEach var="room" items="${list}">
-
             <li>
               <div class="card">
                 <div class="card-media h-28">
                   <div class="card-media-overly"></div>
-                  <img src="assets/images/group/group-cover-1.jpg" alt="" class="">
+                  <img src="assets/images/els.png" alt="" class="">
                   <c:if test="${room.secretChk}">
                     <div class="absolute bg-red-100 font-semibold px-2.5 py-1 rounded-lg text-red-500 text-xs top-2.5 left-2.5">잠금🔒︎</div>
                   </c:if>
@@ -361,6 +360,124 @@
 
             </c:forEach>
 
+            <li>
+              <div class="card">
+                <div class="card-media h-28">
+                  <div class="card-media-overly"></div>
+                  <img src="assets/images/엔화약세.png" alt="" class="">
+                    <div class="absolute bg-red-100 font-semibold px-2.5 py-1 rounded-lg text-red-500 text-xs top-2.5 left-2.5">잠금🔒︎</div>
+
+                </div>
+
+                <div class="card-body">
+                  <span class="hidden" id="${room.roomName}"></span>
+
+                    <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" class="font-semibold text-lg truncate">강동 8PG 외환담당</a>
+
+
+
+
+                  <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
+                    <a href="#"> <span>주제 : 엔화약세 언제까지...?</span> </a>
+                  </div>
+
+                  <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
+                    <a href="#">
+                      <span>
+                          2023년 12월 6일
+                      </span> </a>
+                  </div>
+                  <div class="flex mt-3.5 space-x-2">
+                    <%--<div class="flex items-center -space-x-2 -mt-1">
+                      <img alt="Image placeholder" src="assets/images/avatars/avatar-6.jpg" class="border-2 border-white rounded-full w-7">
+                      <img alt="Image placeholder" src="assets/images/avatars/avatar-5.jpg" class="border-2 border-white rounded-full w-7">
+                    </div>--%>
+                    <div class="flex-1 leading-5 text-sm">
+                      <div> <strong>8명 참여중</strong> /10명</div>
+                    </div>
+                  </div>
+
+                  <div class="flex mt-3.5 space-x-2 text-sm font-medium">
+                    <c:if test="${room.secretChk}">
+                      <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" data-id="${room.roomId}" class="bg-blue-600 flex flex-1 h-8 items-center justify-center rounded-md text-white capitalize">
+                        입장
+                      </a>
+                    </c:if>
+
+                    <c:if test="${not room.secretChk}">
+                      <a href="/chat/room?roomId=${room.roomId}" roomId="${room.roomId}"  class="bg-blue-600 flex flex-1 h-8 items-center justify-center rounded-md text-white capitalize" roomId="${room.roomId}" onclick="return chkRoomUserCnt(this.getAttribute('roomId'));">입장</a>
+                    </c:if>
+                    <a href="#" class="bg-gray-200 flex flex-1 h-8 items-center justify-center rounded-md capitalize">
+                      방 설정
+                    </a>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card">
+                <div class="card-media h-28">
+                  <div class="card-media-overly"></div>
+                  <img src="assets/images/엔화약세.png" alt="" class="">
+                  <div class="absolute bg-red-100 font-semibold px-2.5 py-1 rounded-lg text-red-500 text-xs top-2.5 left-2.5">잠금🔒︎</div>
+
+                </div>
+
+                <div class="card-body">
+                  <span class="hidden" id="${room.roomName}"></span>
+
+                  <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" class="font-semibold text-lg truncate">강동 8PG 외환담당</a>
+
+
+
+
+                  <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
+                    <a href="#"> <span>주제 : 엔화약세 언제까지...?</span> </a>
+                  </div>
+
+                  <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
+                    <a href="#">
+                      <span>
+                          2023년 12월 6일
+                      </span> </a>
+                  </div>
+                  <div class="flex mt-3.5 space-x-2">
+                    <%--<div class="flex items-center -space-x-2 -mt-1">
+                      <img alt="Image placeholder" src="assets/images/avatars/avatar-6.jpg" class="border-2 border-white rounded-full w-7">
+                      <img alt="Image placeholder" src="assets/images/avatars/avatar-5.jpg" class="border-2 border-white rounded-full w-7">
+                    </div>--%>
+                    <div class="flex-1 leading-5 text-sm">
+                      <div> <strong>8명 참여중</strong> /10명</div>
+                    </div>
+                  </div>
+
+                  <div class="flex mt-3.5 space-x-2 text-sm font-medium">
+                    <c:if test="${room.secretChk}">
+                      <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" data-id="${room.roomId}" class="bg-blue-600 flex flex-1 h-8 items-center justify-center rounded-md text-white capitalize">
+                        입장
+                      </a>
+                    </c:if>
+
+                    <c:if test="${not room.secretChk}">
+                      <a href="/chat/room?roomId=${room.roomId}" roomId="${room.roomId}"  class="bg-blue-600 flex flex-1 h-8 items-center justify-center rounded-md text-white capitalize" roomId="${room.roomId}" onclick="return chkRoomUserCnt(this.getAttribute('roomId'));">입장</a>
+                    </c:if>
+                    <a href="#" class="bg-gray-200 flex flex-1 h-8 items-center justify-center rounded-md capitalize">
+                      방 설정
+                    </a>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </li>
+
 
 
           </ul>
@@ -370,13 +487,15 @@
 
         </div>
       </div>
+      <br>
+      <br>
 
       <div class="sm:my-6 my-3 flex items-center justify-between border-b pb-3">
         <div>
-          <h2 class="text-xl font-semibold"> 분류 </h2>
-          <p class="font-medium text-gray-500 leading-6"> Find a group by browsing top categories. </p>
+          <h2 class="text-xl font-semibold">관심사 별 채팅방 둘러보기</h2>
+          <%--<p class="font-medium text-gray-500 leading-6"> Find a group by browsing top categories. </p>--%>
         </div>
-        <a href="#" class="text-blue-500 sm:block hidden"> See all </a>
+        <a href="#" class="text-blue-500 sm:block hidden"> 전체 보기 </a>
       </div>
 
       <div class="relative -mt-3" uk-slider="finite: true">
@@ -388,42 +507,42 @@
               <div class="rounded-md overflow-hidden relative w-full h-36">
                 <div class="absolute w-full h-3/4 -bottom-12 bg-gradient-to-b from-transparent to-gray-800 z-10">
                 </div>
-                <img src="assets/images/category/travel.jpg" class="absolute w-full h-full object-cover" alt="">
-                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg"> Travel </div>
+                <img src="assets/images/new.png" class="absolute w-full h-full object-cover" alt="">
+                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg">신상품 정보 공유 </div>
               </div>
             </li>
             <li>
               <div class="rounded-md overflow-hidden relative w-full h-36">
                 <div class="absolute w-full h-3/4 -bottom-12 bg-gradient-to-b from-transparent to-gray-800 z-10">
                 </div>
-                <img src="assets/images/category/business.jpg" class="absolute w-full h-full object-cover" alt="">
-                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg"> Business </div>
+                <img src="assets/images/협업.png" class="absolute w-full h-full object-cover" alt="">
+                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg">판매 스킬 공유</div>
               </div>
             </li>
             <li>
               <div class="rounded-md overflow-hidden relative w-full h-36">
                 <div class="absolute w-full h-3/4 -bottom-12 bg-gradient-to-b from-transparent to-gray-800 z-10">
                 </div>
-                <img src="assets/images/category/health.jpg" class="absolute w-full h-full object-cover" alt="">
-                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg"> Health </div>
+                <img src="assets/images/증권.png" class="absolute w-full h-full object-cover" alt="">
+                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg"> 증권시황 </div>
               </div>
             </li>
             <li>
               <div class="rounded-md overflow-hidden relative w-full h-36">
                 <div class="absolute w-full h-3/4 -bottom-12 bg-gradient-to-b from-transparent to-gray-800 z-10">
                 </div>
-                <img src="assets/images/category/science-and-tech.jpg" class="absolute w-full h-full object-cover"
+                <img src="assets/images/퇴직연금.png" class="absolute w-full h-full object-cover"
                      alt="">
-                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg"> Science </div>
+                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg">퇴직연금 꿀팁</div>
               </div>
             </li>
             <li>
               <div class="rounded-md overflow-hidden relative w-full h-36">
                 <div class="absolute w-full h-3/4 -bottom-12 bg-gradient-to-b from-transparent to-gray-800 z-10">
                 </div>
-                <img src="assets/images/category/Buy-and-sell.jpg" class="absolute w-full h-full object-cover"
+                <img src="assets/images/부동산.png" class="absolute w-full h-full object-cover"
                      alt="">
-                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg"> Buy & sell</div>
+                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg">부동산 이슈</div>
               </div>
             </li>
             <li>
@@ -431,7 +550,7 @@
                 <div class="absolute w-full h-3/4 -bottom-12 bg-gradient-to-b from-transparent to-gray-800 z-10">
                 </div>
                 <img src="assets/images/category/travel.jpg" class="absolute w-full h-full object-cover" alt="">
-                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg"> Travel </div>
+                <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg">환율정보</div>
               </div>
             </li>
 
