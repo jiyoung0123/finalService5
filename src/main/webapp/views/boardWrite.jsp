@@ -52,7 +52,7 @@
                             <div class="container">
                                 <h2 class="text-2xl font-semibold">WM 게시판</h2>
                                 <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
-                                   data-tippy-placement="left" title="Create New Page">
+                                   data-tippy-placement="left" title="게시글 작성하기">
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
                                 </a>
                             </div>
