@@ -218,7 +218,9 @@
 
 						<div class="border-t flex justify-between lg:space-x-10 p-7 bg-gray-50 rounded-b-md">
 						<p class="text-sm leading-6">프로필을 등록하고 본격적으로 게시판과 그룹 Chat을 둘러보러 가세요!</p>
-							<a href="/boardWrite" class="insert button lg:w-1/3"><button type="button">설정 완료</button></a>
+							<a uk-toggle="target: #modal-boardWrite" class="insert button lg:w-1/3" style="color: #e0e0e0;">
+                                <button type="button">설정 완료</button>
+                            </a>
 						</div>
 
                     </div>
@@ -228,7 +230,16 @@
             </div>
         </div>
 
-
+<!-- 프로필 설정 완료 시 게시글 작성하기로 넘어간다는 모달창 test -->
+<div id="modal-boardWrite" uk-modal>
+    <div class="uk-modal-body uk-modal-dialog rounded-md shadow-2xl">
+        <h2 class="mb-2 uk-modal-title">게시글 작성 준비를 마쳤어요!</h2>
+        <p>My프로필 등록이 완료됐습니다.<br>지금 바로 게시글을 작성해보고 직원들과 함께 공유해봐요~</p>
+        <div class="uk-modal-footer text-right mt-6 px-0 space-x-1">
+            <a href="/boardWrite"><button class="button" type="button">바로가기</button></a>
+        </div>
+    </div>
+</div>
    
     
 
