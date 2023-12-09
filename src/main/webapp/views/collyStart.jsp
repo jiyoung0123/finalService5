@@ -194,7 +194,7 @@
                             <div>
                                 <div class="card p-5 clickGoal">
                                     <h3 class="text-lg font-semibold mb-2">물을 주면 작물이 자랍니다</h3>
-                                    <p>작물을 클릭해서<br>물을 주면 됩니다</p>
+                                    <p>작물을 클릭해서<br>물을 주면 됩니다!</p>
                                 </div>
                             </div>
                         </div>
