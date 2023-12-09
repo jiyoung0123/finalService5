@@ -321,7 +321,7 @@
                             <br>
                             <ul class="space-y-3">
                                 <li class="uk-filter-control">
-                                    <a class="bg-gray-100 py-1.5 px-4 rounded-full" href="#">2023.9.16(토)</a>
+                                    <a class="bg-gray-100 py-1.5 px-4 rounded-full" href="#">2023.12.15(금)</a>
                                  	<div class="bg-white rounded-lg shadow-md p-3 flex "> 
                                         <div class="bg-blue-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
@@ -334,7 +334,7 @@
                                             </div>
                                             <p class="text-sm"> 가입한 상품의 수익률을 조회했어요. </p> 
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
-                                            	<i class="icon-feather-calendar pr-1"></i> <div> 9.16(토) 오전 10:41 </div> </div>
+                                            	<i class="icon-feather-calendar pr-1"></i> <div> 12.15(금) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>
@@ -351,7 +351,7 @@
                                             </div>
                                             <p class="text-sm"> 가입한 상품의 일부를 매도했어요. </p> 
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
-                                            	<i class="icon-feather-calendar pr-1"></i> <div> 9.16(토) 오전 10:41 </div> </div>
+                                            	<i class="icon-feather-calendar pr-1"></i> <div> 12.15(금) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>
@@ -368,7 +368,7 @@
                                             </div>
                                             <p class="text-sm"> 투자상품을 추가로 가입했어요. </p> 
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
-                                            	<i class="icon-feather-calendar pr-1"></i> <div> 9.16(토) 오전 10:41 </div> </div>
+                                            	<i class="icon-feather-calendar pr-1"></i> <div> 12.15(금) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>
@@ -385,12 +385,12 @@
                                             </div>
                                             <p class="text-sm"> 가입한 상품의 수익률을 조회했어요. </p> 
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
-                                            	<i class="icon-feather-calendar pr-1"></i> <div> 9.16(토) 오전 10:41 </div> </div>
+                                            	<i class="icon-feather-calendar pr-1"></i> <div> 12.15(금) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>
                                 <li class="uk-filter-control">
-                                <a class="bg-gray-100 py-1.5 px-4 rounded-full" href="#">2023.9.14(목)</a>
+                                <a class="bg-gray-100 py-1.5 px-4 rounded-full" href="#">2023.12.14(목)</a>
                                  	<div class="bg-white rounded-lg shadow-md p-3 flex "> 
                                         <div class="bg-yellow-600 rounded-lg w-1.5"></div>
                                         <div class="ml-4 flex-1">
@@ -403,7 +403,7 @@
                                             </div>
                                             <p class="text-sm"> 다른 종류의 상품을 검색하고 있어요. </p> 
                                             <div class="flex items-center space-x-1 text-red-400 text-xs mt-2">
-                                            	<i class="icon-feather-calendar pr-1"></i> <div> 9.14(목) 오전 10:41 </div> </div>
+                                            	<i class="icon-feather-calendar pr-1"></i> <div> 12.14(목) 오전 10:41 </div> </div>
                                         	</div>
                                    	</div>
                                 </li>

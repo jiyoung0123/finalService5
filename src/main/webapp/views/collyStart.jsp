@@ -20,7 +20,7 @@
         text-decoration: none; /* 밑줄 제거 */
     }
     .insert:hover {
-        color: wihte; /* 마우스를 대면 색상을 상속받음 */
+        color: white; /* 마우스를 대면 색상을 상속받음 */
     }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -213,7 +213,7 @@
 
                 <div class="border-t flex justify-between lg:space-x-10 p-7 bg-gray-50 rounded-b-md">
                     <p class="text-sm leading-6">물을 주면 작물이 자라요! 퀴즈를 풀고 물을 줘볼까요?</p>
-                    <a href="collyFarm?userId=2538899" class="insert button lg:w-1/3"><button id="registerColly_btn" type="button">재배 시작하기</button></a>
+                    <a href="collyFarm?userId=4538899" class="insert button lg:w-1/3"><button id="registerColly_btn" type="button">재배 시작하기</button></a>
                 </div>
                 </form>
 
