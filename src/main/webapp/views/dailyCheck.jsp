@@ -76,7 +76,8 @@
                 imageUrl: "https://cdnimage.dailian.co.kr/news/202112/news_1638323610_1058458_m_1.jpeg",
                 imageWidth: 500,
                 imageHeight: 400,
-                imageAlt: "Custom image"
+                imageAlt: "Custom image",
+                confirmButtonText: '확인'
             });
         }
 
@@ -85,7 +86,8 @@
                 title: '출석체크 완료',
                 start: date,
                 allDay: true,
-                color: 'blue'
+                color: 'blue',
+                confirmButtonText: '확인'
             });
         }
     });
