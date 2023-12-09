@@ -228,7 +228,18 @@
             </div>
         </div>
 
-
+<!-- 프로필설정 완료 시 띄울 alert -->
+<div class="md:w-2/4">
+    <!-- <div class="space-y-4"> -->
+            <div class="bg-green-500 border p-4 relative rounded-md" uk-alert>
+                <button class="uk-alert-close absolute bg-gray-100 bg-opacity-20 m-5 p-0.5 pb-0 right-0 rounded text-gray-200 text-xl top-0">
+                    <i class="icon-feather-x"></i>
+                </button>
+                <h3 class="text-lg font-semibold text-white">성공!</h3>
+                <p class="text-white text-opacity-75">프로필이 완료되었어요! 내가 설정한 목표 달성을 위해 직원들이 작성한 게시글을 둘러보세요</p>
+            </div>
+    <!-- </div> -->
+</div>
    
     
 
