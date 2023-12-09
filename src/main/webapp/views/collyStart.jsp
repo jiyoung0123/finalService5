@@ -187,8 +187,8 @@
                             </div>
                             <div>
                                 <div class="card p-5 clickGoal" uk-scrollspy-class="uk-animation-slide-top">
-                                    <h3 class="text-lg font-semibold mb-2">퀴즈를 풀고 물 획득하기</h3>
-                                    <p>퀴즈는 하루 2번 풀 수 있어요!<br>오전/ 오후 1번씩 도전 해 볼까요?</p>
+                                    <h3 class="text-lg font-semibold mb-2">퀴즈와 출석체크로 물 획득하기</h3>
+                                    <p>퀴즈는 하루 1번 풀 수 있어요!<br>출석 체크도 하루에 1번!</p>
                                 </div>
                             </div>
                             <div>

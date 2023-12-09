@@ -40,7 +40,7 @@ function connect(event) {
     chatPage.classList.remove('hidden');
 
     // 연결하고자하는 Socket 의 endPoint
-    var socket = new SockJS('http://127.0.0.1:8088/randomWs');
+    var socket = new SockJS('http://172.16.20.78:8088/randomWs');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, onConnected, onError);
     event.preventDefault();
