@@ -47,26 +47,16 @@
                                     <!-- 게시글 작성하기
                                     boardWriterId가 없으면, 모달창(프로필 등록 안내) 
                                     있으면, 작성하기 창으로 이동-->
-                                    <c:choose>
-                                        <c:when test="${boardWriterId == null}">
-                                            <a href="/boardWrite" uk-toggle="target: #modal-profile" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
-                                            data-tippy-placement="left" title="Create New Page">
-                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                         </a>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
-                                            data-tippy-placement="left" title="Create New Page">
-                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                                            </a>
-                                        </c:otherwise>
-                                    </c:choose>
+                                <a href="/boardWrite" class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
+                                   data-tippy-placement="left" title="Create New Page">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                </a>
                                     <!-- 게시글 작성하기 -->
                             </div>
                             <nav class="responsive-nav md:m-0 -mx-4 style-2">
                                 <ul>
-                                    <li class="active"><a href="#" class="lg:px-2"> 전체글 </a></li>
-                                    <li><a href="/boardLiked" class="lg:px-2"> 인기글 </a></li>
+                                    <li ><a href="/board" class="lg:px-2"> 전체글 </a></li>
+                                    <li class="active"><a href="/boardLiked" class="lg:px-2"> 인기글 </a></li>
                                     <li><a href="/boardNew" class="lg:px-2"> 최신글 </a></li>
                                 </ul>
                             </nav>
@@ -79,12 +69,60 @@
                                 <img src="assets/images/콜리.png" alt="" class="w-12 h-12 rounded-full">
                                 <div class="flex-1">
                                     <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> 완전 뿌듯해요</a>
-                                    <p class="text-sm text-gray-400 mb-2">작성자 3133252  <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> 11/12/2023</p>
+                                    <p class="text-sm text-gray-400 mb-2"> 작성자 3133252  <span data-href="%40tag-dev.html"> </span> </span> 11/12/2023</p>
                                     <p class="leading-6 line-clamp-2 mt-3">  오늘 권유한 상품이에요 </p>
                                 </div>
                                 <div class="sm:flex items-center space-x-4 hidden">
                                     <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                    <span class="text-xl"> 7 </span>
+                                    <span class="text-xl">8 </span>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 p-7">
+                                <img src="assets/images/avatars/b.png" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> 팀장님과의 갈등 어떻게 해결하면 좋을까요?</a>
+                                    <p class="text-sm text-gray-400 mb-2"> 작성자 3223252  <span data-href="%40tag-dev.html"> </span> </span> 11/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3">  오늘 권유한 상품이에요 </p>
+                                </div>
+                                <div class="sm:flex items-center space-x-4 hidden">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                    <span class="text-xl">9 </span>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 p-7">
+                                <img src="assets/images/avatars/e.png" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> [wm토론방] 중국 펀드 리밸런싱 관련하여 논의해요 ! </a>
+                                    <p class="text-sm text-gray-400 mb-2">작성자 2422586  <span data-href="%40tag-dev.html"> </span> </span> 11/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3">  통중국 ... 아직도 가지고있는 1인 입니다. </p>
+                                </div>
+                                <div class="sm:flex items-center space-x-4 hidden">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                    <span class="text-xl"> 2 </span>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 p-7">
+                                <img src="assets/images/avatars/a.png" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> 이 달의 김팀장 추천펀드</a>
+                                    <p class="text-sm text-gray-400 mb-2">작성자 2514252  <span data-href="%40tag-dev.html"></span> </span> 11/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3">  안녕하세요, 청담동 김팀장입니다. </p>
+                                </div>
+                                <div class="sm:flex items-center space-x-4 hidden">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                    <span class="text-xl"> 3 </span>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 p-7">
+                                <img src="assets/images/avatars/c.png" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> 마이데이터를 이용한 상품판매 꿀팁잇슈 </a>
+                                    <p class="text-sm text-gray-400 mb-2">작성자 2140858  <span data-href="%40tag-dev.html"> </span> </span> 11/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3">  마이데이터 가입만 하고 고객님 돌려보내는건 아니시죠? </p>
+                                </div>
+                                <div class="sm:flex items-center space-x-4 hidden">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                    <span class="text-xl"> 9 </span>
                                 </div>
                             </div>
                         </li>
