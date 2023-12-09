@@ -77,7 +77,7 @@
         font-weight: bold;
     }
 
-    /* Components specific */ 
+    /* Components specific */
     #dashboard-row-1-cell-2 .highcharts-dashboards-component-subtitle {
         color: var(--highcharts-dashboards-orange);
     }
@@ -293,7 +293,7 @@
                     type: 'KPI',
                     cell: 'dashboard-row-1-cell-1',
                     title: '투자원금(평가금액)',
-                    value: 14300000,
+                    value: new Intl.NumberFormat('en-US').format(14300000),
                     valueFormat: '{value}',
                     subtitle: '23%',
                     chartOptions: {
@@ -315,8 +315,8 @@
                 {
                     type: 'KPI',
                     cell: 'dashboard-row-1-cell-2',
-                    title: '실시간 투자수익률',
-                    value: 1258700,
+                    title: '실시간 투자수익금',
+                    value: new Intl.NumberFormat('en-US').format(1258700),
                     valueFormat: '{value}',
                     subtitle: '8.3%',
                     chartOptions: {
