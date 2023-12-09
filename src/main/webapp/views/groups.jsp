@@ -364,7 +364,7 @@
               <div class="card">
                 <div class="card-media h-28">
                   <div class="card-media-overly"></div>
-                  <img src="assets/images/엔화약세.png" alt="" class="">
+                  <img src="assets/images/항셍.png" alt="" class="">
                     <div class="absolute bg-red-100 font-semibold px-2.5 py-1 rounded-lg text-red-500 text-xs top-2.5 left-2.5">잠금🔒︎</div>
 
                 </div>
@@ -372,7 +372,7 @@
                 <div class="card-body">
                   <span class="hidden" id="${room.roomName}"></span>
 
-                    <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" class="font-semibold text-lg truncate">강동 8PG 외환담당</a>
+                    <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" class="font-semibold text-lg truncate">홍콩 H지수 전망 토론</a>
 
 
 
