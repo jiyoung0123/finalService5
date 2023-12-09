@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="sm:flex items-center space-x-4 hidden">
                                     <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                    <span class="text-xl">8 </span>
+                                    <span class="text-xl">2 </span>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-5 p-7">
