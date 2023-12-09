@@ -218,7 +218,7 @@
 
 						<div class="border-t flex justify-between lg:space-x-10 p-7 bg-gray-50 rounded-b-md">
 						<p class="text-sm leading-6">프로필을 등록하고 본격적으로 게시판과 그룹 Chat을 둘러보러 가세요!</p>
-							<a href="/groups" class="insert button lg:w-1/3"><button type="button">설정 완료</button></a>
+							<a href="/boardWrite" class="insert button lg:w-1/3"><button type="button">설정 완료</button></a>
 						</div>
 
                     </div>
