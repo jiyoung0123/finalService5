@@ -13,7 +13,10 @@
                 imageUrl: "/assets/images/nowater.png",
                 imageWidth:150,
                 imageHeight: 150,
+                confirmButtonText: '확인',
             });
+            setTimeout(() =>
+            btnActive(), 1500);
         }else{
          $.ajax({
             type : "post",
@@ -21,14 +24,16 @@
             data: { "userId" : userId },
             success : function(result){
                 //alert("물을 주었습니다. 물의 양이 업데이트되었습니다.");
-                Swal.fire({
-                title: "물주기 성공!",
-                text: "물의 양이 업데이트되었습니다.",
-                imageUrl: "/assets/images/successwater.png",
-                imageWidth:150,
-                imageHeight: 150,
-            });
-                location.reload();
+                    Swal.fire({
+                    title: "물주기 성공!",
+                    text: "물의 양이 업데이트되었습니다.",
+                    imageUrl: "/assets/images/successwater.png",
+                    imageWidth:150,
+                    imageHeight: 150,
+                    confirmButtonText: '확인',
+                    });
+                setTimeout(() =>
+               btnActive(), 1500);
             }
            });
          }
@@ -45,23 +50,23 @@
                 //alert("퀴즈에 참여해 주셔서 감사합니다");
                 $(".uk-modal-close-default").trigger("click"); // 퀴즈 모달창 닫고,
                 // 참여완료 팝업 호출
-                setTimeout(() => Swal.fire({
-                template: "#my-template2",
+               Swal.fire({
                 title: "참여 완료!",
                 text: "퀴즈에 참여해 주셔서 감사합니다.",
                 imageUrl: "/assets/images/퀴즈성공.png",
                 imageWidth:150,
                 imageHeight: 150,
-                 }), 300
-                 );
-                btnActive();
+                confirmButtonText: '확인',
+               });
+                setTimeout(() => 
+                btnActive(), 1500);
             }
         });
        
     };
 function btnActive() {
-    console.log("참여완료 팝업창 닫기");
-    reload();
+    console.log("팝업창 닫고 새로고침");
+    location.reload();
 }
 
 </script>
