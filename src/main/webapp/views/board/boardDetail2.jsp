@@ -156,7 +156,7 @@
                         <ul class="space-y-3">
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/d.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 서지영 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -166,7 +166,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/a.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 정인보 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -176,7 +176,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/b.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 이진만 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -186,7 +186,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/c.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 최준혁 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -196,7 +196,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/d.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 최미진 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -206,7 +206,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/sad.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 조현손 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>

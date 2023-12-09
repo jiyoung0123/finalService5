@@ -79,7 +79,7 @@
                                 <img src="assets/images/콜리.png" alt="" class="w-12 h-12 rounded-full">
                                 <div class="flex-1">
                                     <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> 완전 뿌듯해요</a>
-                                    <p class="text-sm text-gray-400 mb-2"> 3133252  <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> 11/12/2023</p>
+                                    <p class="text-sm text-gray-400 mb-2">작성자 3133252  <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> 11/12/2023</p>
                                     <p class="leading-6 line-clamp-2 mt-3">  오늘 권유한 상품이에요 </p>
                                 </div>
                                 <div class="sm:flex items-center space-x-4 hidden">
@@ -112,7 +112,7 @@
                             <div class="flex items-center space-x-5 p-7">
                                 <img src="assets/images/avatars/b.png" alt="" class="w-12 h-12 rounded-full">
                                 <div class="flex-1">
-                                    <a href="/board/boardDetail2" class="text-lg font-semibold line-clamp-1"> 항셍지수의 미래에 대해 어떻게 생각하세요?</a>
+                                    <a href="/boardDetail2" class="text-lg font-semibold line-clamp-1"> 항셍지수의 미래에 대해 어떻게 생각하세요?</a>
                                     <div class="flex space-x-3 text-sm pb-2 mt-1 flex-wrap font-medium">
                                         <a href="timeline.html" class="font-semibold"> 작성자 2855004 </a>
                                         <div class="text-gray-500"> 2023.11.13 </div>
@@ -141,7 +141,7 @@
                         <ul class="space-y-3">
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/d.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 서지영 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -151,7 +151,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/a.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 정인보 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -161,7 +161,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/b.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 이진만 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -171,7 +171,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/c.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 최준혁 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -181,7 +181,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/d.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 최미진 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -191,7 +191,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/sad.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 조현손 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>

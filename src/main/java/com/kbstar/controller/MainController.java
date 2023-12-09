@@ -94,7 +94,11 @@ public class MainController {
         }
     }
 
-
+    @RequestMapping("/dailyCheck")
+    public String dailyCheck(Model model) throws Exception {
+        model.addAttribute("center", "dailyCheck");
+        return "index";
+    }
 
 
 }

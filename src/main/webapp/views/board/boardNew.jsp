@@ -65,9 +65,57 @@
                             <div class="flex items-start space-x-5 p-7">
                                 <img src="assets/images/콜리.png" alt="" class="w-12 h-12 rounded-full">
                                 <div class="flex-1">
-                                    <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> 완전 뿌듯해요</a>
-                                    <p class="text-sm text-gray-400 mb-2"> 3133252  <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> 11/12/2023</p>
-                                    <p class="leading-6 line-clamp-2 mt-3">  오늘 권유한 상품이에요 </p>
+                                    <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 디지캠퍼스 어떻게 생각하시나요?</a>
+                                    <p class="text-sm text-gray-400 mb-2"> 작성자 3133252  <span data-href="%40tag-dev.html"> </span> </span> 16/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3">  영업점 직원도 갈만 할까요?  </p>
+                                </div>
+                                <div class="sm:flex items-center space-x-4 hidden">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                    <span class="text-xl"> 7 </span>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 p-7">
+                                <img src="assets/images/avatars/c.png" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 적금 만기고객 , 투자권유 스크립트 </a>
+                                    <p class="text-sm text-gray-400 mb-2"> 작성자 2214147 <span data-href="%40tag-dev.html"> </span> </span> 16/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3"> 제가 만든 스크립트에요, 도움이 되신다면 댓글 부탁드려요 ^^  </p>
+                                </div>
+                                <div class="sm:flex items-center space-x-4 hidden">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                    <span class="text-xl"> 7 </span>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 p-7">
+                                <img src="assets/images/avatars/a.png" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> (업무 외) 주말에 뭐하시나요?</a>
+                                    <p class="text-sm text-gray-400 mb-2"> 작성자 3133252  <span data-href="%40tag-dev.html"> </span> </span> 16/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3">  주말에 아이와 놀러갈 겨울철 실내 장소 추천해주세요,   </p>
+                                </div>
+                                <div class="sm:flex items-center space-x-4 hidden">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                    <span class="text-xl"> 7 </span>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 p-7">
+                                <img src="assets/images/avatars/b.png" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <a href="#" class="text-lg font-semibold line-clamp-1 mb-1">isa 만기자금 irp 한도 잘 모르겠어요 </a>
+                                    <p class="text-sm text-gray-400 mb-2">작성자 3128252  <span data-href="%40tag-dev.html"> </span> </span> 16/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3">  선배님들, 만기자금만큼 한도 늘어나나요?  </p>
+                                </div>
+                                <div class="sm:flex items-center space-x-4 hidden">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
+                                    <span class="text-xl"> 7 </span>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-5 p-7">
+                                <img src="assets/images/avatars/a.png" alt="" class="w-12 h-12 rounded-full">
+                                <div class="flex-1">
+                                    <a href="#" class="text-lg font-semibold line-clamp-1 mb-1"> 여유자금 3억원 장기투자 어떻게하면 좋을까요? </a>
+                                    <p class="text-sm text-gray-400 mb-2">작성자 3133252  <span data-href="%40tag-dev.html"> </span> </span> 16/12/2023</p>
+                                    <p class="leading-6 line-clamp-2 mt-3">  주니어 vm이에요 , 3억원 정도 안정적인 투자 방안 궁금해요   </p>
                                 </div>
                                 <div class="sm:flex items-center space-x-4 hidden">
                                     <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
@@ -75,22 +123,7 @@
                                 </div>
                             </div>
                         </li>
-                        <c:forEach var="obj" items="${boardlist}">
-                            <li>
-                                <div class="flex items-start space-x-5 p-7">
-                                    <img src=${obj.boardImagePath} alt="" class="w-12 h-12 rounded-full">
-                                    <div class="flex-1">
-                                        <a href="/boardDetail" class="text-lg font-semibold line-clamp-1 mb-1"> ${obj.boardTitle}</a>
-                                        <p class="text-sm text-gray-400 mb-2"> 작성자 <span data-href="%40tag-dev.html"> ${obj.boardWriterId}</span> </span> ${obj.boardDate}</p>
-                                        <p class="leading-6 line-clamp-2 mt-3">  ${obj.boardContents}</p>
-                                    </div>
-                                    <div class="sm:flex items-center space-x-4 hidden">
-                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path></svg>
-                                        <span class="text-xl"> ${obj.boardLikes} </span>
-                                    </div>
-                                </div>
-                            </li>
-                        </c:forEach>
+
                     </ul>
                     <%--가장 좋아요가 많은 글 보여주기--%>
                     <h2 class="text-xl font-semibold mb-6 lg:mt-10 mt-4"> 핫 WM 이슈 </h2>
@@ -128,7 +161,7 @@
                         <ul class="space-y-3">
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/d.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 서지영 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -138,7 +171,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/a.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 정인보 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -148,7 +181,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/b.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 이진만 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -158,7 +191,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-1.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/c.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 최준혁 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -168,7 +201,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-2.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/d.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 최미진 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
@@ -178,7 +211,7 @@
                             </li>
                             <li>
                                 <div class="flex items-center space-x-3">
-                                    <img src="assets/images/avatars/avatar-3.jpg" alt="" class="w-8 h-8 rounded-full">
+                                    <img src="assets/images/avatars/sad.png" alt="" class="w-8 h-8 rounded-full">
                                     <a href="#" class="font-semibold"> 조현손 </a>
                                     <div class="flex items-center space-x-2">
                                         <ion-icon name="chatbubble-ellipses-outline" class="text-lg"></ion-icon>
