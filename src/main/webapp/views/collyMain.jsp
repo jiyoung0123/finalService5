@@ -1,19 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script>
     function colly_water(){
         var userId = '${rcolly.userId}';
         var water = '${rcolly.water}';
         if (water <=0){
-            confirm("물이 없습니다.");
+            //confirm("물이 없습니다.");
+            Swal.fire({
+                template: "#my-template",
+                text: "지금은 물이 없습니다. 잠시 후 다시 시도해 주세요.",
+                imageUrl: "/assets/images/nowater.png",
+                imageWidth:150,
+                imageHeight: 150,
+            });
         }else{
          $.ajax({
             type : "post",
             url : "/collyWater",
             data: { "userId" : userId },
             success : function(result){
-                alert("물을 주었습니다. 물의 양이 업데이트되었습니다.");
+                //alert("물을 주었습니다. 물의 양이 업데이트되었습니다.");
+                Swal.fire({
+                title: "물주기 성공!",
+                text: "물의 양이 업데이트되었습니다.",
+                imageUrl: "/assets/images/successwater.png",
+                imageWidth:150,
+                imageHeight: 150,
+            });
                 location.reload();
             }
            });
@@ -28,14 +42,27 @@
             data: { "quizId" : "2",
                      "answer": answer },
             success : function(result){
-                alert("퀴즈에 참여해 주셔서 감사합니다");
-                location.reload();
+                //alert("퀴즈에 참여해 주셔서 감사합니다");
+                $(".uk-modal-close-default").trigger("click"); // 퀴즈 모달창 닫고,
+                // 참여완료 팝업 호출
+                setTimeout(() => Swal.fire({
+                template: "#my-template2",
+                title: "참여 완료!",
+                text: "퀴즈에 참여해 주셔서 감사합니다.",
+                imageUrl: "/assets/images/퀴즈성공.png",
+                imageWidth:150,
+                imageHeight: 150,
+                 }), 300
+                 );
+                btnActive();
             }
         });
-
-    }
-
-
+       
+    };
+function btnActive() {
+    console.log("참여완료 팝업창 닫기");
+    reload();
+}
 
 </script>
     <!-- Main Contents -->
