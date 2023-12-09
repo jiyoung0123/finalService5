@@ -13,22 +13,22 @@ public class StomWebSocketConfig implements WebSocketMessageBrokerConfigurer{
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws")
-                .setAllowedOrigins("http://127.0.0.1:8088")
+                .setAllowedOrigins("http://172.16.20.78:8088")
                 .setAllowedOriginPatterns("*")
                 .withSockJS();
         registry.addEndpoint("/chbot")
-                .setAllowedOrigins("http://127.0.0.1:8088")
+                .setAllowedOrigins("http://172.16.20.78:8088")
                 .setAllowedOriginPatterns("*")
                 .withSockJS();
         registry.addEndpoint("/wss")
-                .setAllowedOrigins("http://127.0.0.1:8088")
+                .setAllowedOrigins("http://172.16.20.78:8088")
                 .setAllowedOriginPatterns("*")
                 .withSockJS();
 
         //        127.0.0.1로 접속했던 애들도 이 웹소켓에 접속할 수 있게끔 하겠다는 뜻
         //        randomWs의 웹소켓을 만들었다
         registry.addEndpoint("/randomWs")
-                .setAllowedOrigins("http://127.0.0.1:8088")
+                .setAllowedOrigins("http://172.16.20.78:8088")
                 .setAllowedOriginPatterns("*")
                 .withSockJS();
     }

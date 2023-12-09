@@ -364,27 +364,26 @@
               <div class="card">
                 <div class="card-media h-28">
                   <div class="card-media-overly"></div>
-                  <img src="assets/images/엔화약세.png" alt="" class="">
-                    <div class="absolute bg-red-100 font-semibold px-2.5 py-1 rounded-lg text-red-500 text-xs top-2.5 left-2.5">잠금🔒︎</div>
-
+                  <img src="assets/images/항셍.png" alt="" class="">
+                    <div class="absolute bg-red-100 font-semibold px-2.5 py-1 rounded-lg text-red-500 text-xs top-2.5 left-2.5">Full🔒</div>
                 </div>
 
                 <div class="card-body">
                   <span class="hidden" id="${room.roomName}"></span>
 
-                    <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" class="font-semibold text-lg truncate">강동 8PG 외환담당</a>
+                    <a href="#enterRoomModal"  data-bs-toggle="modal" data-target="#enterRoomModal" class="font-semibold text-lg truncate">홍콩 H지수 전망 토론</a>
 
 
 
 
                   <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
-                    <a href="#"> <span>주제 : 엔화약세 언제까지...?</span> </a>
+                    <a href="#"> <span>주제 : H지수 관련 (훈수금지)</span> </a>
                   </div>
 
                   <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
                     <a href="#">
                       <span>
-                          2023년 12월 6일
+                          2023년 12월 14일
                       </span> </a>
                   </div>
                   <div class="flex mt-3.5 space-x-2">
@@ -393,7 +392,7 @@
                       <img alt="Image placeholder" src="assets/images/avatars/avatar-5.jpg" class="border-2 border-white rounded-full w-7">
                     </div>--%>
                     <div class="flex-1 leading-5 text-sm">
-                      <div> <strong>8명 참여중</strong> /10명</div>
+                      <div> <strong>50명 참여중</strong> /50명</div>
                     </div>
                   </div>
 
@@ -443,7 +442,7 @@
                   <div class="flex items-center flex-wrap space-x-1 mt-1 text-sm text-gray-500 capitalize">
                     <a href="#">
                       <span>
-                          2023년 12월 6일
+                          2023년 12월 15일
                       </span> </a>
                   </div>
                   <div class="flex mt-3.5 space-x-2">
@@ -477,6 +476,8 @@
 
               </div>
             </li>
+
+
 
 
 
@@ -549,7 +550,7 @@
               <div class="rounded-md overflow-hidden relative w-full h-36">
                 <div class="absolute w-full h-3/4 -bottom-12 bg-gradient-to-b from-transparent to-gray-800 z-10">
                 </div>
-                <img src="assets/images/category/travel.jpg" class="absolute w-full h-full object-cover" alt="">
+                <img src="assets/images/환율정보.png" class="absolute w-full h-full object-cover" alt="">
                 <div class="absolute bottom-0 w-full p-3 text-white z-20 font-semibold text-lg">환율정보</div>
               </div>
             </li>
