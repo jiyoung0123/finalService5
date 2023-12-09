@@ -1,13 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!-- 고객 대시보드 페이지 -->
-<body>
- <div class="main_content">
-     <div class="mcontainer">
-     
-     </div>
- </div>
-</body>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
 <!-- 고객 대시보드 페이지 재커밋 -->
@@ -361,7 +352,7 @@
                                 // },
                                 {
                                     tagName: 'h5',
-                                    textContent: '고객명 : 김비비',
+                                    textContent: '고객명 : 나비비',
                                     attributes: {
                                         id: 'main-right-text'
                                     }
@@ -459,8 +450,8 @@
                     type: 'KPI',
                     cell: 'dashboard-row-3-cell-1',
                     title: '최근 소비내역',
-                    value: 350,
-                    valueFormat: '$ {value}',
+                    value: 358000,
+                    valueFormat: '{value}',
                     chartOptions: {
                         series: [
                             {
@@ -519,11 +510,11 @@
 </script>
 </head>
 <body>
-<div class="main_content"  style="margin-top: 30px;">
+<div class="main_content">
     <div class="flex-shirink-0" >
         <div class="flex justify-between relative md:mb-4 mb-3">
             <div class="flex-1">
-                <h2 class="text-2xl font-semibold" style="padding-left: 20px;"> My고객 투자자산 포트폴리오</h2>
+                <h2 class="text-2xl font-semibold" style="padding-left: 20px; padding-top: 10px;"> My고객 투자자산 포트폴리오</h2>
                 <div id="container"></div>
             </div>
         </div>
