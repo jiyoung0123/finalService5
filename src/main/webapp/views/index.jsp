@@ -23,7 +23,7 @@
 
     <!-- Basic Page Needs
         ================================================== -->
-    <title>Socialite Template</title>
+    <title>WM WorKB 고객관리시스템</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Socialite is - Professional A unique and beautiful collection of UI elements">
@@ -117,115 +117,115 @@
 
                     <div class="header_widgets">
 
-                        <a href="#" class="is_icon" uk-tooltip="title: Cart">
-                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
-                        </a>
-                        <div uk-drop="mode: click" class="header_dropdown dropdown_cart">
+<%--                        <a href="#" class="is_icon" uk-tooltip="title: Cart">--%>
+<%--                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>--%>
+<%--                        </a>--%>
+<%--                        <div uk-drop="mode: click" class="header_dropdown dropdown_cart">--%>
 
-                            <div class="drop_headline">
-                                <h4>  My Cart </h4>
-                                <a href="#" class="btn_action hover:bg-gray-100 mr-2 px-2 py-1 rounded-md underline"> Checkout </a>
-                            </div>
+<%--&lt;%&ndash;                            <div class="drop_headline">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                <h4>  My Cart </h4>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                <a href="#" class="btn_action hover:bg-gray-100 mr-2 px-2 py-1 rounded-md underline"> Checkout </a>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                            </div>&ndash;%&gt;--%>
 
-                            <ul class="dropdown_cart_scrollbar" data-simplebar>
-                                <li>
-                                    <div class="cart_avatar">
-                                        <img src="/assets/images/product/2.jpg" alt="">
-                                    </div>
-                                    <div class="cart_text">
-                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wireless headphones </div>
-                                        <p class="text-sm">Type Accessories  </p>
-                                    </div>
-                                    <div class="cart_price">
-                                        <span> $14.99 </span>
-                                        <button class="type"> Remove</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart_avatar">
-                                        <img src="/assets/images/product/13.jpg" alt="">
-                                    </div>
-                                    <div class="cart_text">
-                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Parfum Spray</div>
-                                        <p class="text-sm">Type Parfums  </p>
-                                    </div>
-                                    <div class="cart_price">
-                                        <span> $16.99 </span>
-                                        <button class="type"> Remove</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart_avatar">
-                                        <img src="/assets/images/product/15.jpg" alt="">
-                                    </div>
-                                    <div class="cart_text">
-                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Herbal Shampoo </div>
-                                        <p class="text-sm">Type Herbel  </p>
-                                    </div>
-                                    <div class="cart_price">
-                                        <span> $12.99 </span>
-                                        <button class="type"> Remove</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart_avatar">
-                                        <img src="/assets/images/product/14.jpg" alt="">
-                                    </div>
-                                    <div class="cart_text">
-                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wood Chair </div>
-                                        <p class="text-sm">Type Furniture  </p>
-                                    </div>
-                                    <div class="cart_price">
-                                        <span> $19.99 </span>
-                                        <button class="type"> Remove</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart_avatar">
-                                        <img src="/assets/images/product/9.jpg" alt="">
-                                    </div>
-                                    <div class="cart_text">
-                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Strawberries FreshRipe </div>
-                                        <p class="text-sm">Type Fruit  </p>
-                                    </div>
-                                    <div class="cart_price">
-                                        <span> $12.99 </span>
-                                        <button class="type"> Remove</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart_avatar">
-                                        <img src="/assets/images/product/2.jpg" alt="">
-                                    </div>
-                                    <div class="cart_text">
-                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wireless headphones </div>
-                                        <p class="text-sm">Type Accessories  </p>
-                                    </div>
-                                    <div class="cart_price">
-                                        <span> $14.99 </span>
-                                        <button class="type"> Remove</button>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart_avatar">
-                                        <img src="/assets/images/product/13.jpg" alt="">
-                                    </div>
-                                    <div class="cart_text">
-                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Parfum Spray</div>
-                                        <p class="text-sm">Type Parfums  </p>
-                                    </div>
-                                    <div class="cart_price">
-                                        <span> $16.99 </span>
-                                        <button class="type"> Remove</button>
-                                    </div>
-                                </li>
-                            </ul>
+<%--                            <ul class="dropdown_cart_scrollbar" data-simplebar>--%>
+<%--                                <li>--%>
+<%--                                    <div class="cart_avatar">--%>
+<%--                                        <img src="/assets/images/product/2.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_text">--%>
+<%--                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wireless headphones </div>--%>
+<%--                                        <p class="text-sm">Type Accessories  </p>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_price">--%>
+<%--                                        <span> $14.99 </span>--%>
+<%--                                        <button class="type"> Remove</button>--%>
+<%--                                    </div>--%>
+<%--                                </li>--%>
+<%--                                <li>--%>
+<%--                                    <div class="cart_avatar">--%>
+<%--                                        <img src="/assets/images/product/13.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_text">--%>
+<%--                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Parfum Spray</div>--%>
+<%--                                        <p class="text-sm">Type Parfums  </p>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_price">--%>
+<%--                                        <span> $16.99 </span>--%>
+<%--                                        <button class="type"> Remove</button>--%>
+<%--                                    </div>--%>
+<%--                                </li>--%>
+<%--                                <li>--%>
+<%--                                    <div class="cart_avatar">--%>
+<%--                                        <img src="/assets/images/product/15.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_text">--%>
+<%--                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Herbal Shampoo </div>--%>
+<%--                                        <p class="text-sm">Type Herbel  </p>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_price">--%>
+<%--                                        <span> $12.99 </span>--%>
+<%--                                        <button class="type"> Remove</button>--%>
+<%--                                    </div>--%>
+<%--                                </li>--%>
+<%--                                <li>--%>
+<%--                                    <div class="cart_avatar">--%>
+<%--                                        <img src="/assets/images/product/14.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_text">--%>
+<%--                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wood Chair </div>--%>
+<%--                                        <p class="text-sm">Type Furniture  </p>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_price">--%>
+<%--                                        <span> $19.99 </span>--%>
+<%--                                        <button class="type"> Remove</button>--%>
+<%--                                    </div>--%>
+<%--                                </li>--%>
+<%--                                <li>--%>
+<%--                                    <div class="cart_avatar">--%>
+<%--                                        <img src="/assets/images/product/9.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_text">--%>
+<%--                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Strawberries FreshRipe </div>--%>
+<%--                                        <p class="text-sm">Type Fruit  </p>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_price">--%>
+<%--                                        <span> $12.99 </span>--%>
+<%--                                        <button class="type"> Remove</button>--%>
+<%--                                    </div>--%>
+<%--                                </li>--%>
+<%--                                <li>--%>
+<%--                                    <div class="cart_avatar">--%>
+<%--                                        <img src="/assets/images/product/2.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_text">--%>
+<%--                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Wireless headphones </div>--%>
+<%--                                        <p class="text-sm">Type Accessories  </p>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_price">--%>
+<%--                                        <span> $14.99 </span>--%>
+<%--                                        <button class="type"> Remove</button>--%>
+<%--                                    </div>--%>
+<%--                                </li>--%>
+<%--                                <li>--%>
+<%--                                    <div class="cart_avatar">--%>
+<%--                                        <img src="/assets/images/product/13.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_text">--%>
+<%--                                        <div class=" font-semibold leading-4 mb-1.5 text-base line-clamp-1"> Parfum Spray</div>--%>
+<%--                                        <p class="text-sm">Type Parfums  </p>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="cart_price">--%>
+<%--                                        <span> $16.99 </span>--%>
+<%--                                        <button class="type"> Remove</button>--%>
+<%--                                    </div>--%>
+<%--                                </li>--%>
+<%--                            </ul>--%>
 
-                            <div class="cart_footer">
-                                <p> Subtotal : $ 320 </p>
-                                <h1> Total :  <strong> $ 320</strong> </h1>
-                            </div>
-                        </div>
+<%--                            <div class="cart_footer">--%>
+<%--                                <p> Subtotal : $ 320 </p>--%>
+<%--                                <h1> Total :  <strong> $ 320</strong> </h1>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
 
                         <a href="#" class="is_icon" uk-tooltip="title: Notifications">
                             <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
@@ -248,15 +248,15 @@
                                     <li>
                                         <a href="#">
                                             <div class="drop_avatar">
-                                                <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                                                <img src="/assets/images/starfriends/proflie1.jpg" alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
                                                      <i class="icon-feather-thumbs-up"></i>
                                                  </span>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>Adrian Mohani</strong> Like Your Comment On Video
-                                                    <span class="text-link">Learn Prototype Faster </span>
+                                                    <strong>이진</strong>님이 당신이 남긴 댓글을 좋아합니다
+                                                    <span class="text-link"> KB금융그룹 양종희 회장 취임식 </span>
                                                 </p>
                                                 <time> 2 hours ago </time>
                                             </div>
@@ -264,12 +264,12 @@
                                     </li>
                                     <li class="not-read">
                                         <a href="#">
-                                            <div class="drop_avatar status-online"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar status-online"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>Stella Johnson</strong> Replay Your Comments in
-                                                    <span class="text-link">Adobe XD Tutorial</span>
+                                                    <strong>정인보</strong>님이 당신의 글에 댓글을 남겼습니다.
+                                                    <span class="text-link">2024년 WM 추천 상품은 없을까요?</span>
                                                 </p>
                                                 <time> 9 hours ago </time>
                                             </div>
@@ -277,15 +277,15 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-3.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
                                                     <i class="icon-feather-thumbs-up"></i>
                                                 </span>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>Alex Dolgove</strong> Added New Review In Video
-                                                    <span class="text-link">Full Stack PHP Developer</span>
+                                                    <strong>정인보</strong>님의 WM 추천 상품이 인기글 1위에 올랐습니다.
+                                                    <span class="text-link">ETF 코리아 베스트</span>
                                                 </p>
                                                 <time> 12 hours ago </time>
                                             </div>
@@ -293,11 +293,11 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>Jonathan Madano</strong> Shared Your Discussion On Video
+                                                    <strong>정인보</strong>님이 새 댓글을 남겼습니다.
                                                     <span class="text-link">Css Flex Box </span>
                                                 </p>
                                                 <time> Yesterday </time>
@@ -306,15 +306,15 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie1.jpg" alt="">
                                             </div>
                                             <span class="drop_icon bg-gradient-primary">
                                                     <i class="icon-feather-thumbs-up"></i>
                                                 </span>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>Adrian Mohani</strong> Like Your Comment On Course
-                                                    <span class="text-link">Javascript Introduction </span>
+                                                    <strong>이진</strong>님이 당신의 글을 맞춤학습에 공유하였습니다.
+                                                    <span class="text-link"> 미국 채권시장 중장기 리포트 </span>
                                                 </p>
                                                 <time> 2 hours ago </time>
                                             </div>
@@ -322,12 +322,12 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar status-online"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar status-online"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>Stella Johnson</strong> Replay Your Comments in
-                                                    <span class="text-link">Programming for Games</span>
+                                                    <strong>최준혁</strong>님이 당신의 글을 좋아합니다.
+                                                    <span class="text-link"> 이 것이 WM이다. </span>
                                                 </p>
                                                 <time> 9 hours ago </time>
                                             </div>
@@ -335,12 +335,12 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>Stella Johnson</strong> Replay Your Comments in
-                                                    <span class="text-link">Programming for Games</span>
+                                                    <strong>정인보</strong>님이 그룹 챗방을 활성화하였습니다.
+                                                    <span class="text-link"> KPI 워크샵 </span>
                                                 </p>
                                                 <time> 9 hours ago </time>
                                             </div>
@@ -348,56 +348,56 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-3.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
                                                 <p>
-                                                    <strong>Alex Dolgove</strong> Added New Review In Course
-                                                    <span class="text-link">Full Stack PHP Developer</span>
+                                                    <strong>최준혁</strong>님이 콜리팜 친구추가를 하였어요!
+                                                    <span class="text-link">콜리팜 물주러 가기</span>
                                                 </p>
                                                 <time> 12 hours ago </time>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
-                                            </div>
-                                            <div class="drop_text">
-                                                <p>
-                                                    <strong>Jonathan Madano</strong> Shared Your Discussion On Course
-                                                    <span class="text-link">Css Flex Box </span>
-                                                </p>
-                                                <time> Yesterday </time>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
-                                            </div>
-                                            <div class="drop_text">
-                                                <p>
-                                                    <strong>Adrian Mohani</strong> Like Your Comment On Course
-                                                    <span class="text-link">Javascript Introduction </span>
-                                                </p>
-                                                <time> 2 hours ago </time>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
-                                            </div>
-                                            <div class="drop_text">
-                                                <p>
-                                                    <strong>Stella Johnson</strong> Replay Your Comments in
-                                                    <span class="text-link">Programming for Games</span>
-                                                </p>
-                                                <time> 9 hours ago </time>
-                                            </div>
-                                        </a>
-                                    </li>
+<%--                                    <li>--%>
+<%--                                        <a href="#">--%>
+<%--                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">--%>
+<%--                                            </div>--%>
+<%--                                            <div class="drop_text">--%>
+<%--                                                <p>--%>
+<%--                                                    <strong>Jonathan Madano</strong> Shared Your Discussion On Course--%>
+<%--                                                    <span class="text-link">Css Flex Box </span>--%>
+<%--                                                </p>--%>
+<%--                                                <time> Yesterday </time>--%>
+<%--                                            </div>--%>
+<%--                                        </a>--%>
+<%--                                    </li>--%>
+<%--                                    <li>--%>
+<%--                                        <a href="#">--%>
+<%--                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie1.jpg" alt="">--%>
+<%--                                            </div>--%>
+<%--                                            <div class="drop_text">--%>
+<%--                                                <p>--%>
+<%--                                                    <strong>Adrian Mohani</strong> Like Your Comment On Course--%>
+<%--                                                    <span class="text-link">Javascript Introduction </span>--%>
+<%--                                                </p>--%>
+<%--                                                <time> 2 hours ago </time>--%>
+<%--                                            </div>--%>
+<%--                                        </a>--%>
+<%--                                    </li>--%>
+<%--                                    <li>--%>
+<%--                                        <a href="#">--%>
+<%--                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">--%>
+<%--                                            </div>--%>
+<%--                                            <div class="drop_text">--%>
+<%--                                                <p>--%>
+<%--                                                    <strong>Stella Johnson</strong> Replay Your Comments in--%>
+<%--                                                    <span class="text-link">Programming for Games</span>--%>
+<%--                                                </p>--%>
+<%--                                                <time> 9 hours ago </time>--%>
+<%--                                            </div>--%>
+<%--                                        </a>--%>
+<%--                                    </li>--%>
                                 </ul>
                             </div>
                         </div>
@@ -424,81 +424,81 @@
                                 <ul>
                                     <li class="un-read">
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-7.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> Stella Johnson </strong> <time>12:43 PM</time>
-                                                <p>  Alex will explain you how ...  </p>
+                                                <strong> 나수덕(L3, 아키텍처부) </strong> <time>12:43 PM</time>
+                                                <p>  WM사업부문 DevOPs 적용방안입니다 ...  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> Adrian Mohani </strong> <time> 6:43 PM</time>
-                                                <p> Thanks for The Answer sit amet...  </p>
+                                                <strong> 한수지(L2, 수탁부) </strong> <time> 6:43 PM</time>
+                                                <p> 식사는 하셨는지요...  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-6.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong>Alia Dolgove </strong> <time> Wed </time>
-                                                <p>  Alia just joined Messenger!  </p>
+                                                <strong> 김지영(L3(부점장대우), 업무지원센터) </strong> <time> Wed </time>
+                                                <p>  날이 풀리면 골프나 한 번...  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-5.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie4.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> Jonathan Madano </strong> <time> Sun</time>
-                                                <p>  Replay Your Comments insit amet consectetur </p>
+                                                <strong> 김찬호(L1, WM사업부) </strong> <time> Sun</time>
+                                                <p>  안녕하십니까!! 부장님! WM사업부 김찬 ... </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li class="un-read">
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-2.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie3.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> Stella Johnson </strong> <time>12:43 PM</time>
-                                                <p>  Alex will explain you how ...  </p>
+                                                <strong> 윤창준(L1, 개인마케팅부) </strong> <time>12:43 PM</time>
+                                                <p>  안녕하세요!  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-1.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie4.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> Adrian Mohani </strong> <time> 6:43 PM</time>
-                                                <p> Thanks for The Answer sit amet...  </p>
+                                                <strong> 김진후(S3, 자본시장플랫폼부)  </strong> <time> 6:43 PM</time>
+                                                <p> 바쁘신데 죄송합니다만 ...  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-3.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie1.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong>Alia Dolgove </strong> <time> Wed </time>
-                                                <p>  Alia just joined Messenger!  </p>
+                                                <strong> 인정현(L1, 직원만족부) </strong> <time> Wed </time>
+                                                <p>  워크샵 관련 대천연수원 대관은 ...  </p>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <div class="drop_avatar"> <img src="/assets/images/avatars/avatar-4.jpg" alt="">
+                                            <div class="drop_avatar"> <img src="/assets/images/starfriends/proflie2.jpg" alt="">
                                             </div>
                                             <div class="drop_text">
-                                                <strong> Jonathan Madano </strong> <time> Sun</time>
-                                                <p>  Replay Your Comments insit amet consectetur </p>
+                                                <strong> 신찬희(과장, KB카드사)  </strong> <time> Sun</time>
+                                                <p> 인사를 일찍 드렸어야했는데 늦게 드려 ... </p>
                                             </div>
                                         </a>
                                     </li>
@@ -509,38 +509,38 @@
 
 
                         <a href="#">
-                            <img src="/assets/images/avatars/avatar-2.jpg" class="is_avatar" alt="">
+                            <img src="/assets/images/starfriends/proflie1.jpg" class="is_avatar" alt="">
                         </a>
                         <div uk-drop="mode: click;offset:5" class="header_dropdown profile_dropdown">
 
                             <a href="timeline.html" class="user">
                                 <div class="user_avatar">
-                                    <img src="/assets/images/avatars/avatar-2.jpg" alt="">
+                                    <img src="/assets/images/starfriends/proflie1.jpg" alt="">
                                 </div>
                                 <div class="user_name">
-                                    <div> Stella Johnson </div>
-                                    <span> @johnson</span>
+                                    <div> 서지영 </div>
+                                    <span> L4(감사역) </span>
                                 </div>
                             </a>
                             <hr>
                             <a href="pages-upgrade.html" class="is-link">
                                 <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
-                                Upgrade To Premium  </span>
+                                Premium으로 구독  </span>
                             </a>
                             <hr>
                             <a href="page-setting.html">
                                 <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
-                                My Account
+                                나의 계정
                             </a>
                             <a href="groups.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z"  clip-rule="evenodd" />
                                 </svg>
-                                Manage Pages
+                                직원 관리
                             </a>
                             <a href="pages-setting.html">
                                 <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
-                                My Billing
+                                급여
                             </a>
                             <a href="#" id="night-mode" class="btn-night-mode">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -600,12 +600,12 @@
                     </svg> <span> 실시간 시황 </span> </a>
                 </li>
 
-                <li><a href="courses.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-indigo-500">
-                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-                    </svg>
-                    <span> 맞춤학습</span></a>
-                </li>
+<%--                <li><a href="courses.html">--%>
+<%--                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-indigo-500">--%>
+<%--                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />--%>
+<%--                    </svg>--%>
+<%--                    <span>습 맞춤학습</span></a>--%>
+<%--                </li>--%>
                  <li><a href="/mycust">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-yellow-500">
                         <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
