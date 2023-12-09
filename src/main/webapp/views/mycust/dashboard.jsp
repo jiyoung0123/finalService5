@@ -315,7 +315,7 @@
                 {
                     type: 'KPI',
                     cell: 'dashboard-row-1-cell-2',
-                    title: '실시간 투자수익금',
+                    title: '실시간 투자수익(수익률)',
                     value: new Intl.NumberFormat('en-US').format(1258700),
                     valueFormat: '{value}',
                     subtitle: '8.3%',
