@@ -509,7 +509,7 @@
                                                 <div>·</div>
                                                 <div> 286명이 지켜보는 중 </div>
                                             </div>
-                                            <div id="socket_msg1" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                            <div id="socket_msg0" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
                                                 $12.99
                                             </div>
 
@@ -533,8 +533,8 @@
                                                 <div> 148명이 지켜보는 중 </div>
                                             </div>
 
-                                            <div id="socket_msg2" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
-                                                $12.99
+                                            <div id="socket_msg1" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                $34.99
                                             </div>
 
                                         </div>
@@ -556,8 +556,8 @@
                                                 <div>·</div>
                                                 <div> 126명이 지켜보는 중 </div>
                                             </div>
-                                            <div id="socket_msg3" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
-                                                $12.99
+                                            <div id="socket_msg2" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                $17.99
                                             </div>
 
                                         </div>
@@ -579,7 +579,7 @@
                                                 <div>·</div>
                                                 <div> 286명이 지켜보는 중 </div>
                                             </div>
-                                            <div id="socket_msg4" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                            <div id="socket_msg3" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
                                                 $12.99
                                             </div>
 
@@ -698,7 +698,29 @@
                         <div class="relative -mt-3" uk-slider="finite: true">
                             <div class="uk-slider-container px-1 py-3">
                                 <ul class="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@s uk-grid-small uk-grid">
+                                    <li>
+                                        <div class="card p-2 flex space-x-4 border border-gray-100">
+                                            <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                                <div class="card-media h-24">
+                                                    <img src="/assets/images/logo/snp500.png" alt="snp500">
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 pt-2.5 relative">
 
+                                                <div class="text-xs font-semibold uppercase text-yellow-500"> Yahoo Finance </div>
+                                                <div class="text-lg mt-3 2.5 text-gray-700"> S&P 500 </div>
+                                                <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                    <div> 4명의 추천 </div>
+                                                    <div>·</div>
+                                                    <div> 286명이 지켜보는 중 </div>
+                                                </div>
+                                                <div id="stock3" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                    $4,737.15
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li>
                                         <div class="card p-2 flex space-x-4 border border-gray-100">
                                             <div class="w-20 h-24 overflow-hidden rounded-lg">
@@ -716,7 +738,30 @@
                                                     <div> 286명이 지켜보는 중 </div>
                                                 </div>
                                                 <div id="stock0" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
-                                                    $12.99
+                                                    $1,995.05
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card p-2 flex space-x-4 border border-gray-100">
+                                            <div class="w-20 h-24 overflow-hidden rounded-lg">
+                                                <div class="card-media h-24">
+                                                    <img src="/assets/images/logo/dow.png" alt="dow">
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 pt-2.5 relative">
+
+                                                <div class="text-xs font-semibold uppercase text-yellow-500"> Yahoo Finance </div>
+                                                <div class="text-lg mt-3 2.5 text-gray-700"> DOW30 </div>
+                                                <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
+                                                    <div> 32명의 추천 </div>
+                                                    <div>·</div>
+                                                    <div> 126명이 지켜보는 중 </div>
+                                                </div>
+                                                <div id="stock2" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
+                                                    $37,186.33
                                                 </div>
 
                                             </div>
@@ -740,58 +785,14 @@
                                                 </div>
 
                                                 <div id="stock1" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
-                                                    $12.99
+                                                    $1,995.05
                                                 </div>
 
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="card p-2 flex space-x-4 border border-gray-100">
-                                            <div class="w-20 h-24 overflow-hidden rounded-lg">
-                                                <div class="card-media h-24">
-                                                    <img src="/assets/images/logo/dow.png" alt="dow">
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 pt-2.5 relative">
 
-                                                <div class="text-xs font-semibold uppercase text-yellow-500"> Yahoo Finance </div>
-                                                <div class="text-lg mt-3 2.5 text-gray-700"> DOW30 </div>
-                                                <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
-                                                    <div> 32명의 추천 </div>
-                                                    <div>·</div>
-                                                    <div> 126명이 지켜보는 중 </div>
-                                                </div>
-                                                <div id="stock2" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
-                                                    $12.99
-                                                </div>
 
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="card p-2 flex space-x-4 border border-gray-100">
-                                            <div class="w-20 h-24 overflow-hidden rounded-lg">
-                                                <div class="card-media h-24">
-                                                    <img src="/assets/images/logo/snp500.png" alt="snp500">
-                                                </div>
-                                            </div>
-                                            <div class="flex-1 pt-2.5 relative">
-
-                                                <div class="text-xs font-semibold uppercase text-yellow-500"> Yahoo Finance </div>
-                                                <div class="text-lg mt-3 2.5 text-gray-700"> S&P 500 </div>
-                                                <div class="flex items-center space-x-2 text-sm text-gray-400 capitalize">
-                                                    <div> 4명의 추천 </div>
-                                                    <div>·</div>
-                                                    <div> 286명이 지켜보는 중 </div>
-                                                </div>
-                                                <div id="stock3" class="top-1.5 absolute bg-gray-100 font-semibold px-2.5 py-1 right-1 rounded-full text text-blude-500 text-sm">
-                                                    $12.99
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </li>
 
                                 </ul>
                             </div>
